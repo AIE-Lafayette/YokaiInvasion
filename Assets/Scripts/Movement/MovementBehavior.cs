@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovementBehaviourScript : MonoBehaviour
+public class MovementBehavior : MonoBehaviour
 {
     private Vector3 _moveDirection;
     [SerializeField]
     private int _speed;
+
     /// <summary>
     /// The speed and direction of the game object.
     /// </summary>
