@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerInputBehaviour : MonoBehaviour
 {
-    private MovementBehavior _playerMovement;
+    private PlayerMovement _playerMovement;
     [SerializeField]
     private FireBehaviour _gun;
 
     private void Awake()
     {
-        _playerMovement = GetComponent<MovementBehavior>();
+        _playerMovement = GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame

@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 5972686878661756158}
   - component: {fileID: 5742974361761551085}
   m_Layer: 0
-  m_Name: Player
+  m_Name: ZPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -158,7 +158,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 07f4b512eead2794ab70024bfeb7101d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
