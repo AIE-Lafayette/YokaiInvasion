@@ -6,7 +6,8 @@ public class EnemyBehaviour : MonoBehaviour
 {
     [SerializeField]
     private EnemyBehaviour _enemyBehaviour;
-    
+    [SerializeField]
+    private int _damage;
     private HealthBehavior _healthBehavior;
     private void Start()
     {
@@ -27,7 +28,7 @@ public class EnemyBehaviour : MonoBehaviour
         {
             //is the posistion of other and this the same
             if (transform.position == other.transform.position)
-                _healthBehavior.Health--;//health - 1
+                _healthBehavior.TakeDamage(_damage);//decrements health
         }
     }
 }

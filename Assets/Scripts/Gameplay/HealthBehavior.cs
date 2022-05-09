@@ -18,9 +18,9 @@ public class HealthBehavior : MonoBehaviour
     {
         Destroy(gameObject);
     }
-    public virtual void TakeDamage()
+    public virtual void TakeDamage(int damage)
     {
-        _health--;
+        _health -= damage;
     }
 
     private void Update()
@@ -29,14 +29,11 @@ public class HealthBehavior : MonoBehaviour
         //{
         //    _health--;
         //}
-
         //If health reaches 0 
         if (_health <= 0)
         {
             //destroy the game object
             OnDeath();
         }
-
-
     }
 }
