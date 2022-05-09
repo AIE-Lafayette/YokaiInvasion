@@ -32,6 +32,7 @@ public class ProjectitleBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //checks if its the ownertag
         if (other.tag == OwnerTag)
             return;
 
@@ -42,13 +43,14 @@ public class ProjectitleBehaviour : MonoBehaviour
 
         //otherHealth.TakeDamge(_damage);
 
+        //destroys the bullet on collision
         if (_destroyOnHit)
             Destroy(gameObject);
     }
     private void Update()
     {
+        //The time until it deletes 
         _currentLifeTime += Time.deltaTime;
-
         if (_currentLifeTime >= _lifeTime)
             Destroy(gameObject);
     }
