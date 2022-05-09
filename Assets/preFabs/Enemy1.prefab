@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 6742332548285843584}
   - component: {fileID: 7004145117431578541}
   - component: {fileID: 2356199363833523444}
+  - component: {fileID: -8672987016829158871}
+  - component: {fileID: 2907505735916504512}
+  - component: {fileID: 1251242642173693643}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Untagged
@@ -108,7 +111,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cef6ca6739561d74a89e39518f883675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
-  health: 6
-  scaling: 7
-  scalingCap: 8
+--- !u!114 &-8672987016829158871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3814194849162877219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0a4b83d363ea694a9e349d7279b806c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50
+--- !u!114 &2907505735916504512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3814194849162877219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd1c66010edf0249ab2d1b2cb63b4ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 7
+--- !u!54 &1251242642173693643
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3814194849162877219}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
