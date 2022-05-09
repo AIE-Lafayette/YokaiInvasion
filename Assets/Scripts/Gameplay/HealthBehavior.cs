@@ -14,6 +14,10 @@ public class HealthBehavior : MonoBehaviour
         //lower health by one
         health--;
     }
+    public virtual void OnDeath()
+    {
+
+    }
 
     private void Update()
     {
@@ -22,11 +26,13 @@ public class HealthBehavior : MonoBehaviour
         //    health--;
         //}
 
-        //If health reaches 0 then reload the scene
+        //If health reaches 0 
         if (health <= 0)
         {
-            //reload the scene
-            SceneManager.LoadScene("ZachTestScene");
+            //destroy the game object
+            Destroy(gameObject);
         }
+
+
     }
 }
