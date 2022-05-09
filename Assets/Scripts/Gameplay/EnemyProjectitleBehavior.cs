@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectitleBehaviour : MonoBehaviour
+public class EnemyProjectitleBehavior : MonoBehaviour
 {
     private string _ownerTag;
     [SerializeField]
     private float _damage;
     [SerializeField]
-    private float _lifeTime;
+    private FireBehaviour _gun;
+    [SerializeField]
+    private float _bulletCooldown;
     [SerializeField]
     private bool _destroyOnHit;
-    private float _currentLifeTime;
-    private Rigidbody _rigidbody;
+    private float _bulletTimer;
 
     public string OwnerTag
     {
@@ -20,19 +21,19 @@ public class ProjectitleBehaviour : MonoBehaviour
         set { _ownerTag = value; }
     }
 
-    public Rigidbody RigidBody
+    // Update is called once per frame
+    void Update()
     {
-        get { return _rigidbody; }
-    }
+        _bulletTimer += Time.deltaTime;
 
-    private void Awake()
-    {
-        _rigidbody = GetComponent<Rigidbody>();
+        if (_bulletTimer >= _bulletCooldown)
+        {
+            _gun.Fire();
+            _bulletTimer = 0;
+        }
     }
-
     private void OnTriggerEnter(Collider other)
     {
-        //checks if its the ownertag
         if (other.tag == OwnerTag)
             return;
 
@@ -43,15 +44,7 @@ public class ProjectitleBehaviour : MonoBehaviour
 
         //otherHealth.TakeDamge(_damage);
 
-        //destroys the bullet on collision
         if (_destroyOnHit)
-            Destroy(gameObject);
-    }
-    private void Update()
-    {
-        //The time until it deletes 
-        _currentLifeTime += Time.deltaTime;
-        if (_currentLifeTime >= _lifeTime)
             Destroy(gameObject);
     }
 }
