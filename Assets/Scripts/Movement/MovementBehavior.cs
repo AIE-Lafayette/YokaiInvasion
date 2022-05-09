@@ -18,7 +18,7 @@ public class MovementBehavior : MonoBehaviour
     }
 
     // Update is called once per frame
-    public virtual void Update()
+    public void Update()
     {
         transform.position += MoveDirection * _speed * Time.deltaTime;
         GetComponent<Rigidbody>().velocity = transform.forward;

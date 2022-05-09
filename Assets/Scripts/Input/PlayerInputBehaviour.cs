@@ -6,7 +6,7 @@ public class PlayerInputBehaviour : MonoBehaviour
 {
     private MovementBehavior _playerMovement;
     [SerializeField]
-    //private FireBehaviourScript _gun;
+    private FireBehaviour _gun;
 
     private void Awake()
     {
@@ -22,7 +22,7 @@ public class PlayerInputBehaviour : MonoBehaviour
         //throws a projectitle when space is pressed
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            //_gun.Fire();
+            _gun.Fire();
         }
     }
 }
