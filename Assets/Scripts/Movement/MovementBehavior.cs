@@ -7,6 +7,7 @@ public class MovementBehavior : MonoBehaviour
     private Vector3 _moveDirection;
     [SerializeField]
     private int _speed;
+
     /// <summary>
     /// The speed and direction of the game object.
     /// </summary>
