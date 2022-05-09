@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInputBehaviour : MonoBehaviour
+public class InputBehavior : MonoBehaviour
 {
-    private PlayerMovement _playerMovement;
-    [SerializeField]
-    private FireBehaviour _gun;
 
-    private void Awake()
+    private PlayerMovement _playerMovement;
+
+    // Start is called before the first frame update
+    void Start()
     {
         _playerMovement = GetComponent<PlayerMovement>();
     }
@@ -16,13 +16,7 @@ public class PlayerInputBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //lets the player move only left or right
+        //new Vector3(Input.GetAxisRaw("Horizontal")
         _playerMovement.MoveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, 0).normalized;
-
-        //throws a projectitle when space is pressed
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            _gun.Fire();
-        }
     }
 }
