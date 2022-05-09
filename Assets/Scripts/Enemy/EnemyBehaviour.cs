@@ -7,7 +7,7 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField]
     private EnemyBehaviour _enemyBehaviour;
     [SerializeField]
-    private int _damage;
+    private float _damage;
     private HealthBehavior _healthBehavior;
     private void Start()
     {
