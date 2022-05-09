@@ -21,10 +21,10 @@ public class HealthBehavior : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            _health--;
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    _health--;
+        //}
 
         //If health reaches 0 
         if (_health <= 0)
