@@ -22,7 +22,7 @@ public class HealthBehavior : MonoBehaviour
 
         if (health <= 0)
         {
-            SceneManager.LoadScene("ZachTestScene");
+            //SceneManager.LoadScene("ZachTestScene");
         }
     }
 }
