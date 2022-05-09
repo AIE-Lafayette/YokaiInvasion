@@ -18,6 +18,10 @@ public class HealthBehavior : MonoBehaviour
     {
         Destroy(gameObject);
     }
+    public virtual void TakeDamage()
+    {
+        _health--;
+    }
 
     private void Update()
     {
