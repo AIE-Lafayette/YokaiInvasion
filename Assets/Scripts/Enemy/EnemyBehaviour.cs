@@ -6,6 +6,8 @@ public class EnemyBehaviour : MonoBehaviour
 {
     [SerializeField]
     private EnemyBehaviour _enemyBehaviour;
+    
+    private HealthBehavior _healthBehavior;
     private void Start()
     {
         
