@@ -26,7 +26,7 @@ public class EnemyBehaviour : MonoBehaviour
         if (!_enemyBehaviour)
         {
             if (transform.position == other.transform.position)
-                Destroy(this);
+                _healthBehavior.Health--;
         }
     }
 }
