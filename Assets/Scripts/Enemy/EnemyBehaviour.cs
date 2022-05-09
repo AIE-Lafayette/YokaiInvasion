@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
+    [SerializeField]
+    private EnemyBehaviour _enemyBehaviour;
     
+    private HealthBehavior _healthBehavior;
     private void Start()
     {
         
@@ -13,5 +16,17 @@ public class EnemyBehaviour : MonoBehaviour
     void Update()
     {
 
+    }
+    /// <summary>
+    /// called when the posistion of the other and the transform of the enemy is the same
+    /// </summary>
+    /// <param name="other"></param>
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!_enemyBehaviour)
+        {
+            if (transform.position == other.transform.position)
+                _healthBehavior.Health--;
+        }
     }
 }
