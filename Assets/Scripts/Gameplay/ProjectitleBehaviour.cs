@@ -36,12 +36,12 @@ public class ProjectitleBehaviour : MonoBehaviour
         if (other.tag == OwnerTag)
             return;
 
-        //HealthBehaviour otherHealth = other.GetComponent<HealthBehaviour>();
+        HealthBehavior otherHealth = other.GetComponent<HealthBehavior>();
 
-        //if (!otherHealth)
-        //    return;
+        if (!otherHealth)
+            return;
 
-        //otherHealth.TakeDamge(_damage);
+        otherHealth.TakeDamage(_damage);
 
         //destroys the bullet on collision
         if (_destroyOnHit)
