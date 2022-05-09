@@ -23,10 +23,11 @@ public class EnemyBehaviour : MonoBehaviour
     /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
-        if (!_enemyBehaviour)
+        if (!_enemyBehaviour)//if not enemy behaviour
         {
+            //is the posistion of other and this the same
             if (transform.position == other.transform.position)
-                _healthBehavior.Health--;
+                _healthBehavior.Health--;//health - 1
         }
     }
 }
