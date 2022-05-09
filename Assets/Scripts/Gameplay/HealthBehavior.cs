@@ -6,23 +6,33 @@ using UnityEngine;
 public class HealthBehavior : MonoBehaviour
 {
     [SerializeField]
-    int health;
+    private int _health;
 
-    private void OnTriggerEnter(Collider other)
+    public int Health 
     {
-        health--;
+        get {return _health; }
+        set {_health = value; }
+    }
+    
+    public virtual void OnDeath()
+    {
+        Destroy(gameObject);
     }
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    _health--;
+        //}
+
+        //If health reaches 0 
+        if (_health <= 0)
         {
-            health--;
+            //destroy the game object
+            OnDeath();
         }
 
-        if (health <= 0)
-        {
-            //SceneManager.LoadScene("ZachTestScene");
-        }
+
     }
 }
