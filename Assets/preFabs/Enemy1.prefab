@@ -13,9 +13,14 @@ GameObject:
   - component: {fileID: 6742332548285843584}
   - component: {fileID: 7004145117431578541}
   - component: {fileID: 2356199363833523444}
+<<<<<<< HEAD
   - component: {fileID: -8672987016829158871}
   - component: {fileID: 2907505735916504512}
   - component: {fileID: 1251242642173693643}
+=======
+  - component: {fileID: 9062488439222746768}
+  - component: {fileID: 2095178345686392813}
+>>>>>>> Zachbranch
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Untagged
@@ -111,14 +116,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cef6ca6739561d74a89e39518f883675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   _enemyBehaviour: {fileID: 2356199363833523444}
+=======
+<<<<<<< HEAD
+>>>>>>> master
 --- !u!114 &-8672987016829158871
 MonoBehaviour:
+=======
+--- !u!54 &9062488439222746768
+Rigidbody:
+>>>>>>> Zachbranch
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3814194849162877219}
+<<<<<<< HEAD
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0a4b83d363ea694a9e349d7279b806c, type: 3}
@@ -126,6 +140,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 50
 --- !u!114 &2907505735916504512
+=======
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!114 &2095178345686392813
+>>>>>>> Zachbranch
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,6 +160,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3814194849162877219}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 3cd1c66010edf0249ab2d1b2cb63b4ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -154,3 +181,9 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+=======
+  m_Script: {fileID: 11500000, guid: 164ef94d68d949b46b03610140653616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 5
+>>>>>>> Zachbranch
