@@ -42,6 +42,8 @@ public class EnemyBehaviour : MonoBehaviour
     /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
+        //a alternatve to this statement is using the *GameObject.FindGameObjectsWithTag("Enemy");*
+        //you will have to use the game manager to get the array of enemies
         if (!_enemyBehaviour)//if not enemy behaviour
         {
             //is the posistion of other and this the same
