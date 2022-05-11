@@ -38,16 +38,5 @@ public class EnemyProjectitleBehavior : MonoBehaviour
     {
         if (other.tag == OwnerTag)
             return;
-
-        HealthBehavior otherHealth = other.GetComponent<HealthBehavior>();
-
-        if (!otherHealth)
-            return;
-
-        otherHealth.TakeDamage(_damage);
-
-        //deletes the bullet on collision
-        if (_destroyOnHit)
-            Destroy(gameObject);
     }
 }
