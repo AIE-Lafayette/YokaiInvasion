@@ -13,6 +13,12 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField]
     private int _speed;
 
+
+    public float Health
+    {
+        get { return _healthBehavior.Health;}
+        set { _healthBehavior.Health = value; }
+    }
     /// <summary>
     /// The speed and direction of the game object.
     /// </summary>
