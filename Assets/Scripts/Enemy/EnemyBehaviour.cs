@@ -14,10 +14,10 @@ public class EnemyBehaviour : MonoBehaviour
     private int _speed;
 
 
-    public float Health
+    public float MaxHealth
     {
-        get { return _healthBehavior.Health;}
-        set { _healthBehavior.Health = value; }
+        get { return _healthBehavior.MaxHealth;}
+        set { _healthBehavior.MaxHealth = value; }
     }
     /// <summary>
     /// The speed and direction of the game object.

@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     private EnemyBehaviour _enemyBehaviour;
     public Text _enemycount;
     [SerializeField]
-    private float MaxHealth;
+    private float HealthLimit;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,11 +28,10 @@ public class GameManager : MonoBehaviour
         //if the start timer is greater than or equal to the max timer 
         if (_enemies.Length == 0 )
         {
-            if (_enemyBehaviour.Health <= MaxHealth)
-                _enemyBehaviour.Health += 2;
+            //max health is less than the health limit 
+            if (_enemyBehaviour.MaxHealth <= HealthLimit)
+                _enemyBehaviour.MaxHealth += 2;//plus 2 to max health *or decrease here*
             //spawn the next wave here 
-            //when the spawn the the next wave hapens the stats increase
-            //or decrease here
             //new script for the sides moving here
             return;
         }
