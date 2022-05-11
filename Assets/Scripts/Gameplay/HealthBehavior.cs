@@ -8,6 +8,8 @@ public class HealthBehavior : MonoBehaviour
     [SerializeField]
     private float _health;
     [SerializeField]
+    private float _maxHealth;
+    [SerializeField]
     private bool _isAlive;
     [SerializeField]
     private bool _destroyOnDeath;
@@ -15,8 +17,14 @@ public class HealthBehavior : MonoBehaviour
     public float Health
     {
         get { return _health; }
-        set { _health = value; }
+        
     }
+    public float MaxHealth
+    {
+        get { return _maxHealth; }
+        set { _maxHealth = value; }
+    }
+
 
     public bool IsAlive
     {
@@ -36,7 +44,10 @@ public class HealthBehavior : MonoBehaviour
         //sets it to be not alive
         _isAlive = false;
     }
-
+    private void Awake()
+    {
+        _health = _maxHealth;
+    }
     // Update is called once per frame
     void Update()
     {
