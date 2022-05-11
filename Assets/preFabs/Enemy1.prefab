@@ -194,7 +194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyBehaviour: {fileID: 7749460261752766541}
   _damage: 5
-  _speed: 40
+  _speed: 10
 --- !u!54 &7335270417012486934
 Rigidbody:
   m_ObjectHideFlags: 0
