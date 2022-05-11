@@ -15,6 +15,7 @@ public class HealthBehavior : MonoBehaviour
     public float Health
     {
         get { return _health; }
+        set { _health = value; }
     }
 
     public bool IsAlive
