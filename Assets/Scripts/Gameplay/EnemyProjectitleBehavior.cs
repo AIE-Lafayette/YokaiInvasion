@@ -24,11 +24,13 @@ public class EnemyProjectitleBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //The higher the bulletcooldown the long it takes to fire
         _bulletTimer += Time.deltaTime;
-
+        //only fire when the timmer is greater than cooldown
         if (_bulletTimer >= _bulletCooldown)
         {
             _gun.Fire();
+            //resets timer
             _bulletTimer = 0;
         }
     }
@@ -36,15 +38,5 @@ public class EnemyProjectitleBehavior : MonoBehaviour
     {
         if (other.tag == OwnerTag)
             return;
-
-        //HealthBehaviour otherHealth = other.GetComponent<HealthBehaviour>();
-
-        //if (!otherHealth)
-        //    return;
-
-        //otherHealth.TakeDamge(_damage);
-
-        if (_destroyOnHit)
-            Destroy(gameObject);
     }
 }

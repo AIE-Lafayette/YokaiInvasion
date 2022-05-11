@@ -36,12 +36,12 @@ public class ProjectitleBehaviour : MonoBehaviour
         if (other.tag == OwnerTag)
             return;
 
-        //HealthBehaviour otherHealth = other.GetComponent<HealthBehaviour>();
+        HealthBehavior otherHealth = other.GetComponent<HealthBehavior>();
 
-        //if (!otherHealth)
-        //    return;
+        if (!otherHealth)
+            return;
 
-        //otherHealth.TakeDamge(_damage);
+        otherHealth.TakeDamage(_damage);
 
         //destroys the bullet on collision
         if (_destroyOnHit)
@@ -51,7 +51,8 @@ public class ProjectitleBehaviour : MonoBehaviour
     {
         //The time until it deletes 
         _currentLifeTime += Time.deltaTime;
+        //if the current life time is greater or equal to the life time
         if (_currentLifeTime >= _lifeTime)
-            Destroy(gameObject);
+            Destroy(gameObject);//destroy self
     }
 }

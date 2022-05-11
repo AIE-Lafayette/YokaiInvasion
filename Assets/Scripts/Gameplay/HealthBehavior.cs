@@ -6,37 +6,47 @@ using UnityEngine;
 public class HealthBehavior : MonoBehaviour
 {
     [SerializeField]
-    private int _health;
+    private float _health;
+    [SerializeField]
+    private bool _isAlive;
+    [SerializeField]
+    private bool _destroyOnDeath;
 
-    public int Health 
+    public float Health
     {
-        get {return _health; }
-        set {_health = value; }
+        get { return _health; }
     }
-    
+
+    public bool IsAlive
+    {
+        get { return _isAlive; }
+    }
+
+    //deals the damage amount and sends back the result
+    public virtual float TakeDamage(float damgeAmount)
+    {
+        _health -= damgeAmount;
+
+        return damgeAmount;
+    }
+
     public virtual void OnDeath()
     {
-        Destroy(gameObject);
-    }
-    public virtual void TakeDamage()
-    {
-        _health--;
+        //sets it to be not alive
+        _isAlive = false;
     }
 
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    _health--;
-        //}
-
-        //If health reaches 0 
-        if (_health <= 0)
-        {
-            //destroy the game object
+        //checks if health is lower than 0 while being alive
+        if (_health <= 0 && IsAlive)
             OnDeath();
-        }
 
+        _isAlive = _health > 0;
 
+        //checks if it is dead and deletes on death
+        if (!IsAlive && _destroyOnDeath)
+            Destroy(gameObject);
     }
 }
