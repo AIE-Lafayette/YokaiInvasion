@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //addes the move direction scaled up by  the speed to position
         Vector3 velocity = MoveDirection * _speed * Time.fixedDeltaTime;
         _rigidbody.MovePosition(transform.position + velocity);
     }

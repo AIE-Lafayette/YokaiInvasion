@@ -51,7 +51,8 @@ public class ProjectitleBehaviour : MonoBehaviour
     {
         //The time until it deletes 
         _currentLifeTime += Time.deltaTime;
+        //if the current life time is greater or equal to the life time
         if (_currentLifeTime >= _lifeTime)
-            Destroy(gameObject);
+            Destroy(gameObject);//destroy self
     }
 }
