@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &101062296263104367
+--- !u!1 &3145139170823038385
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,21 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 414954993354196363}
-  - component: {fileID: 6075058200590033000}
+  - component: {fileID: 3145139170823038386}
+  - component: {fileID: 3145139170823038389}
+  - component: {fileID: 3145139170823038388}
+  - component: {fileID: 1941435723907470952}
   m_Layer: 0
-  m_Name: gun
+  m_Name: Sphere (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &414954993354196363
+--- !u!4 &3145139170823038386
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/preFabs/RangedEnemy.prefab
   m_GameObject: {fileID: 101062296263104367}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0.47, z: -0.234}
@@ -33,12 +36,33 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &6075058200590033000
 MonoBehaviour:
+=======
+  m_GameObject: {fileID: 3145139170823038385}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.055, y: 0.698, z: -0.183}
+  m_LocalScale: {x: 0.214824, y: 0.29700205, z: 0.31174803}
+  m_Children: []
+  m_Father: {fileID: 3145139171505049956}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3145139170823038389
+MeshFilter:
+>>>>>>> jasperBranch:Assets/preFabs/Enemy2.prefab
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 101062296263104367}
+  m_GameObject: {fileID: 3145139170823038385}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &3145139170823038388
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3145139170823038385}
   m_Enabled: 1
+<<<<<<< HEAD:Assets/preFabs/RangedEnemy.prefab
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2201e6f04ad38e4a96ca8947307c863, type: 3}
   m_Name: 
@@ -95,6 +119,8 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 372846633097309660}
   m_Enabled: 0
+=======
+>>>>>>> jasperBranch:Assets/preFabs/Enemy2.prefab
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -106,7 +132,11 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+<<<<<<< HEAD:Assets/preFabs/RangedEnemy.prefab
   - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+=======
+  - {fileID: 2100000, guid: aff629c7830507d439db424460886150, type: 2}
+>>>>>>> jasperBranch:Assets/preFabs/Enemy2.prefab
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -128,12 +158,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+<<<<<<< HEAD:Assets/preFabs/RangedEnemy.prefab
 --- !u!135 &7984684472521952845
+=======
+--- !u!135 &1941435723907470952
+>>>>>>> jasperBranch:Assets/preFabs/Enemy2.prefab
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/preFabs/RangedEnemy.prefab
   m_GameObject: {fileID: 372846633097309660}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -142,6 +177,16 @@ SphereCollider:
   m_Radius: 0.5
   m_Center: {x: -0.0000001192093, y: 0.00000023841856, z: 0}
 --- !u!1 &521273010317828217
+=======
+  m_GameObject: {fileID: 3145139170823038385}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &3145139171289353784
+>>>>>>> jasperBranch:Assets/preFabs/Enemy2.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,45 +194,52 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/preFabs/RangedEnemy.prefab
   - component: {fileID: 3861961055122845590}
   - component: {fileID: 7090517926086221217}
   - component: {fileID: 7425905836873895083}
+=======
+  - component: {fileID: 3145139171289353785}
+  - component: {fileID: 3145139171289353788}
+  - component: {fileID: 3145139171289353787}
+  - component: {fileID: 3339041731632056245}
+>>>>>>> jasperBranch:Assets/preFabs/Enemy2.prefab
   m_Layer: 0
-  m_Name: Sphere (1)
+  m_Name: Sphere (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3861961055122845590
+--- !u!4 &3145139171289353785
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 521273010317828217}
+  m_GameObject: {fileID: 3145139171289353784}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.055, y: 0.698, z: -0.183}
+  m_LocalPosition: {x: -0.075, y: 0.698, z: -0.164}
   m_LocalScale: {x: 0.214824, y: 0.29700205, z: 0.31174803}
   m_Children: []
-  m_Father: {fileID: 8351220092370855244}
-  m_RootOrder: 1
+  m_Father: {fileID: 3145139171505049956}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7090517926086221217
+--- !u!33 &3145139171289353788
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 521273010317828217}
+  m_GameObject: {fileID: 3145139171289353784}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &7425905836873895083
+--- !u!23 &3145139171289353787
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 521273010317828217}
+  m_GameObject: {fileID: 3145139171289353784}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -222,7 +274,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+<<<<<<< HEAD:Assets/preFabs/RangedEnemy.prefab
 --- !u!1 &2267426438853875543
+=======
+--- !u!135 &3339041731632056245
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3145139171289353784}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &3145139171505049964
+>>>>>>> jasperBranch:Assets/preFabs/Enemy2.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -230,6 +299,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/preFabs/RangedEnemy.prefab
   - component: {fileID: 8351220092370855244}
   - component: {fileID: 5019491508573715299}
   - component: {fileID: 1868469567467618712}
@@ -237,6 +307,16 @@ GameObject:
   - component: {fileID: 3515521973886359250}
   - component: {fileID: 5328024584753553547}
   - component: {fileID: 653750253398660219}
+=======
+  - component: {fileID: 3145139171505049956}
+  - component: {fileID: 3145139171505049955}
+  - component: {fileID: 3145139171505049954}
+  - component: {fileID: 5071758986714242163}
+  - component: {fileID: 3145139171505049952}
+  - component: {fileID: 3145139171505049967}
+  - component: {fileID: 3145139171505049966}
+  - component: {fileID: 3145139171505049965}
+>>>>>>> jasperBranch:Assets/preFabs/Enemy2.prefab
   m_Layer: 0
   m_Name: RangedEnemy
   m_TagString: Untagged
@@ -244,14 +324,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8351220092370855244
+--- !u!4 &3145139171505049956
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2267426438853875543}
+  m_GameObject: {fileID: 3145139171505049964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD:Assets/preFabs/RangedEnemy.prefab
   m_LocalPosition: {x: -1.63, y: 3.0736, z: -29.216494}
   m_LocalScale: {x: 0.8526785, y: 1.1690373, z: 0.61321723}
   m_Children:
@@ -260,24 +341,33 @@ Transform:
   - {fileID: 7876512285732081605}
   - {fileID: 414954993354196363}
   - {fileID: 6116294436577451929}
+=======
+  m_LocalPosition: {x: -8.6, y: 0.6, z: -15.07}
+  m_LocalScale: {x: 1.3905, y: 1.9064, z: 1}
+  m_Children:
+  - {fileID: 3145139172366038304}
+  - {fileID: 3145139170823038386}
+  - {fileID: 3145139171289353785}
+  - {fileID: 3145139172792728493}
+>>>>>>> jasperBranch:Assets/preFabs/Enemy2.prefab
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5019491508573715299
+--- !u!33 &3145139171505049955
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2267426438853875543}
+  m_GameObject: {fileID: 3145139171505049964}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &1868469567467618712
+--- !u!23 &3145139171505049954
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2267426438853875543}
+  m_GameObject: {fileID: 3145139171505049964}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -312,13 +402,30 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+<<<<<<< HEAD:Assets/preFabs/RangedEnemy.prefab
 --- !u!54 &7564678750579237472
+=======
+--- !u!135 &5071758986714242163
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3145139171505049964}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &3145139171505049952
+>>>>>>> jasperBranch:Assets/preFabs/Enemy2.prefab
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2267426438853875543}
+  m_GameObject: {fileID: 3145139171505049964}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -328,53 +435,74 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &3515521973886359250
+--- !u!114 &3145139171505049967
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2267426438853875543}
+  m_GameObject: {fileID: 3145139171505049964}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cef6ca6739561d74a89e39518f883675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD:Assets/preFabs/RangedEnemy.prefab
   _enemyBehaviour: {fileID: 3515521973886359250}
   _damage: 5
   _speed: 1
 --- !u!114 &5328024584753553547
+=======
+  _enemyBehaviour: {fileID: 3145139171505049967}
+  _damage: 0
+  _speed: 4
+--- !u!114 &3145139171505049966
+>>>>>>> jasperBranch:Assets/preFabs/Enemy2.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2267426438853875543}
+  m_GameObject: {fileID: 3145139171505049964}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3cd1c66010edf0249ab2d1b2cb63b4ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD:Assets/preFabs/RangedEnemy.prefab
   _health: 5
   _isAlive: 1
   _destroyOnDeath: 1
 --- !u!114 &653750253398660219
+=======
+  _health: 0
+  _isAlive: 0
+  _destroyOnDeath: 0
+--- !u!114 &3145139171505049965
+>>>>>>> jasperBranch:Assets/preFabs/Enemy2.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2267426438853875543}
+  m_GameObject: {fileID: 3145139171505049964}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8c0a4cee058a2b4da96d739b3518284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 2
+<<<<<<< HEAD:Assets/preFabs/RangedEnemy.prefab
   _gun: {fileID: 6075058200590033000}
   _bulletCooldown: 1.5
   _destroyOnHit: 1
 --- !u!1 &2450069498346982038
+=======
+  _gun: {fileID: 3145139172792728492}
+  _bulletCooldown: 1
+  _destroyOnHit: 0
+--- !u!1 &3145139172366038319
+>>>>>>> jasperBranch:Assets/preFabs/Enemy2.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -382,45 +510,52 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/preFabs/RangedEnemy.prefab
   - component: {fileID: 7876512285732081605}
   - component: {fileID: 2127692212015453335}
   - component: {fileID: 2462935464095500518}
+=======
+  - component: {fileID: 3145139172366038304}
+  - component: {fileID: 3145139172366038307}
+  - component: {fileID: 3145139172366038306}
+  - component: {fileID: 3113701639128531100}
+>>>>>>> jasperBranch:Assets/preFabs/Enemy2.prefab
   m_Layer: 0
-  m_Name: Sphere (2)
+  m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7876512285732081605
+--- !u!4 &3145139172366038304
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2450069498346982038}
+  m_GameObject: {fileID: 3145139172366038319}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.075, y: 0.698, z: -0.164}
-  m_LocalScale: {x: 0.214824, y: 0.29700205, z: 0.31174803}
+  m_LocalPosition: {x: 0, y: 0.698, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
-  m_Father: {fileID: 8351220092370855244}
-  m_RootOrder: 2
+  m_Father: {fileID: 3145139171505049956}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2127692212015453335
+--- !u!33 &3145139172366038307
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2450069498346982038}
+  m_GameObject: {fileID: 3145139172366038319}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &2462935464095500518
+--- !u!23 &3145139172366038306
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2450069498346982038}
+  m_GameObject: {fileID: 3145139172366038319}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -433,7 +568,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: aff629c7830507d439db424460886150, type: 2}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -455,7 +590,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+<<<<<<< HEAD:Assets/preFabs/RangedEnemy.prefab
 --- !u!1 &9071375234879524678
+=======
+--- !u!135 &3113701639128531100
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3145139172366038319}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &3145139172792728491
+>>>>>>> jasperBranch:Assets/preFabs/Enemy2.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -463,36 +615,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/preFabs/RangedEnemy.prefab
   - component: {fileID: 5486819996925879502}
   - component: {fileID: 2106201246832441601}
   - component: {fileID: 1324883795413436636}
+=======
+  - component: {fileID: 3145139172792728493}
+  - component: {fileID: 3145139172792728492}
+>>>>>>> jasperBranch:Assets/preFabs/Enemy2.prefab
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5486819996925879502
+--- !u!4 &3145139172792728493
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9071375234879524678}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.698, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_GameObject: {fileID: 3145139172792728491}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8351220092370855244}
-  m_RootOrder: 0
+  m_Father: {fileID: 3145139171505049956}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD:Assets/preFabs/RangedEnemy.prefab
 --- !u!33 &2106201246832441601
 MeshFilter:
+=======
+--- !u!114 &3145139172792728492
+MonoBehaviour:
+>>>>>>> jasperBranch:Assets/preFabs/Enemy2.prefab
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/preFabs/RangedEnemy.prefab
   m_GameObject: {fileID: 9071375234879524678}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1324883795413436636
@@ -536,3 +699,14 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+=======
+  m_GameObject: {fileID: 3145139172792728491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2201e6f04ad38e4a96ca8947307c863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bulletRef: {fileID: 6206681611907711863, guid: e05cf1656fded1549b165903eb5d556c, type: 3}
+  _bulletForce: 10
+  _owner: {fileID: 3145139171505049964}
+>>>>>>> jasperBranch:Assets/preFabs/Enemy2.prefab
