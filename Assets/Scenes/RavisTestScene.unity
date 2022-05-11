@@ -123,6 +123,32 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &364887603 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2304691337510630327, guid: a104d545f5ded96428603a30710d8751, type: 3}
+  m_PrefabInstance: {fileID: 1149221694}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &364887611 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 203063394994356940, guid: a104d545f5ded96428603a30710d8751, type: 3}
+  m_PrefabInstance: {fileID: 1149221694}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &364887612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364887603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8c0a4cee058a2b4da96d739b3518284, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 3
+  _gun: {fileID: 893277875}
+  _bulletCooldown: 0.5
+  _destroyOnHit: 0
 --- !u!1 &597644894
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,6 +328,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &893277873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 893277874}
+  - component: {fileID: 893277875}
+  m_Layer: 0
+  m_Name: emitter
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &893277874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893277873}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 364887611}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &893277875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893277873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2201e6f04ad38e4a96ca8947307c863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bulletRef: {fileID: 6206681611907711863, guid: e05cf1656fded1549b165903eb5d556c, type: 3}
+  _bulletForce: 30
 --- !u!1001 &1149221694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -356,6 +427,18 @@ PrefabInstance:
     - target: {fileID: 2304691337510630327, guid: a104d545f5ded96428603a30710d8751, type: 3}
       propertyPath: m_Name
       value: Enemy1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2783646548858132152, guid: a104d545f5ded96428603a30710d8751, type: 3}
+      propertyPath: _speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009364442965417732, guid: a104d545f5ded96428603a30710d8751, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335270417012486934, guid: a104d545f5ded96428603a30710d8751, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a104d545f5ded96428603a30710d8751, type: 3}
