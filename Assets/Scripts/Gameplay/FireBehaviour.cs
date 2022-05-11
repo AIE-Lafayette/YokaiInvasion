@@ -6,9 +6,13 @@ public class FireBehaviour : MonoBehaviour
 {
     [SerializeField]
     private ProjectitleBehaviour _bulletRef;
+    
     [SerializeField]
     private float _bulletForce;
     private ProjectitleBehaviour bulletBehaviour;
+    /// <summary>
+    /// makes the bullet not hit the owner to kill its self
+    /// </summary>
     [SerializeField]
     private GameObject _owner;
 
