@@ -24,8 +24,9 @@ public class EnemyProjectitleBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //only fire when the timmer is greater than cooldown
+        //The higher the bulletcooldown the long it takes to fire
         _bulletTimer += Time.deltaTime;
+        //only fire when the timmer is greater than cooldown
         if (_bulletTimer >= _bulletCooldown)
         {
             _gun.Fire();
