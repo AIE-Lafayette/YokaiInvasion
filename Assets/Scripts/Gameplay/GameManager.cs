@@ -7,17 +7,6 @@ public class GameManager : MonoBehaviour
     private GameObject[] _enemies;
     private EnemySpawnerBehavior enemySpawnerBehavior;
     public Text _enemycount;
-    /// <summary>
-    /// is the start of the spawn
-    /// </summary>
-    [SerializeField]
-    private float StartTimerForSpawn;
-    /// <summary>
-    /// is the compared time that start timer has to reach
-    /// </summary>
-    [SerializeField]
-    private float MaxTimerForSpawn;
-    
 
     // Start is called before the first frame update
     void Start()
@@ -33,10 +22,9 @@ public class GameManager : MonoBehaviour
         _enemies = GameObject.FindGameObjectsWithTag("Enemy");
         //then print the text 
         _enemycount.text = "Enemies: " + _enemies.Length.ToString();
-        //add deltatime to the start timer
-        StartTimerForSpawn += Time.deltaTime;
+
         //if the start timer is greater than or equal to the max timer 
-        if (StartTimerForSpawn >= MaxTimerForSpawn )
+        if (_enemies.Length == 0 )
         {
             //spawn the next wave here 
             
