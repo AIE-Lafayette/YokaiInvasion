@@ -113,8 +113,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 5
-  _lifeTime: 10
-  _destroyOnHit: 0
+  _lifeTime: 3
+  _destroyOnHit: 1
 --- !u!1 &7956891544880784241
 GameObject:
   m_ObjectHideFlags: 0
