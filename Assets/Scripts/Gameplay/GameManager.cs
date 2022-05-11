@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     private GameObject[] _enemies;
     private EnemySpawnerBehavior enemySpawnerBehavior;
     public Text _enemycount;
+    [SerializeField]
+    private float maxScaling;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +29,8 @@ public class GameManager : MonoBehaviour
         if (_enemies.Length == 0 )
         {
             //spawn the next wave here 
-            
+            //when the spawn the the next wave hapens the stats increase
+            //or decrease here
             return;
         }
     }
