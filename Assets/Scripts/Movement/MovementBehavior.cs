@@ -20,8 +20,10 @@ public class MovementBehavior : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
+        //makes movedirection into a new vecotor3 that uses speed to move
+        MoveDirection = new Vector3(0, 0, -_speed);
         //addes the move direction scaled up by  the speed to position
-        transform.position += MoveDirection * _speed * Time.deltaTime;
+        transform.position += MoveDirection * Time.deltaTime;
         //makes the rigidbodys velocity equal to the forward
         GetComponent<Rigidbody>().velocity = transform.forward;
     }
