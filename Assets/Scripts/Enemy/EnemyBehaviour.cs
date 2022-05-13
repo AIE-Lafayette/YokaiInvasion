@@ -13,6 +13,12 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField]
     private int _speed;
 
+
+    public float MaxHealth
+    {
+        get { return _healthBehavior.MaxHealth;}
+        set { _healthBehavior.MaxHealth = value; }
+    }
     /// <summary>
     /// The speed and direction of the game object.
     /// </summary>
@@ -42,6 +48,8 @@ public class EnemyBehaviour : MonoBehaviour
     /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
+        //a alternatve to this statement is using the *GameObject.FindGameObjectsWithTag("Enemy");*
+        //you will have to use the game manager to get the array of enemies
         if (!_enemyBehaviour)//if not enemy behaviour
         {
             //is the posistion of other and this the same
