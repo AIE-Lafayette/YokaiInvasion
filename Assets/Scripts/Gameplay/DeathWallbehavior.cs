@@ -6,9 +6,9 @@ public class DeathWallbehavior : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if(GameObject.FindWithTag("Enemy"))
+        if(GameObject.FindWithTag("Player"))
         {
-            Destroy(GameObject.FindWithTag("Enemy"));
+            Destroy(GameObject.FindWithTag("Player"));
         }
     }
 }
