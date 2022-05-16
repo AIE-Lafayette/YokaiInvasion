@@ -4,28 +4,24 @@ using UnityEngine;
 
 public class EnemySpawnerBehavior : MonoBehaviour
 {
+    //the array that holds the enemies
+    private GameObject[] _enemyCount;
     [SerializeField]
     private EnemyBehaviour _enemy;
-    private GameManager _gamemanger;
-    private bool _isActive;
-    public bool IsActive 
+    //how meny enemies that spawn in the wave
+    public int EnemyWaveCount
     {
-        get {return _isActive; }
-        set { value = _isActive; }
+        get { return _enemyCount.Length; }
+        set { value = _enemyCount.Length; }
     }
-
-
- 
     private void Update()
     {
-        if (_isActive = true)
+        if (_enemyCount.Length <= 0)
         {
-            for (int i = 0; i < _gamemanger.EnemyWaveCount; i++)
+            for (int i = 0; i < EnemyWaveCount; i++)
             {
                 EnemyBehaviour spawnedEnemy = Instantiate(_enemy, transform.position, transform.rotation);
             }
-           
-            _isActive = false;
 
             return;
         }
