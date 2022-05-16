@@ -8,22 +8,29 @@ public class EnemySpawnerBehavior : MonoBehaviour
     private GameObject[] _enemyCount;
     [SerializeField]
     private EnemyBehaviour _enemy;
-    //how meny enemies that spawn in the wave
-    public int EnemyWaveCount
+    private int _enemyNumberOfWaves;
+    //how meny enemies 
+
+    public int EnemyCount
     {
         get { return _enemyCount.Length; }
-        set { value = _enemyCount.Length; }
+    }
+
+    public int WaveCount
+    {
+        get { return _enemyNumberOfWaves; }
+        set { value = _enemyNumberOfWaves; }
     }
     private void Update()
     {
+        _enemyCount = GameObject.FindGameObjectsWithTag("Enemy");
         if (_enemyCount.Length <= 0)
         {
-            for (int i = 0; i < EnemyWaveCount; i++)
+            for (int i = 0; i == WaveCount; i++)
             {
                 EnemyBehaviour spawnedEnemy = Instantiate(_enemy, transform.position, transform.rotation);
             }
-
-            
+            return;
         }
     }
 }

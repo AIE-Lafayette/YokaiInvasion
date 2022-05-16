@@ -24,21 +24,15 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //then print the text 
-        _enemycount.text = "Enemies: " + enemySpawnerBehavior.EnemyWaveCount.ToString();
-
-
+        _enemycount.text = "Enemies: " + enemySpawnerBehavior.WaveCount.ToString();
         //if the start timer is greater than or equal to the max timer 
-        if ( == 0 )
+        if (enemySpawnerBehavior.WaveCount == 0 )
         {
-           
+            enemySpawnerBehavior.WaveCount += _waveCount;
             //max health is less than the health limit 
             if (_enemyBehaviour.MaxHealth <= HealthLimit)
                 _enemyBehaviour.MaxHealth += 2;//plus 2 to max health *or decrease here*
             //spawn the next wave here 
-            enemySpawnerBehavior.IsActive = true;
-            //new script for the sides moving here
-
         }
     }
-
 }
