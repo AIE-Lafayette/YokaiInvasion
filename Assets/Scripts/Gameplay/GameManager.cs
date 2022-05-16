@@ -7,10 +7,16 @@ public class GameManager : MonoBehaviour
     private GameObject[] _enemies;
     private EnemySpawnerBehavior enemySpawnerBehavior;
     private EnemyBehaviour _enemyBehaviour;
-    public Text _enemyHealth;
     public Text _enemycount;
     [SerializeField]
+    private int _waveCount;
+    [SerializeField]
     private float HealthLimit;
+
+    public int EnemyWaveCount
+    {
+        get { return _waveCount; }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -25,18 +31,19 @@ public class GameManager : MonoBehaviour
         _enemies = GameObject.FindGameObjectsWithTag("Enemy");
         //then print the text 
         _enemycount.text = "Enemies: " + _enemies.Length.ToString();
-        //add enemy health here
-       // _enemyHealth.text = "Enemies: " + _en
+
 
         //if the start timer is greater than or equal to the max timer 
         if (_enemies.Length == 0 )
         {
+           
             //max health is less than the health limit 
             if (_enemyBehaviour.MaxHealth <= HealthLimit)
                 _enemyBehaviour.MaxHealth += 2;//plus 2 to max health *or decrease here*
             //spawn the next wave here 
+            enemySpawnerBehavior.IsActive = true;
             //new script for the sides moving here
-            return;
+
         }
     }
 
