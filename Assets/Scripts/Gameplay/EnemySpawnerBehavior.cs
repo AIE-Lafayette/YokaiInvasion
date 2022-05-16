@@ -14,13 +14,11 @@ public class EnemySpawnerBehavior : MonoBehaviour
     public int EnemyCount
     {
         get { return _enemyCount.Length; }
-        set { value = _enemyCount.Length; }
     }
-
+    //the abount of waves
     public int WaveCount
     {
         get { return _enemyNumberOfWaves; }
-        set { value = _enemyNumberOfWaves; }
     }
     void Update()
     {
@@ -28,10 +26,12 @@ public class EnemySpawnerBehavior : MonoBehaviour
         _enemyCount = GameObject.FindGameObjectsWithTag("Enemy");
         if (_enemyCount.Length <= 0)
         {
+            //keeps adding in enemyes based on the waves
             for (int i = 0; i <= _enemyNumberOfWaves; i++)
             {
                 EnemyBehaviour spawnedEnemy = Instantiate(_enemy, transform.position, transform.rotation);
             }
+            //incresse amount
             _enemyNumberOfWaves++;
             
         }

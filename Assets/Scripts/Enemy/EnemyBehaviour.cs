@@ -13,7 +13,11 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField]
     private int _speed;
 
-
+    public float Damage
+    {
+        get { return _damage; }
+        set { _damage = value; }
+    }
     public float MaxHealth
     {
         get { return _healthBehavior.MaxHealth;}
@@ -28,10 +32,6 @@ public class EnemyBehaviour : MonoBehaviour
         set { _moveDirection = value; }
     }
 
-    private void Start()
-    {
-        
-    }
     // Update is called once per frame
     void Update()
     {
