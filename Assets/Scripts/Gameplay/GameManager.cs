@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
         //then print the text 
         _enemycount.text = "Enemies: " + enemySpawnerBehavior1.EnemyCount.ToString();
         //if the start timer is greater than or equal to the max timer 
-        if (enemySpawnerBehavior1.EnemyCount <= 0 )
+        if (enemySpawnerBehavior1.EnemyCount <= 0)
         {
             //max health is less than the health limit 
             if (_enemyBehaviour.MaxHealth <= HealthLimit)

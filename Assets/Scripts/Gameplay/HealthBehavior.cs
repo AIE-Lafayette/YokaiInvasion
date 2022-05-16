@@ -17,7 +17,7 @@ public class HealthBehavior : MonoBehaviour
     public float Health
     {
         get { return _health; }
-        
+
     }
     public float MaxHealth
     {
