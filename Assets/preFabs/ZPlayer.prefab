@@ -109,7 +109,6 @@ GameObject:
   - component: {fileID: 5742974361761551085}
   - component: {fileID: 3923458405677812800}
   - component: {fileID: 8338609890622973531}
-  - component: {fileID: -3560632899660784294}
   m_Layer: 0
   m_Name: ZPlayer
   m_TagString: Untagged
@@ -225,21 +224,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1
+  _maxHealth: 0
   _isAlive: 1
   _destroyOnDeath: 1
---- !u!114 &-3560632899660784294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 675629193992820222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be69df3db4f432a41a9de58ca24d0def, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _gun: {fileID: 4433230293350011103}
 --- !u!1 &4212918487032482956
 GameObject:
   m_ObjectHideFlags: 0

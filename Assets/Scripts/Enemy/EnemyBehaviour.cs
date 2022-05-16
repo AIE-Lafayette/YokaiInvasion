@@ -13,6 +13,12 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField]
     private int _speed;
 
+
+    public float MaxHealth
+    {
+        get { return _healthBehavior.MaxHealth;}
+        set { _healthBehavior.MaxHealth = value; }
+    }
     /// <summary>
     /// The speed and direction of the game object.
     /// </summary>
