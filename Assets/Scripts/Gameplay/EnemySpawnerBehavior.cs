@@ -14,13 +14,11 @@ public class EnemySpawnerBehavior : MonoBehaviour
     public int EnemyCount
     {
         get { return _enemyCount.Length; }
-        set { value = _enemyCount.Length; }
     }
     //the abount of waves
     public int WaveCount
     {
         get { return _enemyNumberOfWaves; }
-        set { value = _enemyNumberOfWaves; }
     }
     void Update()
     {
