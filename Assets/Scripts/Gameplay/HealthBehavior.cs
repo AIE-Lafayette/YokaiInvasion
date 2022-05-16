@@ -59,6 +59,11 @@ public class HealthBehavior : MonoBehaviour
 
         //checks if it is dead and deletes on death
         if (!IsAlive && _destroyOnDeath)
+        {
             Destroy(gameObject);
+            if(tag == "Player")
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+            
     }
 }
