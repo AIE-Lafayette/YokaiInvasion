@@ -4,21 +4,36 @@ using UnityEngine;
 
 public class EnemySpawnerBehavior : MonoBehaviour
 {
-    private int _enemyCount;
-
+    //the array that holds the enemies
+    private GameObject[] _enemyCount;
     [SerializeField]
     private EnemyBehaviour _enemy;
+    private int _enemyNumberOfWaves;
+    //how meny enemies 
 
- 
-    private void Update()
+    public int EnemyCount
     {
-        if (_enemyCount <= 0)
+        get { return _enemyCount.Length; }
+        set { value = _enemyCount.Length; }
+    }
+
+    public int WaveCount
+    {
+        get { return _enemyNumberOfWaves; }
+        set { value = _enemyNumberOfWaves; }
+    }
+    void Update()
+    {
+        
+        _enemyCount = GameObject.FindGameObjectsWithTag("Enemy");
+        if (_enemyCount.Length <= 0)
         {
-            EnemyBehaviour spawnedEnemy = Instantiate(_enemy, transform.position, transform.rotation);
-            _enemyCount++;
-
+            for (int i = 0; i <= _enemyNumberOfWaves; i++)
+            {
+                EnemyBehaviour spawnedEnemy = Instantiate(_enemy, transform.position, transform.rotation);
+            }
+            _enemyNumberOfWaves++;
+            
         }
-
-
     }
 }
