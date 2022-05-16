@@ -13,7 +13,11 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField]
     private int _speed;
 
-
+    public float Damage
+    {
+        get { return _damage; }
+        set { _damage = value; }
+    }
     public float MaxHealth
     {
         get { return _healthBehavior.MaxHealth;}
