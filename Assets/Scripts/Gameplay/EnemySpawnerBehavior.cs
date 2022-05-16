@@ -23,7 +23,7 @@ public class EnemySpawnerBehavior : MonoBehaviour
                 EnemyBehaviour spawnedEnemy = Instantiate(_enemy, transform.position, transform.rotation);
             }
 
-            return;
+            
         }
     }
 }
