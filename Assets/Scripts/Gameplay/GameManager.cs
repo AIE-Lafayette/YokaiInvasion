@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     private GameObject[] _enemies;
     private EnemySpawnerBehavior enemySpawnerBehavior;
     private EnemyBehaviour _enemyBehaviour;
+    public Text _enemyHealth;
     public Text _enemycount;
     [SerializeField]
     private float HealthLimit;
@@ -24,6 +25,8 @@ public class GameManager : MonoBehaviour
         _enemies = GameObject.FindGameObjectsWithTag("Enemy");
         //then print the text 
         _enemycount.text = "Enemies: " + _enemies.Length.ToString();
+        //add enemy health here
+       // _enemyHealth.text = "Enemies: " + _en
 
         //if the start timer is greater than or equal to the max timer 
         if (_enemies.Length == 0 )
