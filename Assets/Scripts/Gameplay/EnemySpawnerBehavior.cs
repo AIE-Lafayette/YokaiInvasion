@@ -4,18 +4,28 @@ using UnityEngine;
 
 public class EnemySpawnerBehavior : MonoBehaviour
 {
-    private GameObject[] _enemyCount;
-
     [SerializeField]
     private EnemyBehaviour _enemy;
+    private GameManager _gamemanger;
+    private bool _isActive;
+    public bool IsActive 
+    {
+        get {return _isActive; }
+        set { value = _isActive; }
+    }
 
 
+ 
     private void Update()
     {
-        _enemyCount = GameObject.FindGameObjectsWithTag("Enemy");
-        if (_enemyCount.Length <= 0)
+        if (_isActive = true)
         {
-            EnemyBehaviour spawnedEnemy = Instantiate(_enemy, transform.position, transform.rotation);
+            for (int i = 0; i < _gamemanger.EnemyWaveCount; i++)
+            {
+                EnemyBehaviour spawnedEnemy = Instantiate(_enemy, transform.position, transform.rotation);
+            }
+           
+            _isActive = false;
 
             return;
         }
