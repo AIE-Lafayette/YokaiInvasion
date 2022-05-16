@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NinjaPowerUpBehavior : UsePowerUpBehavior
 {
-    [SerializeField]
+
     private UsePowerUpBehavior _abilityScript;
     [SerializeField]
     private GameObject _ninja;
@@ -13,6 +13,11 @@ public class NinjaPowerUpBehavior : UsePowerUpBehavior
     {
         get { return _ninja; }
         set { _ninja = value; }
+    }
+
+    private void Awake()
+    {
+        _abilityScript.CurrentPowerUp = new NinjaPowerUpBehavior();
     }
 
     /// <summary>

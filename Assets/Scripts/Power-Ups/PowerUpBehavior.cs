@@ -2,12 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
+
 public class PowerUpBehavior : MonoBehaviour
 {
     [SerializeField]
     GameObject _owner;
     private GameObject _visualPrefab;
+
+    [SerializeField]
+    private PowerUpBehavior _currentPowerUp;
+
+    public PowerUpBehavior CurrentPowerUp
+    {
+        get { return _currentPowerUp; }
+        set { _currentPowerUp = value; }
+    }
 
     public GameObject Owner
     {

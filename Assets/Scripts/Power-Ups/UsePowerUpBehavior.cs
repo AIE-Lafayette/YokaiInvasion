@@ -2,42 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [System.Serializable]
-public class UsePowerUpBehavior : MonoBehaviour
+public class UsePowerUpBehavior : PowerUpBehavior
 {
-    [SerializeField]
-    private PowerUpBehavior _currentPowerUp;
-
-    public PowerUpBehavior CurrentPowerUp
-    {
-        get { return _currentPowerUp; }
-        set { _currentPowerUp = value; }
-    }
-
     /// <summary>
     /// Activates the current powerUp
     /// </summary>
     /// <param name="arg">the argument that needs to be passed through</param>
     public void Activate(params object[] arg)
     {
-        if (_currentPowerUp is null)
-            return;
+        //if (_currentPowerUp is null)
+        //    return;
 
-        _currentPowerUp.Activate(arg);
+        CurrentPowerUp.Activate(arg);
     }
-
-    
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Ninja")
         {
-            NinjaPowerUpBehavior enemyAbility = other.GetComponent<NinjaPowerUpBehavior>();
+            PowerUpBehavior enemyAbility = other.GetComponent<PowerUpBehavior>();
             if (enemyAbility)
             {
-                GetComponent<NinjaPowerUpBehavior>().CurrentPowerUp = enemyAbility.CurrentPowerUp;
+                GetComponent<PowerUpBehavior>().CurrentPowerUp = enemyAbility.CurrentPowerUp;
+                Activate();
                 Destroy(other.gameObject);
             }
-            Activate();
         }
     }
 }
