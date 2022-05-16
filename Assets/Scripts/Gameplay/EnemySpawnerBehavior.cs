@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class EnemySpawnerBehavior : MonoBehaviour
 {
-    private int _enemyCount;
+    private GameObject[] _enemyCount;
 
     [SerializeField]
     private EnemyBehaviour _enemy;
 
- 
+
     private void Update()
     {
-        if (_enemyCount <= 0)
+        _enemyCount = GameObject.FindGameObjectsWithTag("Enemy");
+        if (_enemyCount.Length <= 0)
         {
             EnemyBehaviour spawnedEnemy = Instantiate(_enemy, transform.position, transform.rotation);
-            _enemyCount++;
 
+            return;
         }
-
-
     }
 }
