@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8401789039116213522}
   - component: {fileID: 7335270417012486934}
   - component: {fileID: 7749460261752766541}
+  - component: {fileID: 276171100210581404}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Enemy
@@ -97,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 7
+  _maxHealth: 7
   _isAlive: 1
   _destroyOnDeath: 1
 --- !u!54 &7335270417012486934
@@ -130,6 +132,19 @@ MonoBehaviour:
   _enemyBehaviour: {fileID: 7749460261752766541}
   _damage: 5
   _speed: 40
+--- !u!65 &276171100210581404
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8401789039116213520}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1, y: 1.1, z: 1.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8401789037984196611
 MonoBehaviour:
   m_ObjectHideFlags: 0

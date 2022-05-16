@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1
+  _maxHealth: 1
   _isAlive: 1
   _destroyOnDeath: 1
 --- !u!136 &8534351617684221675
