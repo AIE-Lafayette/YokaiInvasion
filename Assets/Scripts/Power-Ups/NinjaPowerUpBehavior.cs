@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NinjaPowerUpBehavior : PowerUpBehavior
+public class NinjaPowerUpBehavior : UsePowerUpBehavior
 {
+    [SerializeField]
     private UsePowerUpBehavior _abilityScript;
     [SerializeField]
     private GameObject _ninja;
@@ -17,7 +18,7 @@ public class NinjaPowerUpBehavior : PowerUpBehavior
     /// <summary>
     /// Turns on the ninjas and can start using there helps
     /// </summary>
-    public override void Activate(params object[] arguments)
+    public void Activate(params object[] arguments)
     {
         // Creates an instance of the Routine Behavior or copies the instance of it.
         RoutineBehaviour routineBehavior = RoutineBehaviour.Instance;

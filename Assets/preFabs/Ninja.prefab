@@ -191,3 +191,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _owner: {fileID: 9203121133887263188}
+  _ninja: {fileID: 9203121133887263188}
