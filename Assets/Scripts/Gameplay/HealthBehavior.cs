@@ -17,7 +17,7 @@ public class HealthBehavior : MonoBehaviour
     public float Health
     {
         get { return _health; }
-        
+
     }
     public float MaxHealth
     {
@@ -61,9 +61,6 @@ public class HealthBehavior : MonoBehaviour
         if (!IsAlive && _destroyOnDeath)
         {
             Destroy(gameObject);
-            if(tag == "Player")
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-            
     }
 }

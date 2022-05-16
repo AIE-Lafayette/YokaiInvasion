@@ -22,7 +22,7 @@ public class EnemySpawnerBehavior : MonoBehaviour
     }
     void Update()
     {
-        
+
         _enemyCount = GameObject.FindGameObjectsWithTag("Enemy");
         if (_enemyCount.Length <= 0)
         {
@@ -33,7 +33,7 @@ public class EnemySpawnerBehavior : MonoBehaviour
             }
             //incresse amount
             _enemyNumberOfWaves++;
-            
+
         }
     }
 }
