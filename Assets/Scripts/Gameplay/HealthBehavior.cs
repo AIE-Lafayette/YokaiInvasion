@@ -61,9 +61,6 @@ public class HealthBehavior : MonoBehaviour
         if (!IsAlive && _destroyOnDeath)
         {
             Destroy(gameObject);
-            if(tag == "Player")
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-            
     }
 }

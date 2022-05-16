@@ -4,15 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PlayerBehaviour1 : HealthBehavior
 {
-    private EnemyBehaviour enemyBehaviour;
     public override void OnDeath()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         base.OnDeath();
     }
     private void OnTriggerEnter(Collider other)
     {
+        EnemyBehaviour enemyBehaviour = other.GetComponent<EnemyBehaviour>();
         if (transform.position == other.transform.position)
-            TakeDamage(2);
+            TakeDamage(enemyBehaviour.Damage);
     }
 }
