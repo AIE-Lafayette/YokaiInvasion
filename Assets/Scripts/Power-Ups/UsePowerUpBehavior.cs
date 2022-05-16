@@ -25,6 +25,7 @@ public class UsePowerUpBehavior : PowerUpBehavior
     {
         if (other.tag == "Ninja")
         {
+            _currentPowerUp = new NinjaPowerUpBehavior();
             Activate();
         }
     }

@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 2253324984092716969}
   - component: {fileID: 2416203764978616297}
   - component: {fileID: 6338833043378500629}
+  - component: {fileID: 8549755078791936131}
   m_Layer: 0
   m_Name: Ninja
   m_TagString: Player
@@ -177,3 +178,16 @@ CapsuleCollider:
   m_Height: 2.1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8549755078791936131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9203121133887263188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d8a5a0bf3f16054eae150d92b4c6f11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _owner: {fileID: 9203121133887263188}
