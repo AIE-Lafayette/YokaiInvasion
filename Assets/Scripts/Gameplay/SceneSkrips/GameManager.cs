@@ -12,10 +12,8 @@ public class GameManager : MonoBehaviour
     public GameState State;
 
     public static event System.Action<GameState> OnGmaeStateChange;
-    [SerializeField]
-    private EnemySpawnerBehavior enemySpawnerBehavior1, enemySpawnerBehavior2,
-                                 enemySpawnerBehavior3, enemySpawnerBehavior4,
-                                 enemySpawnerBehavior5;
+
+    private EnemySpawnerBehavior enemySpawnerBehavior;
 
     private EnemyBehaviour _enemyBehaviour;
     private int _enemyCount;
@@ -63,19 +61,11 @@ public class GameManager : MonoBehaviour
     }
     public void setActiveSpawners()
     {
-        enemySpawnerBehavior1.IsActive = true;
-        enemySpawnerBehavior2.IsActive = true;
-        enemySpawnerBehavior3.IsActive = true;
-        enemySpawnerBehavior4.IsActive = true;
-        enemySpawnerBehavior5.IsActive = true;
+        enemySpawnerBehavior.IsActive = true;
     }
     public void caculatePoint()
     {
-        _enemyCount = enemySpawnerBehavior1.EnemyCount +
-                      enemySpawnerBehavior2.EnemyCount +
-                      enemySpawnerBehavior3.EnemyCount +
-                      enemySpawnerBehavior4.EnemyCount +
-                      enemySpawnerBehavior5.EnemyCount;
+        _enemyCount = enemySpawnerBehavior.EnemyCount;
     }
     public void AddPoint()
     {

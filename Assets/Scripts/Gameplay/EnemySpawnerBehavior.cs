@@ -26,6 +26,11 @@ public class EnemySpawnerBehavior : MonoBehaviour
     {
         get { return _enemyNumberOfWaves; }
     }
+    private void Start()
+    {
+        IsActive = true;
+        GameManager.Instace.caculatePoint();
+    }
     void Update()
     {
         if (IsActive)
