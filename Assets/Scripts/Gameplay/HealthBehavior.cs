@@ -17,7 +17,7 @@ public class HealthBehavior : MonoBehaviour
     public float Health
     {
         get { return _health; }
-        
+
     }
     public float MaxHealth
     {
@@ -59,6 +59,8 @@ public class HealthBehavior : MonoBehaviour
 
         //checks if it is dead and deletes on death
         if (!IsAlive && _destroyOnDeath)
+        {
             Destroy(gameObject);
+        }
     }
 }

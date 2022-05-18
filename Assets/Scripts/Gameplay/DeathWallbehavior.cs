@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class DeathWallbehavior : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if(GameObject.FindWithTag("Enemy"))
+        if (GameObject.FindWithTag("Player"))
         {
-            Destroy(GameObject.FindWithTag("Enemy"));
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+        if (GameObject.FindWithTag("Untagged"))
+            return;
     }
 }
