@@ -8,9 +8,14 @@ public class EnemySpawnerBehavior : MonoBehaviour
     private GameObject[] _enemyCount;
     [SerializeField]
     private EnemyBehaviour _enemy;
+    private bool _isActive = false;
     private int _enemyNumberOfWaves;
     //how meny enemies 
-
+    public bool IsActive
+    {
+        get {return _isActive; }
+        set {_isActive = value; }
+    }
     public int EnemyCount
     {
         get { return _enemyCount.Length; }
@@ -22,9 +27,9 @@ public class EnemySpawnerBehavior : MonoBehaviour
     }
     void Update()
     {
-        
+
         _enemyCount = GameObject.FindGameObjectsWithTag("Enemy");
-        if (_enemyCount.Length <= 0)
+        if (IsActive)
         {
             //keeps adding in enemyes based on the waves
             for (int i = 0; i <= _enemyNumberOfWaves; i++)
@@ -33,7 +38,7 @@ public class EnemySpawnerBehavior : MonoBehaviour
             }
             //incresse amount
             _enemyNumberOfWaves++;
-            
+            IsActive = false;
         }
     }
 }

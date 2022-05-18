@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class PlayerHealthBehaviour : HealthBehavior
+public class PlayerBehaviour1 : HealthBehavior
 {
     public override void OnDeath()
     {
         base.OnDeath();
+        GameManager.Instace.UpdateGamestate(GameState.EndScreen);
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -14,5 +15,4 @@ public class PlayerHealthBehaviour : HealthBehavior
         if (transform.position == other.transform.position)
             TakeDamage(enemyBehaviour.Damage);
     }
-
 }
