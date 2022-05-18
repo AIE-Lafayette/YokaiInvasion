@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Sc_MainMenu : MonoBehaviour
 {
-    [SerializeField]
-   private GameManager _gamemanger = GameManager.Instace;
+   
     public GameObject MainMenu;
     void Awake()
     {

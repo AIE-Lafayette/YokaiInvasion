@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ExitMenuBehaviour : MonoBehaviour
 {
-    [SerializeField]
-    private GameManager _gamemanger = GameManager.Instace;
+   
     public GameObject ExitMenu;
     void Awake()
     {

@@ -609,6 +609,7 @@ MonoBehaviour:
   enemySpawnerBehavior4: {fileID: 0}
   enemySpawnerBehavior5: {fileID: 0}
   _enemycount: {fileID: 1577610415}
+  _enemyWave: {fileID: 1067644021}
   HealthLimit: 3
 --- !u!4 &1466014808
 Transform:

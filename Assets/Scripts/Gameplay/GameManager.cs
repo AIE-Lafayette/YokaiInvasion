@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     private EnemyBehaviour _enemyBehaviour;
     public Text _enemycount;
     [SerializeField]
+    private int _waveCount;
+    [SerializeField]
     private float HealthLimit;
     private void Awake()
     {
