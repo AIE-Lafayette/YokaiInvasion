@@ -7,21 +7,6 @@ public class ExitMenuBehaviour : MonoBehaviour
 {
    
     public GameObject ExitMenu;
-    void Awake()
-    {
-
-        GameManager.OnGmaeStateChange += GameManager_OnGmaeStateChange;
-    }
-
-    private void GameManager_OnGmaeStateChange(GameState obj)
-    {
-
-    }
-
-    void OnDestroy()
-    {
-        GameManager.OnGmaeStateChange -= GameManager_OnGmaeStateChange;
-    }
     // Start is called before the first frame update
     void Start()
     {

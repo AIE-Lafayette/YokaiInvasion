@@ -18,42 +18,24 @@ public class GameManager : MonoBehaviour
                                  enemySpawnerBehavior5;
 
     private EnemyBehaviour _enemyBehaviour;
+    private int _enemyCount;
     public Text _enemycount;
-    [SerializeField]
-    private int _waveCount;
-    [SerializeField]
-    private float HealthLimit;
-    private void Awake()
+    private void Awake() { Instace = this;}
+    private void Start()
     {
-        Instace = this;
+        _enemycount.text = "Enemies: " + _enemyCount.ToString();
+        caculatePoint();
     }
     // Update is called once per frame
     void Update()
     {
-        //then print the text 
-        _enemycount.text = "Enemies: " + (enemySpawnerBehavior1.EnemyCount + 
-                                          enemySpawnerBehavior2.EnemyCount + 
-                                          enemySpawnerBehavior3.EnemyCount + 
-                                          enemySpawnerBehavior4.EnemyCount +
-                                          enemySpawnerBehavior5.EnemyCount).ToString();
-        //if the start timer is greater than or equal to the max timer 
-        if (enemySpawnerBehavior1.EnemyCount <= 0)
+        if (_enemyCount == 0)
         {
-            ////max health is less than the health limit 
-            //if (_enemyBehaviour.MaxHealth <= HealthLimit)
-            //    _enemyBehaviour.MaxHealth += 2;//plus 2 to max health *or decrease here*
             setActiveSpawners();
         }
     }
 
-    public void setActiveSpawners()
-    {
-        enemySpawnerBehavior1.IsActive = true;
-        enemySpawnerBehavior2.IsActive = true;
-        enemySpawnerBehavior3.IsActive = true;
-        enemySpawnerBehavior4.IsActive = true;
-        enemySpawnerBehavior5.IsActive = true;
-    }
+    
     public void UpdateGamestate(GameState newState)
     {
         State = newState;
@@ -79,8 +61,32 @@ public class GameManager : MonoBehaviour
         }
         OnGmaeStateChange?.Invoke(newState);
     }
-
-    
+    public void setActiveSpawners()
+    {
+        enemySpawnerBehavior1.IsActive = true;
+        enemySpawnerBehavior2.IsActive = true;
+        enemySpawnerBehavior3.IsActive = true;
+        enemySpawnerBehavior4.IsActive = true;
+        enemySpawnerBehavior5.IsActive = true;
+    }
+    public void caculatePoint()
+    {
+        _enemyCount = enemySpawnerBehavior1.EnemyCount +
+                      enemySpawnerBehavior2.EnemyCount +
+                      enemySpawnerBehavior3.EnemyCount +
+                      enemySpawnerBehavior4.EnemyCount +
+                      enemySpawnerBehavior5.EnemyCount;
+    }
+    public void AddPoint()
+    {
+        _enemyCount += 1;
+        _enemycount.text = "Enemies: " + _enemyCount.ToString();
+    }
+    public void SubtractPoint()
+    {
+        _enemyCount -= 1;
+        _enemycount.text = "Enemies: " + _enemyCount.ToString();
+    }
 }
 
 public enum GameState { 

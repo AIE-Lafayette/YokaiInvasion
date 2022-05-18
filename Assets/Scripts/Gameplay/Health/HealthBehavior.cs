@@ -6,47 +6,31 @@ using UnityEngine;
 public class HealthBehavior : MonoBehaviour
 {
     [SerializeField]
-    private float _health;
+    private float _health, _maxHealth;
     [SerializeField]
-    private float _maxHealth;
-    [SerializeField]
-    private bool _isAlive;
-    [SerializeField]
-    private bool _destroyOnDeath;
+    private bool _isAlive, _destroyOnDeath;
 
-    public float Health
-    {
-        get { return _health; }
+    public float Health { get { return _health; } set { _health = value; }}
+    public float MaxHealth {get { return _maxHealth; } set { _maxHealth = value; }}
 
-    }
-    public float MaxHealth
-    {
-        get { return _maxHealth; }
-        set { _maxHealth = value; }
-    }
-
-
-    public bool IsAlive
-    {
-        get { return _isAlive; }
+    public bool IsAlive {get { return _isAlive; }}
+    private void Awake() 
+    { 
+        _health = _maxHealth;
     }
 
     //deals the damage amount and sends back the result
     public virtual float TakeDamage(float damgeAmount)
     {
         _health -= damgeAmount;
-
         return damgeAmount;
     }
-
     public virtual void OnDeath()
     {
+        if (tag == "Enemy")
+            GameManager.Instace.SubtractPoint();
         //sets it to be not alive
         _isAlive = false;
-    }
-    private void Awake()
-    {
-        _health = _maxHealth;
     }
     // Update is called once per frame
     void Update()
@@ -59,8 +43,6 @@ public class HealthBehavior : MonoBehaviour
 
         //checks if it is dead and deletes on death
         if (!IsAlive && _destroyOnDeath)
-        {
-            Destroy(gameObject);
-        }
+         Destroy(gameObject);
     }
 }

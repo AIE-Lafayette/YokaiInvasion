@@ -5,7 +5,8 @@ using UnityEngine;
 public class EnemySpawnerBehavior : MonoBehaviour
 {
     //the array that holds the enemies
-    private GameObject[] _enemyCount;
+    //private GameObject[] _enemyCount;
+    private int _enemyCount;
     [SerializeField]
     private EnemyBehaviour _enemy;
     private bool _isActive = false;
@@ -18,7 +19,7 @@ public class EnemySpawnerBehavior : MonoBehaviour
     }
     public int EnemyCount
     {
-        get { return _enemyCount.Length; }
+        get { return _enemyCount; }
     }
     //the abount of waves
     public int WaveCount
@@ -27,17 +28,12 @@ public class EnemySpawnerBehavior : MonoBehaviour
     }
     void Update()
     {
-
-        _enemyCount = GameObject.FindGameObjectsWithTag("Enemy");
         if (IsActive)
         {
             //keeps adding in enemyes based on the waves
-            for (int i = 0; i <= _enemyNumberOfWaves; i++)
-            {
-                EnemyBehaviour spawnedEnemy = Instantiate(_enemy, transform.position, transform.rotation);
-            }
+            EnemyBehaviour spawnedEnemy = Instantiate(_enemy, transform.position, transform.rotation);
             //incresse amount
-            _enemyNumberOfWaves++;
+            GameManager.Instace.AddPoint();
             IsActive = false;
         }
     }

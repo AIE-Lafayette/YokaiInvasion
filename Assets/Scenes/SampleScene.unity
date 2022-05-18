@@ -360,8 +360,6 @@ MonoBehaviour:
   enemySpawnerBehavior4: {fileID: 1663957889}
   enemySpawnerBehavior5: {fileID: 1937502044}
   _enemycount: {fileID: 932874495}
-  _waveCount: 0
-  HealthLimit: 0
 --- !u!4 &189101777
 Transform:
   m_ObjectHideFlags: 0
@@ -1542,7 +1540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6051660920203556128, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.01
+      value: -0.0663296
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
