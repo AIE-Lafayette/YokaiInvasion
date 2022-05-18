@@ -11,7 +11,7 @@ public class PlayerHealthBehaviour : HealthBehavior
     private void OnTriggerEnter(Collider other)
     {
         EnemyBehaviour enemyBehaviour = other.GetComponent<EnemyBehaviour>();
-        if (transform.position == other.transform.position)
+        if (tag != other.tag)
             TakeDamage(enemyBehaviour.Damage);
     }
 
