@@ -131,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyBehaviour: {fileID: 7749460261752766541}
   _damage: 5
-  _speed: 10
+  _speed: 1
 --- !u!65 &276171100210581404
 BoxCollider:
   m_ObjectHideFlags: 0

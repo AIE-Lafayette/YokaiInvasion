@@ -18,7 +18,11 @@ public class GameManager : MonoBehaviour
     private EnemyBehaviour _enemyBehaviour;
     private int _enemyCount;
     public Text _enemycount;
-    private void Awake() { Instace = this;}
+    private void Awake() 
+    {
+        Instace = this;
+       
+    }
     private void Start()
     {
         _enemycount.text = "Enemies: " + _enemyCount.ToString();
@@ -29,7 +33,7 @@ public class GameManager : MonoBehaviour
     {
         if (_enemyCount == 0)
         {
-            setActiveSpawners();
+            EnemySpawnerBehavior.EnemySpawnerInstance.SettheSetActive();
         }
     }
 
@@ -61,7 +65,7 @@ public class GameManager : MonoBehaviour
     }
     public void setActiveSpawners()
     {
-        enemySpawnerBehavior.IsActive = true;
+        EnemySpawnerBehavior.EnemySpawnerInstance.IsActive = true;
     }
     public void caculatePoint()
     {
