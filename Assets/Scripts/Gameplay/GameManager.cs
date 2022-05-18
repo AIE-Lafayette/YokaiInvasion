@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instace;
@@ -19,7 +21,10 @@ public class GameManager : MonoBehaviour
     public Text _enemycount;
     [SerializeField]
     private float HealthLimit;
-
+    private void Awake()
+    {
+        Instace = this;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -53,20 +58,27 @@ public class GameManager : MonoBehaviour
         switch (newState)
         {
             case GameState.Startmenu:
-                SceneManager.SetActiveScene(SceneManager.GetSceneByName("StartScene"));
+                SceneManager.LoadScene("StartScreen", LoadSceneMode.Single);
+                // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+              //  SceneManager.SetActiveScene(SceneManager.GetSceneByName("DeathScene"));
                 break;
             case GameState.SpawnWave:
+                SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
                 break;
             case GameState.AdvanceForward:
                 break;
             case GameState.EndScreen:
-                SceneManager.SetActiveScene(SceneManager.GetSceneByName("DeathtScene"));
+                SceneManager.LoadScene("DeathScene",LoadSceneMode.Single );
+               // SceneManager.SetActiveScene(SceneManager.GetSceneAt(2));
+                //SceneManager.SetActiveScene(SceneManager.GetSceneByName("DeathScene"));
                 break;
             default:
                 break;
         }
         OnGmaeStateChange?.Invoke(newState);
     }
+
+    
 }
 
 public enum GameState { 

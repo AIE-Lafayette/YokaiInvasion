@@ -7,6 +7,7 @@ public class PlayerBehaviour1 : HealthBehavior
     public override void OnDeath()
     {
         base.OnDeath();
+        GameManager.Instace.UpdateGamestate(GameState.EndScreen);
     }
     private void OnTriggerEnter(Collider other)
     {
