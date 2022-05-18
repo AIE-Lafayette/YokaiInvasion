@@ -23,7 +23,7 @@ public class NinjaPowerUpBehavior : UsePowerUpBehavior
     /// <summary>
     /// Turns on the ninjas and can start using there helps
     /// </summary>
-    public void Activate(params object[] arguments)
+    public override void Activate(params object[] arguments)
     {
         // Creates an instance of the Routine Behavior or copies the instance of it.
         RoutineBehaviour routineBehavior = RoutineBehaviour.Instance;

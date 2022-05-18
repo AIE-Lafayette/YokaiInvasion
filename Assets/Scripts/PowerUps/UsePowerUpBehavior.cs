@@ -8,10 +8,10 @@ public class UsePowerUpBehavior : PowerUpBehavior
     /// Activates the current powerUp
     /// </summary>
     /// <param name="arg">the argument that needs to be passed through</param>
-    public void Activate(params object[] arg)
+    public override void Activate(params object[] arg)
     {
-        //if (_currentPowerUp is null)
-        //    return;
+        if (CurrentPowerUp is null)
+            return;
 
         CurrentPowerUp.Activate(arg);
     }
@@ -20,10 +20,10 @@ public class UsePowerUpBehavior : PowerUpBehavior
     {
         if (other.tag == "Ninja")
         {
-            PowerUpBehavior enemyAbility = other.GetComponent<PowerUpBehavior>();
-            if (enemyAbility)
+            PowerUpBehavior powerUp = other.GetComponent<PowerUpBehavior>();
+            if (powerUp)
             {
-                GetComponent<PowerUpBehavior>().CurrentPowerUp = enemyAbility.CurrentPowerUp;
+                GetComponent<PowerUpBehavior>().CurrentPowerUp = powerUp.CurrentPowerUp;
                 Activate();
                 Destroy(other.gameObject);
             }
