@@ -216,6 +216,57 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 4.092, y: -18.797, z: 22.467}
+--- !u!1 &655677452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 655677454}
+  - component: {fileID: 655677453}
+  m_Layer: 0
+  m_Name: Gamemanager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &655677453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655677452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a010c6327ed318541ac25bc388c5a3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  State: 0
+  enemySpawnerBehavior1: {fileID: 0}
+  enemySpawnerBehavior2: {fileID: 0}
+  enemySpawnerBehavior3: {fileID: 0}
+  enemySpawnerBehavior4: {fileID: 0}
+  enemySpawnerBehavior5: {fileID: 0}
+  _enemycount: {fileID: 0}
+  HealthLimit: 0
+--- !u!4 &655677454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655677452}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6504345, y: -1.3385282, z: 9.184326}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &843678811
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,6 +533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1c2ece8268c15d49a2237e6d8448f6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gamemanger: {fileID: 655677453}
   MainMenu: {fileID: 1497133944}
 --- !u!114 &1497133946
 MonoBehaviour:
