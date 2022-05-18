@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class NinjaPowerUpBehavior : UsePowerUpBehavior
 {
-
     [SerializeField]
     private GameObject _ninja;
+    private bool _active = false;
 
     public GameObject Ninja
     {
@@ -36,11 +36,18 @@ public class NinjaPowerUpBehavior : UsePowerUpBehavior
 
     private void SummonHelper()
     {
-
+        if (_active)
+        {
+            //instatiats the bullet and the position that it spawns, and its rotation.
+            GameObject helper = Instantiate(_ninja.gameObject, transform.position, transform.rotation);
+            helper.transform.SetParent(Owner.transform);
+            _active = false;
+        }
 
         //once its not active removes the helper
         if (_ninja.activeSelf == false)
         {
+            _active = false;
             Destroy(_ninja);
         }
     }
