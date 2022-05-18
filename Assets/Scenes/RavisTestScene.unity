@@ -134,10 +134,6 @@ PrefabInstance:
       propertyPath: _owner
       value: 
       objectReference: {fileID: 855004021}
-    - target: {fileID: 8549755078791936131, guid: a1b2bf01791a91546bb5ce6d096882ec, type: 3}
-      propertyPath: _owner
-      value: 
-      objectReference: {fileID: 855004021}
     - target: {fileID: 9203121133887263176, guid: a1b2bf01791a91546bb5ce6d096882ec, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -188,7 +184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9203121133887263188, guid: a1b2bf01791a91546bb5ce6d096882ec, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1b2bf01791a91546bb5ce6d096882ec, type: 3}

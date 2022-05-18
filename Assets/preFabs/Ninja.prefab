@@ -193,9 +193,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d8a5a0bf3f16054eae150d92b4c6f11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _owner: {fileID: 0}
-  _currentPowerUp: {fileID: 0}
-  _ninja: {fileID: 9203121133887263188}
+  _owner: {fileID: 9203121133887263188}
+  _currentPowerUp: {fileID: 8549755078791936131}
+  _ninjaRef: {fileID: 9203121133887263188}
 --- !u!114 &2019202065
 MonoBehaviour:
   m_ObjectHideFlags: 0
