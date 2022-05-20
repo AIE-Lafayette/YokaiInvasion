@@ -13,6 +13,8 @@ public class PlayerBehaviour1 : HealthBehavior
     {
         EnemyBehaviour enemyBehaviour = other.GetComponent<EnemyBehaviour>();
         if (transform.position == other.transform.position)
+        {
             TakeDamage(enemyBehaviour.Damage);
+        } 
     }
 }

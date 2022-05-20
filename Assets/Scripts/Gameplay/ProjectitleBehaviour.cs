@@ -14,6 +14,11 @@ public class ProjectitleBehaviour : MonoBehaviour
     private float _currentLifeTime;
     private Rigidbody _rigidbody;
 
+    public float Damage
+    {
+        get { return _damage; }
+    }
+
     public string OwnerTag
     {
         get { return _ownerTag; }

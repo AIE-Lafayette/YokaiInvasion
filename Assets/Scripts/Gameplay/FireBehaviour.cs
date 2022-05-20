@@ -16,6 +16,11 @@ public class FireBehaviour : MonoBehaviour
     [SerializeField]
     private GameObject _owner;
 
+    public float BulletForce
+    {
+        get { return _bulletForce; }
+    }
+
     private void Awake()
     {
         bulletBehaviour = GetComponent<ProjectitleBehaviour>();

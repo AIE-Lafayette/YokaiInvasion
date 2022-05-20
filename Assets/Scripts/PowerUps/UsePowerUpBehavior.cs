@@ -18,15 +18,17 @@ public class UsePowerUpBehavior : PowerUpBehavior
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Ninja")
+        if (other.tag == "Rage")
         {
-            PowerUpBehavior powerUp = other.GetComponent<PowerUpBehavior>();
-            if (powerUp)
-            {
-                GetComponent<PowerUpBehavior>().CurrentPowerUp = powerUp.CurrentPowerUp;
-                Activate();
-                Destroy(other.gameObject);
-            }
+            //PowerUpBehavior powerUp = other.GetComponent<PowerUpBehavior>();
+            //if (powerUp)
+            //{
+            //    GetComponent<PowerUpBehavior>().CurrentPowerUp = powerUp.CurrentPowerUp;
+            //    Activate();
+
+            //}
+
+            Destroy(other.gameObject);
         }
     }
 }
