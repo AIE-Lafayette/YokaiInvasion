@@ -10,7 +10,7 @@ public class EnemySpawnerBehavior : MonoBehaviour
     private int _enemyCount;
     [SerializeField]
     private EnemyBehaviour _enemy;
-    public bool _isActive;
+    public static bool _isActive;
     private int _enemyNumberOfWaves;
     //how meny enemies 
     public bool IsActive {get {return _isActive; } set { _isActive = value; } }
@@ -20,12 +20,11 @@ public class EnemySpawnerBehavior : MonoBehaviour
     private void Awake() { EnemySpawnerInstance = this;}
     private void Start()
     {
-        IsActive = true;
+        SettheSetActive();
         GameManager.Instace.caculatePoint();
     }
     void Update()
     {
-        
         if (IsActive)
         {
             //keeps adding in enemyes based on the waves
@@ -37,6 +36,6 @@ public class EnemySpawnerBehavior : MonoBehaviour
     }
     public void SettheSetActive()
     {
-        GameManager.Instace.setActiveSpawners();
+        GameManager.Instace.setActiveSpawners(this);
     }
 }

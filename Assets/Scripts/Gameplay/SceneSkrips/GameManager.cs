@@ -16,12 +16,11 @@ public class GameManager : MonoBehaviour
     private EnemySpawnerBehavior enemySpawnerBehavior;
 
     private EnemyBehaviour _enemyBehaviour;
-    private int _enemyCount;
+    public int _enemyCount;
     public Text _enemycount;
     private void Awake() 
     {
         Instace = this;
-       
     }
     private void Start()
     {
@@ -34,7 +33,7 @@ public class GameManager : MonoBehaviour
         if (_enemyCount == 0)
         {
             EnemySpawnerBehavior.EnemySpawnerInstance.SettheSetActive();
-            
+            //setActiveSpawners();
         }
     }
 
@@ -60,16 +59,11 @@ public class GameManager : MonoBehaviour
         }
         OnGmaeStateChange?.Invoke(newState);
     }
-    public void setActiveSpawners()
+    public void setActiveSpawners(EnemySpawnerBehavior enemySpawnerBehavior)
     {
-        
-        //EnemySpawnerBehavior._isActive = true;
-        EnemySpawnerBehavior.EnemySpawnerInstance.IsActive = true;
-        EnemySpawnerBehavior.EnemySpawnerInstance.IsActive = true;
-        EnemySpawnerBehavior.EnemySpawnerInstance.IsActive = true;
-        EnemySpawnerBehavior.EnemySpawnerInstance.IsActive = true;
-        EnemySpawnerBehavior.EnemySpawnerInstance.IsActive = true;
-
+        bool settrue = true;
+        enemySpawnerBehavior.IsActive = settrue; 
+        //EnemySpawnerBehavior.EnemySpawnerInstance.IsActive = true;
     }
     public void caculatePoint()
     {
