@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletRef: {fileID: 6206681611907711863, guid: e05cf1656fded1549b165903eb5d556c, type: 3}
   _bulletForce: 20
-  _owner: {fileID: 9203121133887263188}
+  _owner: {fileID: 0}
 --- !u!1 &9203121133887263188
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 2416203764978616297}
   - component: {fileID: 6338833043378500629}
   - component: {fileID: 8549755078791936131}
-  - component: {fileID: 8296429663228973084}
+  - component: {fileID: 4788930567351141112}
   m_Layer: 0
   m_Name: Ninja
   m_TagString: Player
@@ -78,7 +78,7 @@ Transform:
   m_GameObject: {fileID: 9203121133887263188}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.822, y: 0.653, z: -7.92}
-  m_LocalScale: {x: 0.69757, y: 0.69757, z: 0.69757}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7250552980278583963}
   m_Father: {fileID: 0}
@@ -145,7 +145,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -191,10 +191,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d8a5a0bf3f16054eae150d92b4c6f11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentPowerUp: {fileID: 8296429663228973084}
-  _abilityScript: {fileID: 8549755078791936131}
-  _ninja: {fileID: 9203121133887263188}
---- !u!114 &8296429663228973084
+  _owner: {fileID: 9203121133887263188}
+  _currentPowerUp: {fileID: 8549755078791936131}
+  _ninjaRef: {fileID: 9203121133887263188}
+--- !u!114 &4788930567351141112
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -203,7 +203,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 9203121133887263188}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b17f2f30d9744f74695dbf0b80f43e81, type: 3}
+  m_Script: {fileID: 11500000, guid: a8c0a4cee058a2b4da96d739b3518284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _owner: {fileID: 0}
+  _damage: 5
+  _gun: {fileID: 2768904392435244236}
+  _bulletCooldown: 1.9
+  _destroyOnHit: 1
