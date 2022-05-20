@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public GameState State;
     public static event System.Action<GameState> OnGmaeStateChange;
     private EnemySpawnerBehavior enemySpawnerBehavior;
-    public int _enemyCount;
+    private int _enemyCount;
     public Text _enemycount;
     private void Awake()  { Instace = this; }
     private void Start()
@@ -22,9 +22,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      
         if (_enemyCount == 0)
         {
-            EnemyHolderManager.Instace.setActiveSpawners();
+            //EnemyHolderManager.Instace.setActiveSpawners();
+            UpdateGamestate(GameState.AdvanceForward);
         }
     }
 
@@ -36,10 +38,14 @@ public class GameManager : MonoBehaviour
             case GameState.Startmenu:
                 SceneManager.LoadScene("StartScreen", LoadSceneMode.Single);
                 break;
-            case GameState.SpawnWave:
+            case GameState.MainGameScene:
                 SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
                 break;
+            case GameState.SpawnWave:
+                EnemyHolderManager.Instace.setActiveSpawners();
+                break;
             case GameState.AdvanceForward:
+                EnviromentSpawnerBehavior.Instace.setActiveSpawners();
                 break;
             case GameState.EndScreen:
                 SceneManager.LoadScene("DeathScene",LoadSceneMode.Single );
@@ -67,6 +73,7 @@ public class GameManager : MonoBehaviour
 
 public enum GameState { 
     Startmenu,
+    MainGameScene,
     SpawnWave,
     AdvanceForward,
     EndScreen

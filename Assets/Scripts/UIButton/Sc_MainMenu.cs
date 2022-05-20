@@ -9,7 +9,7 @@ public class Sc_MainMenu : MonoBehaviour
     void Start(){ MainMenuButton();}
 
     //increases the sene by 1
-    public void PlayNowButton() {GameManager.Instace.UpdateGamestate(GameState.SpawnWave);}
+    public void PlayNowButton() {GameManager.Instace.UpdateGamestate(GameState.MainGameScene);}
 
     public void MainMenuButton()  { MainMenu.SetActive(true);}
     //leaves the game and close application
