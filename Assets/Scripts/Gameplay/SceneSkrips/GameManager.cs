@@ -8,20 +8,12 @@ using System;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instace;
-
     public GameState State;
-
     public static event System.Action<GameState> OnGmaeStateChange;
-
     private EnemySpawnerBehavior enemySpawnerBehavior;
-
-    private EnemyBehaviour _enemyBehaviour;
     public int _enemyCount;
     public Text _enemycount;
-    private void Awake() 
-    {
-        Instace = this;
-    }
+    private void Awake()  { Instace = this; }
     private void Start()
     {
         _enemycount.text = "Enemies: " + _enemyCount.ToString();
@@ -32,12 +24,10 @@ public class GameManager : MonoBehaviour
     {
         if (_enemyCount == 0)
         {
-            EnemySpawnerBehavior.EnemySpawnerInstance.SettheSetActive();
-            //setActiveSpawners();
+            EnemyHolderManager.Instace.setActiveSpawners();
         }
     }
 
-    
     public void UpdateGamestate(GameState newState)
     {
         State = newState;
@@ -58,12 +48,6 @@ public class GameManager : MonoBehaviour
                 break;
         }
         OnGmaeStateChange?.Invoke(newState);
-    }
-    public void setActiveSpawners(EnemySpawnerBehavior enemySpawnerBehavior)
-    {
-        bool settrue = true;
-        enemySpawnerBehavior.IsActive = settrue; 
-        //EnemySpawnerBehavior.EnemySpawnerInstance.IsActive = true;
     }
     public void caculatePoint()
     {
