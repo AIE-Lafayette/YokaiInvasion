@@ -5,7 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class ExitMenuBehaviour : MonoBehaviour
 {
+   
     public GameObject ExitMenu;
+    void Awake()
+    {
+
+        GameManager.OnGmaeStateChange += GameManager_OnGmaeStateChange;
+    }
+
+    private void GameManager_OnGmaeStateChange(GameState obj)
+    {
+
+    }
+
+    void OnDestroy()
+    {
+        GameManager.OnGmaeStateChange -= GameManager_OnGmaeStateChange;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -14,8 +30,9 @@ public class ExitMenuBehaviour : MonoBehaviour
 
     public void RestartButton()
     {
+        GameManager.Instace.UpdateGamestate(GameState.Startmenu);
         //go back a scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     public void ExitMenuButton()

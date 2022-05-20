@@ -53,7 +53,7 @@ public class EnemyBehaviour : MonoBehaviour
         if (!_enemyBehaviour)//if not enemy behaviour
         {
             //is the posistion of other and this the same
-            if (transform.position == other.transform.position)
+            if (tag != other.tag)
                 _healthBehavior.TakeDamage(_damage);//decrements health
         }
     }
