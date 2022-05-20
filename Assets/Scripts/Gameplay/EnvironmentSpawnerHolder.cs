@@ -6,7 +6,7 @@ public class EnvironmentSpawnerHolder : MonoBehaviour
 {
     public static EnvironmentSpawnerHolder Instace;
     [SerializeField]
-    private EnemySpawnerBehavior enemySpawnerBehavior1, enemySpawnerBehavior2,
+    private EnviromentSpawnerBehavior _enviromentSpawnerBehavior, _enviromentSpawnerBehavior2;
                                  
     private void Awake() { Instace = this; }
     // Update is called once per frame
@@ -15,7 +15,8 @@ public class EnvironmentSpawnerHolder : MonoBehaviour
     /// </summary>
     public void setActiveSpawners()
     {
-        enemySpawnerBehavior1.IsActive = true;
-        enemySpawnerBehavior2.IsActive = true;
+        _enviromentSpawnerBehavior.IsActive = true;
+        _enviromentSpawnerBehavior2.IsActive = true;
+
     }
 }

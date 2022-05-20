@@ -11,7 +11,7 @@ public class EnemySpawnerBehavior : MonoBehaviour
     private EnemyBehaviour _enemy;
     private bool _isActive;
     //how meny enemies 
-    public bool IsActive {get {return _isActive; } set { _isActive = value; } }
+    public bool IsActive { get { return _isActive; } set { _isActive = value; } }
     public int EnemyCount {get { return _enemyCount; }}
     private void Awake() {EnemySpawnerInstance = this;}
     private void Start()
