@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
         if (_enemyCount == 0)
         {
             EnemySpawnerBehavior.EnemySpawnerInstance.SettheSetActive();
+            
         }
     }
 
@@ -45,8 +46,6 @@ public class GameManager : MonoBehaviour
         {
             case GameState.Startmenu:
                 SceneManager.LoadScene("StartScreen", LoadSceneMode.Single);
-                // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
-              //  SceneManager.SetActiveScene(SceneManager.GetSceneByName("DeathScene"));
                 break;
             case GameState.SpawnWave:
                 SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
@@ -55,8 +54,6 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.EndScreen:
                 SceneManager.LoadScene("DeathScene",LoadSceneMode.Single );
-               // SceneManager.SetActiveScene(SceneManager.GetSceneAt(2));
-                //SceneManager.SetActiveScene(SceneManager.GetSceneByName("DeathScene"));
                 break;
             default:
                 break;
@@ -65,7 +62,14 @@ public class GameManager : MonoBehaviour
     }
     public void setActiveSpawners()
     {
+        
+        //EnemySpawnerBehavior._isActive = true;
         EnemySpawnerBehavior.EnemySpawnerInstance.IsActive = true;
+        EnemySpawnerBehavior.EnemySpawnerInstance.IsActive = true;
+        EnemySpawnerBehavior.EnemySpawnerInstance.IsActive = true;
+        EnemySpawnerBehavior.EnemySpawnerInstance.IsActive = true;
+        EnemySpawnerBehavior.EnemySpawnerInstance.IsActive = true;
+
     }
     public void caculatePoint()
     {
