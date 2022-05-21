@@ -9,11 +9,7 @@ public class NinjaPowerUpBehavior : UsePowerUpBehavior
     [SerializeField]
     private GameObject _ninja;
 
-    public GameObject Ninja
-    {
-        get { return _ninja; }
-        set { _ninja = value; }
-    }
+    public GameObject Ninja {get { return _ninja; }set { _ninja = value; }}
 
     private void Awake()
     {

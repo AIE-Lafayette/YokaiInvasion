@@ -22,7 +22,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
         if (_enemyCount == 0)
         {
             //EnemyHolderManager.Instace.setActiveSpawners();
@@ -45,7 +44,7 @@ public class GameManager : MonoBehaviour
                 EnemyHolderManager.Instace.setActiveSpawners();
                 break;
             case GameState.AdvanceForward:
-                EnviromentSpawnerBehavior.Instace.setActiveSpawners();
+                EnvironmentSpawnerHolder.Instace.setActiveSpawners();
                 break;
             case GameState.EndScreen:
                 SceneManager.LoadScene("DeathScene",LoadSceneMode.Single );

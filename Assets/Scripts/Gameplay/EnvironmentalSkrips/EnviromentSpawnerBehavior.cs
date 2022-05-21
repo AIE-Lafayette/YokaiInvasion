@@ -4,33 +4,33 @@ using UnityEngine;
 
 public class EnviromentSpawnerBehavior : MonoBehaviour
 {
-    public static EnvironmentSpawnerHolder Instace;
+    public static EnviromentSpawnerBehavior Instace;
     [SerializeField]
-    private GameObject _enviromentRef;
+    private EnviromentSpawnerBehavior _enviromentRef;
     [SerializeField]
     private float _lifeTime;
     private float _timer;
     private bool _isActive;
     //how meny enemies 
     public bool IsActive { get { return _isActive; } set { _isActive = value; } }
-
+    private void Awake() {Instace = this;}
     // Update is called once per frame
     void Update()
     {
         //The higher the timer the long it takes to spawn
         _timer += Time.deltaTime;
-        if (IsActive)
+        if (IsActive && _timer > 8)
         {
-          //  only spawns when the timer is greater than lifeTime
-            if (_timer >= _lifeTime)
+            // instatiats the enviroment and the position that it spawns, and its rotation.
+            GameObject enviroment = Instantiate(_enviromentRef.gameObject, transform.position, transform.rotation);
+            _isActive = false;
+            if (_timer >= 10)
             {
-               // instatiats the enviroment and the position that it spawns, and its rotation.
-                GameObject enviroment = Instantiate(_enviromentRef.gameObject, transform.position, transform.rotation);
-               // resets timer
+                GameManager.Instace.UpdateGamestate(GameState.SpawnWave);
                 _timer = 0;
-                _isActive = false;
             }
-            //make the enemy spawners start again
         }
+        
     }
+
 }

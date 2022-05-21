@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemySpawnerBehavior : MonoBehaviour
 {
     public static EnemySpawnerBehavior EnemySpawnerInstance;
-    //private GameObject[] _enemyCount;
     private int _enemyCount;
     [SerializeField]
     private EnemyBehaviour _enemy;
