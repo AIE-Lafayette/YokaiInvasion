@@ -114,6 +114,33 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Ninja"",
+            ""id"": ""c54bde41-e100-4bc1-8557-9bc0eb472ab0"",
+            ""actions"": [
+                {
+                    ""name"": ""Shoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""e3715013-2de7-4545-a0a7-e805c5d33842"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""73a8d85a-6da9-42b3-8dd5-4e41281de428"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -122,6 +149,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_Shoot = m_Player.FindAction("Shoot", throwIfNotFound: true);
+        // Ninja
+        m_Ninja = asset.FindActionMap("Ninja", throwIfNotFound: true);
+        m_Ninja_Shoot = m_Ninja.FindAction("Shoot", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -208,9 +238,46 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
+
+    // Ninja
+    private readonly InputActionMap m_Ninja;
+    private INinjaActions m_NinjaActionsCallbackInterface;
+    private readonly InputAction m_Ninja_Shoot;
+    public struct NinjaActions
+    {
+        private @PlayerControls m_Wrapper;
+        public NinjaActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Shoot => m_Wrapper.m_Ninja_Shoot;
+        public InputActionMap Get() { return m_Wrapper.m_Ninja; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(NinjaActions set) { return set.Get(); }
+        public void SetCallbacks(INinjaActions instance)
+        {
+            if (m_Wrapper.m_NinjaActionsCallbackInterface != null)
+            {
+                @Shoot.started -= m_Wrapper.m_NinjaActionsCallbackInterface.OnShoot;
+                @Shoot.performed -= m_Wrapper.m_NinjaActionsCallbackInterface.OnShoot;
+                @Shoot.canceled -= m_Wrapper.m_NinjaActionsCallbackInterface.OnShoot;
+            }
+            m_Wrapper.m_NinjaActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Shoot.started += instance.OnShoot;
+                @Shoot.performed += instance.OnShoot;
+                @Shoot.canceled += instance.OnShoot;
+            }
+        }
+    }
+    public NinjaActions @Ninja => new NinjaActions(this);
     public interface IPlayerActions
     {
         void OnMovement(InputAction.CallbackContext context);
+        void OnShoot(InputAction.CallbackContext context);
+    }
+    public interface INinjaActions
+    {
         void OnShoot(InputAction.CallbackContext context);
     }
 }

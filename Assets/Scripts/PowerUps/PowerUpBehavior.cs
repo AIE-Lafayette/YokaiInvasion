@@ -12,10 +12,18 @@ public class PowerUpBehavior : MonoBehaviour
     [SerializeField]
     private PowerUpBehavior _currentPowerUp;
 
-    public PowerUpBehavior CurrentPowerUp {get { return _currentPowerUp; } set { _currentPowerUp = value; }}
+    public PowerUpBehavior CurrentPowerUp
+    {
+        get { return _currentPowerUp; }
+        set { _currentPowerUp = value; }
+    }
 
-    public GameObject Owner {get { return _owner; } set { _owner = value; }}
-
+    public GameObject Owner
+    {
+        get { return _owner; }
+        set { _owner = value; }
+    }
+    
     /// <summary>
     /// How the power up functions
     /// </summary>
