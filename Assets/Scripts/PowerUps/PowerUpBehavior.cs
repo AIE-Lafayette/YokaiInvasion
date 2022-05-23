@@ -23,7 +23,7 @@ public class PowerUpBehavior : MonoBehaviour
         get { return _owner; }
         set { _owner = value; }
     }
-
+    
     /// <summary>
     /// How the power up functions
     /// </summary>
