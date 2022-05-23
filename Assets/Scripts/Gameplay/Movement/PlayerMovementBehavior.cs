@@ -9,6 +9,12 @@ public class PlayerMovementBehavior : MonoBehaviour
     private Rigidbody _rigidbody;
     private Vector3 _velocity;
 
+    public float Speed
+    {
+        get { return _speed; }
+        set { Speed = value; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
