@@ -11,10 +11,23 @@ public class ProjectitleBehaviour : MonoBehaviour
     private bool _destroyOnHit;
     private float _currentLifeTime;
     private Rigidbody _rigidbody;
+    public static ProjectitleBehaviour Instance;
+
+    public float Damage
+    {
+        get { return _damage; }
+    }
 
     public string OwnerTag {get { return _ownerTag; } set { _ownerTag = value; }}
 
     public Rigidbody RigidBody {get { return _rigidbody; } }
+
+    public virtual float IncreaseDamage(float DamageIncrease)
+    {
+        _damage += DamageIncrease;
+
+        return DamageIncrease;
+    }
 
     private void Awake()
     {
