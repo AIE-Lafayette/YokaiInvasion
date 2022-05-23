@@ -8,52 +8,28 @@ using System;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instace;
-
     public GameState State;
-
     public static event System.Action<GameState> OnGmaeStateChange;
-    [SerializeField]
-    private EnemySpawnerBehavior enemySpawnerBehavior1, enemySpawnerBehavior2,
-                                 enemySpawnerBehavior3, enemySpawnerBehavior4,
-                                 enemySpawnerBehavior5;
-
-    private EnemyBehaviour _enemyBehaviour;
+    private EnemySpawnerBehavior enemySpawnerBehavior;
+    private int _playerScore;
+    private int _enemyCount;
     public Text _enemycount;
-    [SerializeField]
-    private int _waveCount;
-    [SerializeField]
-    private float HealthLimit;
-    private void Awake()
+    private void Awake()  { Instace = this; }
+    private void Start()
     {
-        Instace = this;
+        _enemycount.text = "Score: " + _playerScore.ToString();
+        caculatePoint();
     }
     // Update is called once per frame
     void Update()
     {
-        //then print the text 
-        _enemycount.text = "Enemies: " + (enemySpawnerBehavior1.EnemyCount + 
-                                          enemySpawnerBehavior2.EnemyCount + 
-                                          enemySpawnerBehavior3.EnemyCount + 
-                                          enemySpawnerBehavior4.EnemyCount +
-                                          enemySpawnerBehavior5.EnemyCount).ToString();
-        //if the start timer is greater than or equal to the max timer 
-        if (enemySpawnerBehavior1.EnemyCount <= 0)
+        if (_enemyCount == 0)
         {
-            ////max health is less than the health limit 
-            //if (_enemyBehaviour.MaxHealth <= HealthLimit)
-            //    _enemyBehaviour.MaxHealth += 2;//plus 2 to max health *or decrease here*
-            setActiveSpawners();
+            //EnemyHolderManager.Instace.setActiveSpawners();
+            UpdateGamestate(GameState.AdvanceForward);
         }
     }
 
-    public void setActiveSpawners()
-    {
-        enemySpawnerBehavior1.IsActive = true;
-        enemySpawnerBehavior2.IsActive = true;
-        enemySpawnerBehavior3.IsActive = true;
-        enemySpawnerBehavior4.IsActive = true;
-        enemySpawnerBehavior5.IsActive = true;
-    }
     public void UpdateGamestate(GameState newState)
     {
         State = newState;
@@ -61,30 +37,44 @@ public class GameManager : MonoBehaviour
         {
             case GameState.Startmenu:
                 SceneManager.LoadScene("StartScreen", LoadSceneMode.Single);
-                // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
-              //  SceneManager.SetActiveScene(SceneManager.GetSceneByName("DeathScene"));
                 break;
-            case GameState.SpawnWave:
+            case GameState.MainGameScene:
                 SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
                 break;
+            case GameState.SpawnWave:
+                EnemyHolderManager.Instace.setActiveSpawners();
+                break;
             case GameState.AdvanceForward:
+                EnvironmentSpawnerHolder.Instace.setActiveSpawners();
                 break;
             case GameState.EndScreen:
                 SceneManager.LoadScene("DeathScene",LoadSceneMode.Single );
-               // SceneManager.SetActiveScene(SceneManager.GetSceneAt(2));
-                //SceneManager.SetActiveScene(SceneManager.GetSceneByName("DeathScene"));
                 break;
             default:
                 break;
         }
         OnGmaeStateChange?.Invoke(newState);
     }
-
-    
+    public void caculatePoint()
+    {
+        _enemyCount = enemySpawnerBehavior.EnemyCount;
+    }
+    public void AddPoint()
+    {
+        _enemyCount += 1;
+        _enemycount.text = "Score: " + _playerScore.ToString();
+    }
+    public void SubtractPoint()
+    {
+        _playerScore++;
+        _enemyCount -= 1;
+        _enemycount.text = "Score: " + _playerScore.ToString();
+    }
 }
 
 public enum GameState { 
     Startmenu,
+    MainGameScene,
     SpawnWave,
     AdvanceForward,
     EndScreen

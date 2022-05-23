@@ -6,23 +6,27 @@ public class ProjectitleBehaviour : MonoBehaviour
 {
     private string _ownerTag;
     [SerializeField]
-    private float _damage;
-    [SerializeField]
-    private float _lifeTime;
+    private float _damage, _lifeTime;
     [SerializeField]
     private bool _destroyOnHit;
     private float _currentLifeTime;
     private Rigidbody _rigidbody;
+    public static ProjectitleBehaviour Instance;
 
-    public string OwnerTag
+    public float Damage
     {
-        get { return _ownerTag; }
-        set { _ownerTag = value; }
+        get { return _damage; }
     }
 
-    public Rigidbody RigidBody
+    public string OwnerTag {get { return _ownerTag; } set { _ownerTag = value; }}
+
+    public Rigidbody RigidBody {get { return _rigidbody; } }
+
+    public virtual float IncreaseDamage(float DamageIncrease)
     {
-        get { return _rigidbody; }
+        _damage += DamageIncrease;
+
+        return DamageIncrease;
     }
 
     private void Awake()

@@ -11,11 +11,7 @@ public class MovementBehavior : MonoBehaviour
     /// <summary>
     /// The speed and direction of the game object.
     /// </summary>
-    public Vector3 MoveDirection
-    {
-        get { return _moveDirection; }
-        set { _moveDirection = value; }
-    }
+    public Vector3 MoveDirection {get { return _moveDirection; } set { _moveDirection = value; } }
 
     // Update is called once per frame
     public void Update()
