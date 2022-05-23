@@ -6,7 +6,7 @@ using UnityEngine;
 public class CubeColorBehcaiouor : MonoBehaviour
 {
     private MeshRenderer _renderer;
-    private bool _active = true;
+    //private bool _active = true;
     private RoutineBehaviour.TimedAction _currentAction;
 
     // Start is called before the first frame update
