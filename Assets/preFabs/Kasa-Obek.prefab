@@ -109,9 +109,8 @@ GameObject:
   - component: {fileID: 7530375012392024366}
   - component: {fileID: 1824435292812179185}
   - component: {fileID: 7657507282198726864}
-  - component: {fileID: -7961045490711082996}
-  - component: {fileID: 570780961158321383}
   - component: {fileID: -5533932937231236157}
+  - component: {fileID: 2334899234444803428}
   m_Layer: 0
   m_Name: Kasa-Obek
   m_TagString: Enemy
@@ -208,38 +207,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f590f87885ca954aa6181731dc64787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemyBehaviour: {fileID: 7657507282198726864}
   _damage: 3
   _speed: 7
   _isGrounded: 1
   _jumpForce: 5
   _direction: 1
---- !u!114 &-7961045490711082996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4300369910222140372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cef6ca6739561d74a89e39518f883675, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _damage: 0
-  _speed: 0
---- !u!114 &570780961158321383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4300369910222140372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0a4b83d363ea694a9e349d7279b806c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 0
 --- !u!54 &-5533932937231236157
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -256,6 +229,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2334899234444803428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4300369910222140372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd1c66010edf0249ab2d1b2cb63b4ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 7
+  _maxHealth: 10
+  _isAlive: 1
+  _destroyOnDeath: 1
 --- !u!1 &6410802307697052071
 GameObject:
   m_ObjectHideFlags: 0

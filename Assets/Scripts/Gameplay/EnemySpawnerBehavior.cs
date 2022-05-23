@@ -24,7 +24,6 @@ public class EnemySpawnerBehavior : MonoBehaviour
     public int EnemyCount {get { return _enemyCount; }}
     private void Awake() 
     {
-        Random.Range(0, 3);
         EnemySpawnerInstance = this;
     }
     private void Start()
@@ -48,7 +47,7 @@ public class EnemySpawnerBehavior : MonoBehaviour
     private void SpawnEnemy()
     {
         //keeps adding in enemyes based on the waves
-        EnemyBehaviour spawnedEnemy = Instantiate(_enemy[Random.Range(0,3)], transform.position, transform.rotation);
+        EnemyBehaviour spawnedEnemy = Instantiate(_enemy[Random.Range(0,_enemy.Length)], transform.position, transform.rotation);
     }
     /// <summary>
     /// gives a randome value between 0 and 3
