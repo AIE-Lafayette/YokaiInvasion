@@ -13,6 +13,7 @@ public class ProjectitleBehaviour : MonoBehaviour
     private bool _destroyOnHit;
     private float _currentLifeTime;
     private Rigidbody _rigidbody;
+    public static ProjectitleBehaviour Instance;
 
     public float Damage
     {
@@ -28,6 +29,13 @@ public class ProjectitleBehaviour : MonoBehaviour
     public Rigidbody RigidBody
     {
         get { return _rigidbody; }
+    }
+
+    public virtual float IncreaseDamage(float DamageIncrease)
+    {
+        _damage += DamageIncrease;
+
+        return DamageIncrease;
     }
 
     private void Awake()
