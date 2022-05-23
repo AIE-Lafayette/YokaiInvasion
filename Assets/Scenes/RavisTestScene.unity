@@ -607,10 +607,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3694f9026e312f54dbfbc15babaa2987, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _owner: {fileID: 0}
+  _currentPowerUp: {fileID: 0}
   _bulletRef: {fileID: 6206681611907711863, guid: e05cf1656fded1549b165903eb5d556c, type: 3}
-  _damageBuff: 5
-  _gun: {fileID: 0}
-  _forceNerf: 0
 --- !u!54 &1632514062
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -741,6 +740,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 568873410068956722, guid: d9667c669153abe40bc033c15d871ef9, type: 3}
+      propertyPath: _bulletForce
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 2693537416937804032, guid: d9667c669153abe40bc033c15d871ef9, type: 3}
       propertyPath: _owner
       value: 
