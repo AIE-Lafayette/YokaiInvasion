@@ -11,12 +11,13 @@ public class GameManager : MonoBehaviour
     public GameState State;
     public static event System.Action<GameState> OnGmaeStateChange;
     private EnemySpawnerBehavior enemySpawnerBehavior;
+    private int _playerScore;
     private int _enemyCount;
     public Text _enemycount;
     private void Awake()  { Instace = this; }
     private void Start()
     {
-        _enemycount.text = "Enemies: " + _enemyCount.ToString();
+        _enemycount.text = "Score: " + _playerScore.ToString();
         caculatePoint();
     }
     // Update is called once per frame
@@ -61,12 +62,13 @@ public class GameManager : MonoBehaviour
     public void AddPoint()
     {
         _enemyCount += 1;
-        _enemycount.text = "Enemies: " + _enemyCount.ToString();
+        _enemycount.text = "Score: " + _playerScore.ToString();
     }
     public void SubtractPoint()
     {
+        _playerScore++;
         _enemyCount -= 1;
-        _enemycount.text = "Enemies: " + _enemyCount.ToString();
+        _enemycount.text = "Score: " + _playerScore.ToString();
     }
 }
 

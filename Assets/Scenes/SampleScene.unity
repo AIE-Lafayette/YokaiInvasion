@@ -1200,9 +1200,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 1532027095}
     m_Modifications:
     - target: {fileID: 495043955, guid: 72ec404568010894e95e411313308661, type: 3}
+      propertyPath: _lifeTime
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 495043955, guid: 72ec404568010894e95e411313308661, type: 3}
       propertyPath: _enviromentRef
       value: 
-      objectReference: {fileID: 2601307085595849468, guid: ee252ba0a6d74d34da88d04bc156ba41, type: 3}
+      objectReference: {fileID: 7305251280033441380, guid: 82b03306fdf019e4584fb3e3a75a53ba, type: 3}
     - target: {fileID: 3633697433064025460, guid: 72ec404568010894e95e411313308661, type: 3}
       propertyPath: m_Name
       value: EnviromentSpawner
@@ -1905,9 +1909,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 1532027095}
     m_Modifications:
     - target: {fileID: 495043955, guid: 72ec404568010894e95e411313308661, type: 3}
+      propertyPath: _lifeTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 495043955, guid: 72ec404568010894e95e411313308661, type: 3}
       propertyPath: _enviromentRef
       value: 
-      objectReference: {fileID: 2601307085595849468, guid: ee252ba0a6d74d34da88d04bc156ba41, type: 3}
+      objectReference: {fileID: 7305251280033441380, guid: 82b03306fdf019e4584fb3e3a75a53ba, type: 3}
     - target: {fileID: 3633697433064025460, guid: 72ec404568010894e95e411313308661, type: 3}
       propertyPath: m_Name
       value: EnviromentSpawner (2)
