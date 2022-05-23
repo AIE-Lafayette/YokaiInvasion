@@ -14,6 +14,6 @@ public class PlayerBehaviour1 : HealthBehavior
         EnemyBehaviour enemyBehaviour = other.GetComponent<EnemyBehaviour>();
         if (tag != other.tag)
             TakeDamage(enemyBehaviour.Damage);
-        } 
+        
     }
 }
