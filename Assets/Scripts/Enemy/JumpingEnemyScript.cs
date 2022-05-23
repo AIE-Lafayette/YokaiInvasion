@@ -33,6 +33,10 @@ public class JumpingEnemyScript : EnemyBehaviour
     {
         if (_isGrounded == true)
         {
+            //RoutineBehaviour.Instance.StartNewTimedAction(
+            //    args =>_rigidbody.AddForce(Jump * _jumpForce, ForceMode.Impulse),
+            //    TimedActionCountType.SCALEDTIME, 
+            //    1);
             _rigidbody.AddForce(Jump * _jumpForce, ForceMode.Impulse);
             _isGrounded = false;
         }
