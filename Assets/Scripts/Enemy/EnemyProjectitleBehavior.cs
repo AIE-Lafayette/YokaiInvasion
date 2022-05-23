@@ -10,16 +10,10 @@ public class EnemyProjectitleBehavior : MonoBehaviour
     [SerializeField]
     private FireBehaviour _gun;
     [SerializeField]
-    private float _bulletCooldown;
-    [SerializeField]
-    private bool _destroyOnHit;
+    private float _bulletCooldown, _destroyOnHit;
     private float _bulletTimer;
 
-    public string OwnerTag
-    {
-        get { return _ownerTag; }
-        set { _ownerTag = value; }
-    }
+    public string OwnerTag {get { return _ownerTag; } set { _ownerTag = value; }}
 
     // Update is called once per frame
     void Update()
