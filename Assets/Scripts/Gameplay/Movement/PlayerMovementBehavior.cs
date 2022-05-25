@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovementBehavior : MonoBehaviour
 {
+
+    public PlayerMovementBehavior Instace;
     [SerializeField]
     private float _speed;
     private Rigidbody _rigidbody;
@@ -14,6 +16,22 @@ public class PlayerMovementBehavior : MonoBehaviour
         get { return _speed; }
         set { Speed = value; }
     }
+    private void Awake()
+    {
+        Instace = this;
+    }
+
+    public virtual float IncreaseSpeed(float SpeedIncrease)
+    {
+        _speed += SpeedIncrease;
+
+        return SpeedIncrease;
+    }
+
+    private void Awake()
+    {
+        Instace = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -21,13 +39,13 @@ public class PlayerMovementBehavior : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    public void Move(Vector3 direction)
+    public void Move(Vector3 direction) 
     {
         _velocity = direction * _speed * Time.deltaTime;
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void FixedUpdate() 
     {
         _rigidbody.MovePosition(transform.position + _velocity);
     }

@@ -6,8 +6,8 @@ TagManager:
   tags:
   - Enemy
   - Ninja
-  - Speed
-  - PowerUp
+  - Rage
+  - SpeedUp
   layers:
   - Default
   - TransparentFX

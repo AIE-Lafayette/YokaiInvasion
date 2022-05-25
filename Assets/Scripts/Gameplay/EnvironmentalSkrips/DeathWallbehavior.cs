@@ -6,11 +6,11 @@ public class DeathWallbehavior : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (GameObject.FindWithTag("Player"))
+        if (other.tag == "Enemy")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+          GameManager.Instace.UpdateGamestate(GameState.EndScreen);
         }
-        if (GameObject.FindWithTag("Untagged"))
+        if (other.tag == "Untagged")
             return;
     }
 }
