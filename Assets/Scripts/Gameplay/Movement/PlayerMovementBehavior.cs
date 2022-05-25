@@ -17,6 +17,13 @@ public class PlayerMovementBehavior : MonoBehaviour
         set { Speed = value; }
     }
 
+    public virtual float IncreaseSpeed(float SpeedIncrease)
+    {
+        _speed += SpeedIncrease;
+
+        return SpeedIncrease;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
