@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovementBehavior : MonoBehaviour
 {
 
-    public PlayerBehaviour1 Instace;
+    public PlayerMovementBehavior Instace;
     [SerializeField]
     private float _speed;
     private Rigidbody _rigidbody;
@@ -15,6 +15,10 @@ public class PlayerMovementBehavior : MonoBehaviour
     {
         get { return _speed; }
         set { Speed = value; }
+    }
+    private void Awake()
+    {
+        Instace = this;
     }
 
     public virtual float IncreaseSpeed(float SpeedIncrease)
