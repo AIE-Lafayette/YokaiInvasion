@@ -17,7 +17,7 @@ public class DamageBuffPowerUPBehavior : PowerUpBehavior
     public virtual void DamageBuff()
     {  
         _bulletRef.IncreaseDamage(10);
-        _gun.ForceNerf(100);
+        //_gun.ForceNerf(5);
         _bulletRef.transform.localScale = new Vector3(3, 0.2f, 0.2f);
           _active = true;
         TimeLeft();
@@ -31,7 +31,7 @@ public class DamageBuffPowerUPBehavior : PowerUpBehavior
     public override void Activate(params object[] arg)
     {
         //gets a reference to the gun
-        SetOwner();
+        //SetOwner();
         //increases the damage, scale while dreasesing force
         DamageBuff();
     }
@@ -41,6 +41,7 @@ public class DamageBuffPowerUPBehavior : PowerUpBehavior
     {
         if (_active)
         {
+            //A lot of cost to use so might have to change how the timer works
             Invoke("Reset", 10);
         }
     }
@@ -50,9 +51,9 @@ public class DamageBuffPowerUPBehavior : PowerUpBehavior
     /// </summary>
     private void Reset()
     {
-        _bulletRef.IncreaseDamage(-100);
+        _bulletRef.IncreaseDamage(-10);
         _bulletRef.transform.localScale = new Vector3(0.6f, 0.2f, 0.2f);
-        _gun.ForceNerf(-100);
+        //_gun.ForceNerf(-10);
     }
 
     /// <summary>
