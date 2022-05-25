@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class SpeedUpPowerUpBehavior : PowerUpBehavior
 {
-    [SerializeField]
     private PlayerMovementBehavior _playerMovement;
     private bool _active;
+    [SerializeField]
+    private float _timer;
 
     public override void Activate(params object[] arg)
     {
@@ -24,7 +25,7 @@ public class SpeedUpPowerUpBehavior : PowerUpBehavior
     {
         if(_active)
         {
-            Invoke("Reset", 5);
+            RoutineBehaviour.Instance.StartNewTimedAction(args => Reset(), TimedActionCountType.UNSCALEDTIME, _timer);
         }
     }
 
