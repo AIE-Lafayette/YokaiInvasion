@@ -20,7 +20,10 @@ public class PlayerMovementBehavior : MonoBehaviour
     {
         Instace = this;
     }
-
+    public Vector3 Velocity 
+    {
+        get { return _velocity; }
+    }
     public virtual float IncreaseSpeed(float SpeedIncrease)
     {
         _speed += SpeedIncrease;
