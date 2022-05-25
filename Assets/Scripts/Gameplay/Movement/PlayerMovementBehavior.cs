@@ -31,11 +31,6 @@ public class PlayerMovementBehavior : MonoBehaviour
         return SpeedIncrease;
     }
 
-    private void Awake()
-    {
-        Instace = this;
-    }
-
     // Start is called before the first frame update
     void Start()
     {
