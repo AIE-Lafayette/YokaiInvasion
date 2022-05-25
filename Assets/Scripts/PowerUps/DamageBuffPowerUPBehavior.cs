@@ -9,6 +9,7 @@ public class DamageBuffPowerUPBehavior : PowerUpBehavior
     ProjectitleBehaviour _bulletRef;
     FireBehaviour _gun;
     private bool _active = false;
+    [SerializeField]
     private float _timer;
 
     /// <summary>
@@ -41,7 +42,8 @@ public class DamageBuffPowerUPBehavior : PowerUpBehavior
     {
         if (_active)
         {
-            Invoke("Reset", 3);
+            RoutineBehaviour.Instance.StartNewTimedAction(args =>Reset(), TimedActionCountType.UNSCALEDTIME, _timer);
+            //Invoke("Reset", 3);
         }
     }
 

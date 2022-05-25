@@ -22,6 +22,7 @@ public class EnemySpawnerBehavior : MonoBehaviour
     private void Awake() 
     {
         EnemySpawnerInstance = this;
+       
     }
     private void Start()
     {
@@ -32,7 +33,8 @@ public class EnemySpawnerBehavior : MonoBehaviour
     {
         if (IsActive)
         {
-            Invoke("SpawnEnemy", _TimeToSpawnWaves);
+            RoutineBehaviour.Instance.StartNewTimedAction(args => SpawnEnemy() , TimedActionCountType.UNSCALEDTIME, _TimeToSpawnWaves);
+           // Invoke("SpawnEnemy", _TimeToSpawnWaves);
             //incresse amount
             GameManager.Instace.AddPoint();
             IsActive = false;
@@ -41,9 +43,10 @@ public class EnemySpawnerBehavior : MonoBehaviour
     /// <summary>
     /// spawns a single enemy
     /// </summary>
-    private void SpawnEnemy()
+    public void SpawnEnemy()
     {
         //keeps adding in enemyes based on the waves
         EnemyBehaviour spawnedEnemy = Instantiate(_enemy[Random.Range(0,_enemy.Length)], transform.position, transform.rotation);
+        
     }
 }
