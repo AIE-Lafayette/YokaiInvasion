@@ -5,13 +5,10 @@ using UnityEngine;
 public class EnemySpawnerBehavior : MonoBehaviour
 {
     public static EnemySpawnerBehavior EnemySpawnerInstance;
-    private int _enemyCount;
-
     [SerializeField]
     private EnemyBehaviour[] _enemy;
     private bool _isActive;
-    
-    private int _TimeToSpawnWaves;
+    private int _TimeToSpawnWaves, _enemyCount;
 
     /// <summary>
     /// amount of time till the enemy spawn for each wave
@@ -25,6 +22,7 @@ public class EnemySpawnerBehavior : MonoBehaviour
     private void Awake() 
     {
         EnemySpawnerInstance = this;
+       
     }
     private void Start()
     {
@@ -35,7 +33,7 @@ public class EnemySpawnerBehavior : MonoBehaviour
     {
         if (IsActive)
         {
-            Invoke("SpawnEnemy", _TimeToSpawnWaves);
+            RoutineBehaviour.Instance.StartNewTimedAction(args => SpawnEnemy() , TimedActionCountType.UNSCALEDTIME, _TimeToSpawnWaves);
             //incresse amount
             GameManager.Instace.AddPoint();
             IsActive = false;
@@ -44,17 +42,10 @@ public class EnemySpawnerBehavior : MonoBehaviour
     /// <summary>
     /// spawns a single enemy
     /// </summary>
-    private void SpawnEnemy()
+    public void SpawnEnemy()
     {
         //keeps adding in enemyes based on the waves
         EnemyBehaviour spawnedEnemy = Instantiate(_enemy[Random.Range(0,_enemy.Length)], transform.position, transform.rotation);
-    }
-    /// <summary>
-    /// gives a randome value between 0 and 3
-    /// This is being used for the array 
-    /// </summary>
-    private void Rand()
-    {
-        Random.Range(0, 3);
+        
     }
 }

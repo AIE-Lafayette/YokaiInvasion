@@ -11,8 +11,7 @@ public class GameManager : MonoBehaviour
     public GameState State;
     public static event System.Action<GameState> OnGmaeStateChange;
     private EnemySpawnerBehavior enemySpawnerBehavior;
-    private int _playerScore;
-    private int _enemyCount;
+    private int _playerScore, _enemyCount;
     public Text _enemycount;
     private void Awake()  { Instace = this; }
     private void Start()
