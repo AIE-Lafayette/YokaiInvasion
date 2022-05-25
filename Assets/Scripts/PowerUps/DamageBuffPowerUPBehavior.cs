@@ -42,7 +42,7 @@ public class DamageBuffPowerUPBehavior : PowerUpBehavior
         if (_active)
         {
             //A lot of cost to use so might have to change how the timer works
-            Invoke("Reset", 10);
+            Invoke("Reset", 5);
         }
     }
 

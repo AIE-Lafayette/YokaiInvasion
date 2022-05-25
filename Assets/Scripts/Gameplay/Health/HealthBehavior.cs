@@ -28,7 +28,7 @@ public class HealthBehavior : MonoBehaviour
     public virtual void OnDeath()
     {
         if (tag == "Enemy")
-            GameManager.Instace.SubtractPoint();
+            //GameManager.Instace.SubtractPoint();
         //sets it to be not alive
         _isAlive = false;
     }
