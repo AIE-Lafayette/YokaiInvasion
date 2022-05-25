@@ -12,7 +12,7 @@ public class PlayerBehaviour1 : HealthBehavior
     private void OnTriggerEnter(Collider other)
     {
         EnemyBehaviour enemyBehaviour = other.GetComponent<EnemyBehaviour>();
-        if (tag != other.tag)
+        if (other.tag == "Enemy")
             TakeDamage(enemyBehaviour.Damage);
 
         if (other.tag == "ninja")
