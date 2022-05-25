@@ -8,8 +8,7 @@ public class EnviromentSpawnerBehavior : MonoBehaviour
     [SerializeField]
     private EnviromentBehavior _enviromentRef;
     private float _timer;
-    private bool timerIsReached;
-    private bool _isActive;
+    private bool timerIsReached, _isActive;
     //how meny enemies 
     public bool IsActive { get { return _isActive; } set { _isActive = value; } }
     private void Awake() { Instace = this; }
@@ -21,14 +20,16 @@ public class EnviromentSpawnerBehavior : MonoBehaviour
         if (IsActive)
         {
             _isActive = false;
-            Invoke("Spawn",1);
-            Invoke("Spawn", 3);
+            RoutineBehaviour.Instance.StartNewTimedAction(args => Spawn(), TimedActionCountType.UNSCALEDTIME, 1);
+            RoutineBehaviour.Instance.StartNewTimedAction(args => Spawn(), TimedActionCountType.UNSCALEDTIME, 3);
             if (!IsActive)
                 GameManager.Instace.UpdateGamestate(GameState.SpawnWave);
         }
     }
+    
     void Spawn()
     {
         GameObject enviroment = Instantiate(_enviromentRef.gameObject, transform.position, transform.rotation);
     }
+
 }

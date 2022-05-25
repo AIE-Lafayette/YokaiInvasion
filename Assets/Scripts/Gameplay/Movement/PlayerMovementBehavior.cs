@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovementBehavior : MonoBehaviour
 {
+
+    public PlayerBehaviour1 Instace;
     [SerializeField]
     private float _speed;
     private Rigidbody _rigidbody;
