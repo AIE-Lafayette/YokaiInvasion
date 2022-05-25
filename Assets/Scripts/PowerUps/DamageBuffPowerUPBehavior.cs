@@ -43,7 +43,7 @@ public class DamageBuffPowerUPBehavior : PowerUpBehavior
         if (_active)
         {
             RoutineBehaviour.Instance.StartNewTimedAction(args =>Reset(), TimedActionCountType.UNSCALEDTIME, _timer);
-            //Invoke("Reset", 3);
+            
         }
     }
 
