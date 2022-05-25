@@ -13,23 +13,16 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField]
     private int _speed;
 
-    public float Damage
-    {
-        get { return _damage; }
-        set { _damage = value; }
-    }
-    public float MaxHealth
-    {
-        get { return _healthBehavior.MaxHealth;}
-        set { _healthBehavior.MaxHealth = value; }
-    }
+    public float Damage {get { return _damage; } set { _damage = value; } }
+    public float MaxHealth {get { return _healthBehavior.MaxHealth;} set { _healthBehavior.MaxHealth = value; } }
+    public float Health { get { return _healthBehavior.Health; } set { _healthBehavior.Health = value; } }
     /// <summary>
     /// The speed and direction of the game object.
     /// </summary>
-    public Vector3 MoveDirection
+    public Vector3 MoveDirection {get { return _moveDirection; } set { _moveDirection = value; } }
+    private void Awake()
     {
-        get { return _moveDirection; }
-        set { _moveDirection = value; }
+        _healthBehavior = GetComponent<HealthBehavior>();
     }
 
     // Update is called once per frame
@@ -51,10 +44,7 @@ public class EnemyBehaviour : MonoBehaviour
         //a alternatve to this statement is using the *GameObject.FindGameObjectsWithTag("Enemy");*
         //you will have to use the game manager to get the array of enemies
         if (!_enemyBehaviour)//if not enemy behaviour
-        {
-            //is the posistion of other and this the same
-            if (transform.position == other.transform.position)
+            if (tag != other.tag)  //is the posistion of other and this the same
                 _healthBehavior.TakeDamage(_damage);//decrements health
-        }
     }
 }

@@ -17,5 +17,6 @@ public class EnviromentBehavior : MonoBehaviour
         //destroys the enviroment after some time
         if (_timer >= _lifeTime)
             Destroy(_enviromentRef);
+
     }
 }
