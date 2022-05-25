@@ -6,20 +6,19 @@ public class EnemyHolderManager : MonoBehaviour
 {
     public static EnemyHolderManager Instace;
     [SerializeField]
-    private EnemySpawnerBehavior enemySpawnerBehavior1, enemySpawnerBehavior2,
-                                 enemySpawnerBehavior3, enemySpawnerBehavior4,
-                                 enemySpawnerBehavior5;
+    private EnemySpawnerBehavior[] enemySpawnerBehavior;
 
     [SerializeField]
     private int _timeToSpawnWaves;
     private void Awake() {Instace = this;}
     private void Start()
     {
-        enemySpawnerBehavior1.TimeToSpawnWaves = _timeToSpawnWaves;
-        enemySpawnerBehavior2.TimeToSpawnWaves = _timeToSpawnWaves;
-        enemySpawnerBehavior3.TimeToSpawnWaves = _timeToSpawnWaves;
-        enemySpawnerBehavior4.TimeToSpawnWaves = _timeToSpawnWaves;
-        enemySpawnerBehavior5.TimeToSpawnWaves = _timeToSpawnWaves;
+        //loops through the array...
+        for (int i = 0; i < enemySpawnerBehavior.Length; i++)
+        {
+            //sets each index's Time to the time to spawn waves
+            enemySpawnerBehavior[i].TimeToSpawnWaves = _timeToSpawnWaves;
+        }
     }
     // Update is called once per frame
     /// <summary>
@@ -27,11 +26,11 @@ public class EnemyHolderManager : MonoBehaviour
     /// </summary>
     public void setActiveSpawners()
     {
-        enemySpawnerBehavior1.IsActive = true;
-        enemySpawnerBehavior2.IsActive = true;
-        enemySpawnerBehavior3.IsActive = true;
-        enemySpawnerBehavior4.IsActive = true;
-        enemySpawnerBehavior5.IsActive = true;
+        //loops through the array...
+        for (int i = 0; i < enemySpawnerBehavior.Length; i++)
+        {
+            //sets each index's active to true
+            enemySpawnerBehavior[i].IsActive = true;
+        }
     }
-
 }
