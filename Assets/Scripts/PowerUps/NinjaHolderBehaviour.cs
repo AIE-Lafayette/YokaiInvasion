@@ -9,9 +9,7 @@ public class NinjaHolderBehaviour : MonoBehaviour
     private NinjaSpawnerBehviour[] ninjaSpawnerBehavior;
 
     private void Awake() { Instace = this; }
-    private void Start()
-    {
-    }
+
     // Update is called once per frame
     /// <summary>
     /// set the spawner instences to be active

@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovementBehavior : MonoBehaviour
 {
 
-    public PlayerMovementBehavior Instace;
+    public static PlayerMovementBehavior Instace;
     [SerializeField]
     private float _speed;
     private Rigidbody _rigidbody;
