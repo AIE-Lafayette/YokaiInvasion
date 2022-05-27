@@ -6,7 +6,7 @@ public class NinjaSpawnerBehviour : MonoBehaviour
 {
     public static NinjaSpawnerBehviour NinjaSpawnerInstance;
     [SerializeField]
-    private NinjaBehvoaur[] _ninjas;
+    private GameObject[] _gameObjects;
     private bool _isActive;
     /// <summary>
     /// amount of time till the enemy spawn for each wave
@@ -36,6 +36,6 @@ public class NinjaSpawnerBehviour : MonoBehaviour
     public void SpawnNinja()
     {
         //keeps adding in enemyes based on the waves
-        NinjaBehvoaur spawnedEnemy = Instantiate(_ninjas[0], transform.position,transform.rotation);
+        GameObject spawnedEnemy = Instantiate(_gameObjects[0], transform.position,transform.rotation);
     }
 }

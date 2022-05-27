@@ -212,6 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0525993bb04f57a4bb69354e862500bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Instace: {fileID: 0}
   _speed: 10
 --- !u!114 &-9053783190085303994
 MonoBehaviour:
@@ -269,7 +270,7 @@ GameObject:
   - component: {fileID: 6051660920203556128}
   - component: {fileID: 4433230293350011103}
   m_Layer: 0
-  m_Name: Emittor
+  m_Name: Emitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
