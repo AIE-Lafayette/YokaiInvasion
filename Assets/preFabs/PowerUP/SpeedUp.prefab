@@ -46,3 +46,4 @@ MonoBehaviour:
   _owner: {fileID: 6786952594044603178, guid: d9667c669153abe40bc033c15d871ef9, type: 3}
   _currentPowerUp: {fileID: -2999298240953784041}
   _playerMovement: {fileID: 7779060245788787907, guid: d9667c669153abe40bc033c15d871ef9, type: 3}
+  _timer: 10
