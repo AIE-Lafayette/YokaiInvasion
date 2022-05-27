@@ -6,7 +6,7 @@ public class FireBehaviour : MonoBehaviour
 {
     [SerializeField]
     private ProjectitleBehaviour _bulletRef;
-    
+    public static FireBehaviour instance;
     [SerializeField]
     private float _bulletForce;
     private ProjectitleBehaviour bulletBehaviour;
@@ -30,6 +30,7 @@ public class FireBehaviour : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
         bulletBehaviour = GetComponent<ProjectitleBehaviour>();
     }
     //Spawns a bullet and gives it a force 
