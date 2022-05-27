@@ -16,10 +16,10 @@ public class PlayerMovementBehavior : MonoBehaviour
         get { return _speed; }
         set { Speed = value; }
     }
-    private void Awake()
-    {
-        Instace = this;
-    }
+    //private void Awake()
+    //{
+    //    Instace = this;
+    //}
 
     public virtual float IncreaseSpeed(float SpeedIncrease)
     {

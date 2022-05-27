@@ -4,20 +4,26 @@ using UnityEngine;
 
 public class JumpingEnemyScript : EnemyBehaviour
 {
-    [SerializeField]
-    private Vector3 _offset;
-    private Vector3 _startPos;
-    private Vector3 _move;
+    private Rigidbody _rigidbody;
+    private Vector3 _jump;
+    private float _timer = 2.5f;
+    private bool _isGrounded = false;
 
     [SerializeField]
     private float _direction;
-    private float  _lerpTime;
+    [SerializeField]
+    private float _jumpForce;
 
-    private bool _isGrounded = false;
+    public Vector3 Jump
+    {
+        get { return _jump; }
+        set { _jump = value; }
+    }
 
     private void Start()
     {
-        _startPos = transform.position;
+        _rigidbody = GetComponent<Rigidbody>();
+        Jump = new Vector3(0.0f, _jumpForce, -_direction);
     }
 
     private void OnCollisionStay(Collision collision)
@@ -25,20 +31,27 @@ public class JumpingEnemyScript : EnemyBehaviour
         _isGrounded = true;
     }
 
-    private  void Update()
+    private void Update()
     {
-        transform.position = Vector3.Lerp(_startPos, _startPos + _offset, Mathf.Cos(Time.time) * 0.5f + 0.5f);
-
+        //If the enemy is on the ground
         if (_isGrounded == true)
         {
-            _isGrounded = false;
-        }
-        //if (_isGrounded == false)
-        //{
-        //    _move = new Vector3(0, 0, -_direction);
-        //    transform.position += _move * Time.deltaTime;
-        //    GetComponent<Rigidbody>().velocity = transform.forward;
-        //}
+            //if the timer is above 0
+            if(_timer > 0f)
+            {
+                //count down
+                _timer -= Time.deltaTime;
+            }
+            else
+            {
+                //add jumping force
+                _rigidbody.AddForce(Jump * _jumpForce, ForceMode.Impulse);
+                //set the _IsGrounded to be false
+                _isGrounded = false;
+                //restart the timer
+                _timer = 2.5f;
+            }
             
+        }
     }
 }

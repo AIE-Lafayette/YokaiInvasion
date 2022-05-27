@@ -537,6 +537,7 @@ MonoBehaviour:
   _speed: 0
   _offset: {x: 0, y: 5, z: 0}
   _direction: 0
+  _jumpForce: 0
 --- !u!54 &606578186
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -761,6 +762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0525993bb04f57a4bb69354e862500bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Instace: {fileID: 0}
   _speed: 10
 --- !u!114 &1174150345
 MonoBehaviour:
@@ -1434,11 +1436,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6404776012156251143, guid: 24189b5777cbbaa4482dab60df254868, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.55
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 6404776012156251143, guid: 24189b5777cbbaa4482dab60df254868, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -23.35
+      value: -25.39
       objectReference: {fileID: 0}
     - target: {fileID: 6404776012156251143, guid: 24189b5777cbbaa4482dab60df254868, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1478,7 +1480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7657507282198726864, guid: 24189b5777cbbaa4482dab60df254868, type: 3}
       propertyPath: _offset.y
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7657507282198726864, guid: 24189b5777cbbaa4482dab60df254868, type: 3}
       propertyPath: _offset.z
@@ -1486,11 +1488,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7657507282198726864, guid: 24189b5777cbbaa4482dab60df254868, type: 3}
       propertyPath: _direction
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7657507282198726864, guid: 24189b5777cbbaa4482dab60df254868, type: 3}
       propertyPath: _jumpForce
-      value: 0.6
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657507282198726864, guid: 24189b5777cbbaa4482dab60df254868, type: 3}
+      propertyPath: _jumpforce
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7657507282198726864, guid: 24189b5777cbbaa4482dab60df254868, type: 3}
       propertyPath: _isGrounded
