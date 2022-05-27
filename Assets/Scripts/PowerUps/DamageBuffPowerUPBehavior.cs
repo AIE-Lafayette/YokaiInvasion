@@ -54,7 +54,8 @@ public class DamageBuffPowerUPBehavior : PowerUpBehavior
     {
         _bulletRef.IncreaseDamage(-10);
         _bulletRef.transform.localScale = new Vector3(0.6f, 0.2f, 0.2f);
-        FireBehaviour.instance.ForceNerf(-5);
+        //_gun.ForceNerf(-10);
+       / /asdfasdf
     }
 
     /// <summary>
