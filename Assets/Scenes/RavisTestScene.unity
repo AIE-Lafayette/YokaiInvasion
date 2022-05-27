@@ -635,7 +635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _owner: {fileID: 1632514056}
-  _currentPowerUp: {fileID: -2999298240953784041, guid: e47526425587d0042be2c9704d465440, type: 3}
+  _currentPowerUp: {fileID: 5227530777180819338, guid: 1493d9ca108a916499123f577b73d41c, type: 3}
 --- !u!1 &1867668676
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,7 +915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 822933163534807813, guid: 4879baaeeff0010499f82e426be14283, type: 3}
       propertyPath: m_TagString
-      value: SpeedUp
+      value: Rage
       objectReference: {fileID: 0}
     - target: {fileID: 2337227293354176670, guid: 4879baaeeff0010499f82e426be14283, type: 3}
       propertyPath: _speed
