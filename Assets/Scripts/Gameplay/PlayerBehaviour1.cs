@@ -15,8 +15,7 @@ public class PlayerBehaviour1 : HealthBehavior
         if (other.tag == "Enemy")
             TakeDamage(enemyBehaviour.Damage);
 
-        if (other.tag == "ninja")
+        if (other.tag == "Ninja")
             NinjaHolderBehaviour.Instace.setActiveSpawners();
-        
     }
 }

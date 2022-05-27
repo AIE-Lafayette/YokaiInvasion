@@ -16,21 +16,19 @@ public class PlayerMovementBehavior : MonoBehaviour
         get { return _speed; }
         set { Speed = value; }
     }
-    //private void Awake()
-    //{
-    //    Instace = this;
-    //}
-
+    private void Awake()
+    {
+        Instace = this;
+    }
+    public Vector3 Velocity 
+    {
+        get { return _velocity; }
+    }
     public virtual float IncreaseSpeed(float SpeedIncrease)
     {
         _speed += SpeedIncrease;
 
         return SpeedIncrease;
-    }
-
-    private void Awake()
-    {
-        Instace = this;
     }
 
     // Start is called before the first frame update
