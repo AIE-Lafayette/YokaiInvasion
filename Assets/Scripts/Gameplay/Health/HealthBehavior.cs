@@ -31,6 +31,7 @@ public class HealthBehavior : MonoBehaviour
             GameManager.Instace.SubtractPoint();
         //sets it to be not alive
         _isAlive = false;
+        //asdfasdfasd
     }
     // Update is called once per frame
     void Update()

@@ -37,6 +37,7 @@ public class EnemySpawnerBehavior : MonoBehaviour
             //incresse amount
             GameManager.Instace.AddPoint();
             IsActive = false;
+            //asdfasdfasd
         }
     }
     /// <summary>
