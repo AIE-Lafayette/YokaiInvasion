@@ -22,7 +22,6 @@ public class EnemySpawnerBehavior : MonoBehaviour
     private void Awake() 
     {
         EnemySpawnerInstance = this;
-       
     }
     private void Start()
     {
@@ -35,7 +34,7 @@ public class EnemySpawnerBehavior : MonoBehaviour
         {
             RoutineBehaviour.Instance.StartNewTimedAction(args => SpawnEnemy() , TimedActionCountType.UNSCALEDTIME, _TimeToSpawnWaves);
             //incresse amount
-            GameManager.Instace.AddPoint();
+            GameManager.Instace.AddEnemyCount();
             IsActive = false;
         }
     }
@@ -45,7 +44,7 @@ public class EnemySpawnerBehavior : MonoBehaviour
     public void SpawnEnemy()
     {
         //keeps adding in enemyes based on the waves
-        EnemyBehaviour spawnedEnemy = Instantiate(_enemy[Random.Range(0,_enemy.Length)], transform.position, transform.rotation);
+        EnemyBehaviour spawnedEnemy = Instantiate(_enemy[Random.Range(0, _enemy.Length)], transform.position, transform.rotation);
         
     }
 }

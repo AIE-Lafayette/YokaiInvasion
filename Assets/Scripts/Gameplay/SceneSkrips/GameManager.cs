@@ -58,12 +58,12 @@ public class GameManager : MonoBehaviour
     {
         _enemyCount = enemySpawnerBehavior.EnemyCount;
     }
-    public void AddPoint()
+    public void AddEnemyCount()
     {
         _enemyCount += 1;
         _enemycount.text = "Score: " + _playerScore.ToString();
     }
-    public void SubtractPoint()
+    public void AddPoint()
     {
         _playerScore++;
         _enemyCount -= 1;
