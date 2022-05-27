@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,12 +12,18 @@ public class SpeedUpPowerUpBehavior : PowerUpBehavior
 
     public override void Activate(params object[] arg)
     {
+        //Instace();
         SpeedBuff();
+    }
+
+    private void Instace()
+    {
+        //_playerMovement.Instace;
     }
 
     private void SpeedBuff()
     {
-        _playerMovement.IncreaseSpeed(5);
+        PlayerMovementBehavior.Instace.IncreaseSpeed(5);
         _active = true;
         TimeLeft();
     }
@@ -31,6 +38,6 @@ public class SpeedUpPowerUpBehavior : PowerUpBehavior
 
     private void Reset()
     {
-        _playerMovement.IncreaseSpeed(-5);
+        PlayerMovementBehavior.Instace.IncreaseSpeed(-5);
     }
 }
