@@ -1056,9 +1056,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a10993ce8a791c419b6644b97f92485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enviromentSpawnerBehavior:
-  - {fileID: 1829777806}
-  - {fileID: 623735064}
+  _enviromentSpawnerBehavior: {fileID: 1829777806}
+  _enviromentSpawnerBehavior2: {fileID: 623735064}
 --- !u!4 &812797720
 Transform:
   m_ObjectHideFlags: 0
@@ -2316,25 +2315,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7412290360530164135, guid: 72ec404568010894e95e411313308661, type: 3}
   m_PrefabInstance: {fileID: 2020996823}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1930749328 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 675629193992820222, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
-  m_PrefabInstance: {fileID: 733630134}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1930749330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1930749328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa4eced6125786f4190094d6bb71bfe1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ninjaSpawnerBehavior:
-  - {fileID: 637819589}
 --- !u!4 &1930749336 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 272079041844877544, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
@@ -2749,12 +2729,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 361661e970e39bd489b7ef09738ec445, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpawnerBehavior:
-  - {fileID: 1292545852}
-  - {fileID: 866783741}
-  - {fileID: 24408205}
-  - {fileID: 1139068229}
-  - {fileID: 394938654}
+  enemySpawnerBehavior1: {fileID: 1292545852}
+  enemySpawnerBehavior2: {fileID: 866783741}
+  enemySpawnerBehavior3: {fileID: 24408205}
+  enemySpawnerBehavior4: {fileID: 1139068229}
+  enemySpawnerBehavior5: {fileID: 394938654}
   _timeToSpawnWaves: 3
 --- !u!4 &2132062571
 Transform:

@@ -19,6 +19,7 @@ public class EnemyHolderManager : MonoBehaviour
             //sets each index's Time to the time to spawn waves
             enemySpawnerBehavior[i].TimeToSpawnWaves = _timeToSpawnWaves;
         }
+        //adfasdfasdf
     }
     // Update is called once per frame
     /// <summary>

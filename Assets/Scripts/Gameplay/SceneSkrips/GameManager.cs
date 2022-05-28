@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
     }
     public void AddEnemyCount()
     {
+        //asdfasdfasdf
         _enemyCount += 1;
         _enemycount.text = "Score: " + _playerScore.ToString();
     }

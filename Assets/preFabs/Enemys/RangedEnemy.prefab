@@ -267,7 +267,7 @@ MonoBehaviour:
   _maxHealth: 5
   _isAlive: 1
   _destroyOnDeath: 1
-  _powerUpSpawnerHolderBehvour: {fileID: 0}
+  _powerUpSpawnerBehvour: {fileID: 6378153362935630608}
 --- !u!114 &653750253398660219
 MonoBehaviour:
   m_ObjectHideFlags: 0
