@@ -211,7 +211,7 @@ MonoBehaviour:
   _maxHealth: 20
   _isAlive: 1
   _destroyOnDeath: 1
-  _powerUpSpawnerHolderBehvour: {fileID: 0}
+  _powerUpSpawnerBehvour: {fileID: 7473703638417509192}
 --- !u!54 &7335270417012486934
 Rigidbody:
   m_ObjectHideFlags: 0

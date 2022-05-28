@@ -224,9 +224,8 @@ MonoBehaviour:
   _enemyBehaviour: {fileID: 7657507282198726864}
   _damage: 3
   _speed: 7
-  _isGrounded: 1
-  _jumpForce: 5
   _direction: 1
+  _jumpForce: 5
 --- !u!54 &-5533932937231236157
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -259,7 +258,7 @@ MonoBehaviour:
   _maxHealth: 10
   _isAlive: 1
   _destroyOnDeath: 1
-  _powerUpSpawnerHolderBehvour: {fileID: 0}
+  _powerUpSpawnerBehvour: {fileID: 8022121606632810278}
 --- !u!1 &6410802307697052071
 GameObject:
   m_ObjectHideFlags: 0
