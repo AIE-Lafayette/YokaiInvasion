@@ -27,7 +27,7 @@ public class NinjaSpawnerBehviour : MonoBehaviour
         if (IsActive)
         {
             SpawnNinja();
-            IsActive = false;//asdfasdfasdf
+            IsActive = false;
         }
     }
     /// <summary>
