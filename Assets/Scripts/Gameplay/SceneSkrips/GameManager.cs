@@ -59,13 +59,12 @@ public class GameManager : MonoBehaviour
     }
     public void AddEnemyCount()
     {
-        //asdfasdfasdf
         _enemyCount += 1;
         _enemycount.text = "Score: " + _playerScore.ToString();
     }
     public void AddPoint()
     {
-        _playerScore++;
+        _playerScore += 50;
         _enemyCount -= 1;
         _enemycount.text = "Score: " + _playerScore.ToString();
     }
