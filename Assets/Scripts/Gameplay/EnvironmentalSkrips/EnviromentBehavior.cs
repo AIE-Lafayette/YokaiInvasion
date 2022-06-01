@@ -10,11 +10,11 @@ public class EnviromentBehavior : MonoBehaviour
     private float _lifeTime;
     private float _timer;
     private Transform _setPostion;
-    private void Start()
-    {
-        _setPostion = _enviromentRef.transform;
+    //private void Start()
+    //{
+    //    _setPostion = _enviromentRef.transform;
          
-    }
+    //}
     // Update is called once per frame
     void Update()
     {
@@ -23,10 +23,9 @@ public class EnviromentBehavior : MonoBehaviour
         //destroys the enviroment after some time
         if (_timer >= _lifeTime)
         {
-            ReastPlace();
+            //ReastPlace();
+            Destroy(_enviromentRef);
         }
-           // Destroy(_enviromentRef);
-
     }
 
     void ReastPlace() 
