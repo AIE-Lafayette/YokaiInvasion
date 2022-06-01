@@ -13,12 +13,11 @@ public class GameManager : MonoBehaviour
     private EnemySpawnerBehavior enemySpawnerBehavior;
     private int _playerScore, _enemyCount;
     public Text _enemycount;
-    private bool _isEvent;
     private void Awake()  { Instace = this; }
     private void Start()
     {
         _enemycount.text = "Score: " + _playerScore.ToString();
-        //caculatePoint();
+        caculatePoint();
     }
     // Update is called once per frame
     void Update()
@@ -41,7 +40,7 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
                 break;
             case GameState.SpawnWave:
-                EnemyHolderManager.Instace.setActiveSpawners();
+                 EnemyHolderManager.Instace.setActiveSpawners();
                 break;
             case GameState.AdvanceForward:
                 EnvironmentSpawnerHolder.Instace.setActiveSpawners();
@@ -53,6 +52,10 @@ public class GameManager : MonoBehaviour
                 break;
         }
         OnGmaeStateChange?.Invoke(newState);
+    }
+    public void caculatePoint()
+    {
+        _enemyCount = enemySpawnerBehavior.EnemyCount;
     }
     public void AddEnemyCount()
     {

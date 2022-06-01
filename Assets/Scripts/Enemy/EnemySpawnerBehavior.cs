@@ -32,7 +32,7 @@ public class EnemySpawnerBehavior : MonoBehaviour
         if (IsActive)
         {
 
-            SpawnEnemy();
+            RoutineBehaviour.Instance.StartNewTimedAction(args => SpawnEnemy(), TimedActionCountType.UNSCALEDTIME, _TimeToSpawnWaves);
             //incresse amount
             GameManager.Instace.AddEnemyCount();
             IsActive = false;
