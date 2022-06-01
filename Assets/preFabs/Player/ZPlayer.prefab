@@ -107,9 +107,9 @@ GameObject:
   - component: {fileID: 7249894944693881026}
   - component: {fileID: 5972686878661756158}
   - component: {fileID: 5742974361761551085}
+  - component: {fileID: -4409403880236961455}
   - component: {fileID: 3923458405677812800}
   - component: {fileID: -9053783190085303994}
-  - component: {fileID: -4409403880236961455}
   - component: {fileID: 1537720564037260755}
   m_Layer: 0
   m_Name: ZPlayer
@@ -200,33 +200,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3923458405677812800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 675629193992820222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0525993bb04f57a4bb69354e862500bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Instace: {fileID: 0}
-  _speed: 10
---- !u!114 &-9053783190085303994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 675629193992820222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e43926789d5af44b26c6d11bf22702, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _gun: {fileID: 0}
 --- !u!54 &-4409403880236961455
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -243,6 +216,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &3923458405677812800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675629193992820222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0525993bb04f57a4bb69354e862500bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 10
+--- !u!114 &-9053783190085303994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675629193992820222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9e43926789d5af44b26c6d11bf22702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gun: {fileID: 0}
 --- !u!114 &1537720564037260755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,6 +258,7 @@ MonoBehaviour:
   _maxHealth: 1
   _isAlive: 1
   _destroyOnDeath: 1
+  _powerUpSpawnerBehvour: {fileID: 0}
 --- !u!1 &4212918487032482956
 GameObject:
   m_ObjectHideFlags: 0
