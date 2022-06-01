@@ -24,7 +24,6 @@ public class GameManager : MonoBehaviour
     {
         if (_enemyCount == 0)
         {
-            //EnemyHolderManager.Instace.setActiveSpawners();
             UpdateGamestate(GameState.AdvanceForward);
         }
     }
@@ -65,7 +64,7 @@ public class GameManager : MonoBehaviour
     }
     public void AddPoint()
     {
-        _playerScore++;
+        _playerScore += 50;
         _enemyCount -= 1;
         _enemycount.text = "Score: " + _playerScore.ToString();
     }

@@ -36,6 +36,5 @@ public class PowerUpBehavior : MonoBehaviour
     /// <param name="arg">The arguments to have the power up function</param>
     public virtual void Activate(params object[] arg)
     {
-       
     }
 }

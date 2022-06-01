@@ -138,8 +138,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8401789039116213520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.4151983, y: 0.7, z: -22.46}
-  m_LocalScale: {x: 1, y: 1.7917732, z: 1}
+  m_LocalPosition: {x: 3.4151983, y: 0.7966, z: -22.46}
+  m_LocalScale: {x: 0.688215, y: 1.2331252, z: 0.688215}
   m_Children:
   - {fileID: 3118640918492734973}
   - {fileID: 321452270593973118}
@@ -211,7 +211,7 @@ MonoBehaviour:
   _maxHealth: 20
   _isAlive: 1
   _destroyOnDeath: 1
-  _powerUpSpawnerHolderBehvour: {fileID: 0}
+  _powerUpSpawnerBehvour: {fileID: 7473703638417509192}
 --- !u!54 &7335270417012486934
 Rigidbody:
   m_ObjectHideFlags: 0
