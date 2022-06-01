@@ -7,7 +7,6 @@ public class DamageBuffPowerUPBehavior : PowerUpBehavior
 {
     [SerializeField]
     ProjectitleBehaviour _bulletRef;
-    FireBehaviour _gun;
     private bool _active = false;
     [SerializeField]
     private float _timer;
@@ -19,7 +18,6 @@ public class DamageBuffPowerUPBehavior : PowerUpBehavior
     {  
         _bulletRef.IncreaseDamage(10);
         FireBehaviour.instance.ForceNerf(5);
-        _bulletRef.transform.localScale = new Vector3(3, 0.2f, 0.2f);
           _active = true;
         TimeLeft();
     }
@@ -31,8 +29,6 @@ public class DamageBuffPowerUPBehavior : PowerUpBehavior
     /// <param name="arg"></param>
     public override void Activate(params object[] arg)
     {
-        //gets a reference to the gun
-        //SetOwner();
         //increases the damage, scale while dreasesing force
         DamageBuff();
     }
@@ -52,18 +48,6 @@ public class DamageBuffPowerUPBehavior : PowerUpBehavior
     private void Reset()
     {
         _bulletRef.IncreaseDamage(-10);
-        _bulletRef.transform.localScale = new Vector3(0.6f, 0.2f, 0.2f);
-        //_gun.ForceNerf(-10);
-    }
-
-    /// <summary>
-    /// Gets a refenece of the gun for the player
-    /// </summary>
-    private void SetOwner()
-    {
-        if (Owner.tag == "Player")
-        {
-            _gun = Owner.GetComponentInChildren<FireBehaviour>();
-        }
+        FireBehaviour.instance.ForceNerf(-5);
     }
 }
