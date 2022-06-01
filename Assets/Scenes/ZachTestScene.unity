@@ -535,7 +535,6 @@ MonoBehaviour:
   _enemyBehaviour: {fileID: 606578185}
   _damage: 5
   _speed: 0
-  _offset: {x: 0, y: 5, z: 0}
   _direction: 0
   _jumpForce: 0
 --- !u!54 &606578186
@@ -762,7 +761,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0525993bb04f57a4bb69354e862500bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Instace: {fileID: 0}
   _speed: 10
 --- !u!114 &1174150345
 MonoBehaviour:
@@ -780,6 +778,7 @@ MonoBehaviour:
   _maxHealth: 1
   _isAlive: 1
   _destroyOnDeath: 1
+  _powerUpSpawnerBehvour: {fileID: 0}
 --- !u!114 &1174150346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1436,7 +1435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6404776012156251143, guid: 24189b5777cbbaa4482dab60df254868, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6
+      value: 2.46
       objectReference: {fileID: 0}
     - target: {fileID: 6404776012156251143, guid: 24189b5777cbbaa4482dab60df254868, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1492,7 +1491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7657507282198726864, guid: 24189b5777cbbaa4482dab60df254868, type: 3}
       propertyPath: _jumpForce
-      value: 2
+      value: 2.7
       objectReference: {fileID: 0}
     - target: {fileID: 7657507282198726864, guid: 24189b5777cbbaa4482dab60df254868, type: 3}
       propertyPath: _jumpforce
