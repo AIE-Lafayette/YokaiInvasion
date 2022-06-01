@@ -24,7 +24,6 @@ public class GameManager : MonoBehaviour
     {
         if (_enemyCount == 0)
         {
-            //EnemyHolderManager.Instace.setActiveSpawners();
             UpdateGamestate(GameState.AdvanceForward);
         }
     }

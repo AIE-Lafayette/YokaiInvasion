@@ -139,8 +139,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4300369910222140372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.49, y: 2.593, z: -32.81224}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -5.4735, y: 2.6529, z: -32.785}
+  m_LocalScale: {x: 0.9904856, y: 1.128422, z: 1.0142651}
   m_Children:
   - {fileID: 6105612333882906065}
   - {fileID: 4043733950015137177}
@@ -204,7 +204,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4300369910222140372}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -223,9 +223,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyBehaviour: {fileID: 7657507282198726864}
   _damage: 3
-  _speed: 7
+  _speed: 0
   _direction: 1
-  _jumpForce: 5
+  _jumpForce: 2
 --- !u!54 &-5533932937231236157
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -238,9 +238,9 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 50
   m_CollisionDetection: 0
 --- !u!114 &2334899234444803428
 MonoBehaviour:
@@ -397,6 +397,10 @@ PrefabInstance:
       propertyPath: _gameObjects.Array.data[0]
       value: 
       objectReference: {fileID: 822933163534807813, guid: 4879baaeeff0010499f82e426be14283, type: 3}
+    - target: {fileID: 5812609072484030379, guid: 57b84069a6269164082a8aabccad447d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2509445339425683001, guid: 57b84069a6269164082a8aabccad447d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 57b84069a6269164082a8aabccad447d, type: 3}
