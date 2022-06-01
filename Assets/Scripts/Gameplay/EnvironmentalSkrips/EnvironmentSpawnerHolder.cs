@@ -15,7 +15,6 @@ public class EnvironmentSpawnerHolder : MonoBehaviour
     /// </summary>
     public void setActiveSpawners()
     {
-       
         RoutineBehaviour.Instance.StartNewTimedAction(args => SetObjectToActive(), TimedActionCountType.UNSCALEDTIME, 1);
         RoutineBehaviour.Instance.StartNewTimedAction(args => SetObjectToActives(), TimedActionCountType.UNSCALEDTIME, 2);
        

@@ -54,11 +54,6 @@ public class GameManager : MonoBehaviour
         }
         OnGmaeStateChange?.Invoke(newState);
     }
-    //public void caculatePoint()
-    //{
-    //    _enemyCount = enemySpawnerBehavior.EnemyCount;
-        
-    //}
     public void AddEnemyCount()
     {
         _enemyCount += 1;

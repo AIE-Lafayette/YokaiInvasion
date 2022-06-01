@@ -17,8 +17,6 @@ public class EnviromentBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.SetActive(true);
-
         RoutineBehaviour.Instance.StartNewTimedAction(args => ReastPlace(), TimedActionCountType.UNSCALEDTIME, _lifeTime );
     }
 
