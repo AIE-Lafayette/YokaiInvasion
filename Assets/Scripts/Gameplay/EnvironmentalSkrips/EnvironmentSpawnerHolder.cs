@@ -15,9 +15,12 @@ public class EnvironmentSpawnerHolder : MonoBehaviour
     /// </summary>
     public void setActiveSpawners()
     {
-        RoutineBehaviour.Instance.StartNewTimedAction(args => SetObjectToActive(), TimedActionCountType.UNSCALEDTIME, 1);
-        RoutineBehaviour.Instance.StartNewTimedAction(args => SetObjectToActives(), TimedActionCountType.UNSCALEDTIME, 2);
-       
+        if (_enviromentRef[1].gameObject.activeSelf == false)
+            RoutineBehaviour.Instance.StartNewTimedAction(args => SetObjectToActive(), TimedActionCountType.UNSCALEDTIME, 1);
+
+
+        if (_enviromentRef[4].gameObject.activeSelf == false)
+            RoutineBehaviour.Instance.StartNewTimedAction(args => GameManager.Instace.UpdateGamestate(GameState.SpawnWave), TimedActionCountType.UNSCALEDTIME, 2);
     }
 
     void SetObjectToActive()
@@ -26,13 +29,14 @@ public class EnvironmentSpawnerHolder : MonoBehaviour
         {
             _enviromentRef[i].gameObject.SetActive(true);
         }
+        RoutineBehaviour.Instance.StartNewTimedAction(args => SetObjectToActives(), TimedActionCountType.UNSCALEDTIME, 1);
     }
     void SetObjectToActives()
     {
+        
         for (int i = 2; i < 4; i++)
         {
             _enviromentRef[i].gameObject.SetActive(true);
         }
-        RoutineBehaviour.Instance.StartNewTimedAction(args => GameManager.Instace.UpdateGamestate(GameState.SpawnWave), TimedActionCountType.UNSCALEDTIME, 2);
     }
 }

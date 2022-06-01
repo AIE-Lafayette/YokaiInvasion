@@ -22,7 +22,7 @@ public class EnviromentBehavior : MonoBehaviour
 
     void ReastPlace() 
     {
-        gameObject.SetActive(false);
+       _enviromentRef.gameObject.SetActive(false);
         _enviromentRef.transform.position = _setPostion.position;
     }
 }
