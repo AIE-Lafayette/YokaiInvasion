@@ -26,7 +26,7 @@ public class EnemySpawnerBehavior : MonoBehaviour
     private void Start()
     {
         IsActive = true;
-        GameManager.Instace.caculatePoint();
+        //GameManager.Instace.caculatePoint();
     }
     void Update()
     {
