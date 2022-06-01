@@ -13,11 +13,11 @@ TrailRenderer:
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 0
-  m_LightProbeUsage: 0
+  m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 3
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 07106ba2d6a901a41aecc72bdccca05e, type: 2}
@@ -102,8 +102,8 @@ TrailRenderer:
     numCapVertices: 1
     alignment: 0
     textureMode: 0
-    shadowBias: 0
-    generateLightingData: 0
+    shadowBias: 1
+    generateLightingData: 1
   m_MinVertexDistance: 0.1
   m_Autodestruct: 1
   m_Emitting: 1
