@@ -6,7 +6,7 @@ public class FireBehaviour : MonoBehaviour
 {
     [SerializeField]
     private ProjectitleBehaviour _bulletRef;
-    
+    public static FireBehaviour instance;
     [SerializeField]
     private float _bulletForce;
     private ProjectitleBehaviour bulletBehaviour;
@@ -30,11 +30,13 @@ public class FireBehaviour : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
         bulletBehaviour = GetComponent<ProjectitleBehaviour>();
     }
     //Spawns a bullet and gives it a force 
     public void Fire()
     {
+        _bulletRef.transform.forward = transform.forward;
         //instatiats the bullet and the position that it spawns, and its rotation.
         GameObject bullet = Instantiate(_bulletRef.gameObject, transform.position, transform.rotation);
         ProjectitleBehaviour bulletBehaviour = bullet.GetComponent<ProjectitleBehaviour>();

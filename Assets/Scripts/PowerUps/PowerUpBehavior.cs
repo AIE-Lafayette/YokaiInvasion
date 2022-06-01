@@ -12,12 +12,18 @@ public class PowerUpBehavior : MonoBehaviour
     [SerializeField]
     private PowerUpBehavior _currentPowerUp;
 
+    /// <summary>
+    /// The current power up in use
+    /// </summary>
     public PowerUpBehavior CurrentPowerUp
     {
         get { return _currentPowerUp; }
         set { _currentPowerUp = value; }
     }
 
+    /// <summary>
+    /// The current owner of the powerup
+    /// </summary>
     public GameObject Owner
     {
         get { return _owner; }
@@ -30,6 +36,5 @@ public class PowerUpBehavior : MonoBehaviour
     /// <param name="arg">The arguments to have the power up function</param>
     public virtual void Activate(params object[] arg)
     {
-        
     }
 }

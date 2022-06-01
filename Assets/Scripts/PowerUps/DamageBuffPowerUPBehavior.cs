@@ -18,7 +18,7 @@ public class DamageBuffPowerUPBehavior : PowerUpBehavior
     public virtual void DamageBuff()
     {  
         _bulletRef.IncreaseDamage(10);
-        //_gun.ForceNerf(5);
+        FireBehaviour.instance.ForceNerf(5);
         _bulletRef.transform.localScale = new Vector3(3, 0.2f, 0.2f);
           _active = true;
         TimeLeft();
@@ -43,7 +43,6 @@ public class DamageBuffPowerUPBehavior : PowerUpBehavior
         if (_active)
         {
             RoutineBehaviour.Instance.StartNewTimedAction(args =>Reset(), TimedActionCountType.UNSCALEDTIME, _timer);
-            
         }
     }
 

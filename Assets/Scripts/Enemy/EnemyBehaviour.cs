@@ -28,6 +28,7 @@ public class EnemyBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //asdfasdfads
         //makes movedirection into a new vecotor3 that uses speed to move
         MoveDirection = new Vector3(0, 0, -_speed);
         //addes the move direction scaled up by  the deltatime to position
@@ -41,7 +42,6 @@ public class EnemyBehaviour : MonoBehaviour
     /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
-        //a alternatve to this statement is using the *GameObject.FindGameObjectsWithTag("Enemy");*
         //you will have to use the game manager to get the array of enemies
         if (!_enemyBehaviour)//if not enemy behaviour
             if (tag != other.tag)  //is the posistion of other and this the same
