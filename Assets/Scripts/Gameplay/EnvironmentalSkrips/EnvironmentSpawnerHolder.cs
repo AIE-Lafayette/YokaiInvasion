@@ -6,37 +6,21 @@ public class EnvironmentSpawnerHolder : MonoBehaviour
 {
     public static EnvironmentSpawnerHolder Instace;
     [SerializeField]
-    private EnviromentBehavior[] _enviromentRef;
+    private EnviromentSpawnerBehviour[] _enviromentRef;
+    private bool _isActive;
 
+    public bool IsActive { get { return _isActive; } set { _isActive = value; } }
     private void Awake() { Instace = this; }
     // Update is called once per frame
     /// <summary>
-    /// set the game objects to be active after the tiemr is done
+    /// set the spawner instences to be active
     /// </summary>
     public void setActiveSpawners()
     {
-        if (_enviromentRef[1].gameObject.activeSelf == false)
-            RoutineBehaviour.Instance.StartNewTimedAction(args => SetObjectToActive(), TimedActionCountType.UNSCALEDTIME, 1);
-
-
-        if (_enviromentRef[4].gameObject.activeSelf == false)
-            RoutineBehaviour.Instance.StartNewTimedAction(args => GameManager.Instace.UpdateGamestate(GameState.SpawnWave), TimedActionCountType.UNSCALEDTIME, 2);
-    }
-
-    void SetObjectToActive()
-    {
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < _enviromentRef.Length; i++)
         {
-            _enviromentRef[i].gameObject.SetActive(true);
+            _enviromentRef[i].IsActive = true;//set each index to true
         }
-        RoutineBehaviour.Instance.StartNewTimedAction(args => SetObjectToActives(), TimedActionCountType.UNSCALEDTIME, 1);
-    }
-    void SetObjectToActives()
-    {
         
-        for (int i = 2; i < 4; i++)
-        {
-            _enviromentRef[i].gameObject.SetActive(true);
-        }
     }
 }
