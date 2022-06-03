@@ -6,7 +6,7 @@ public class NinjaHolderBehaviour : MonoBehaviour
 {
     public static NinjaHolderBehaviour Instace;
     [SerializeField]
-    private NinjaSpawnerBehviour[] ninjaSpawnerBehavior;
+    private NinjaBehvoaur[] _ninjas;
 
     private void Awake() { Instace = this; }
 
@@ -17,10 +17,10 @@ public class NinjaHolderBehaviour : MonoBehaviour
     public void setActiveSpawners()
     {
         //loops through the array...
-        for (int i = 0; i < ninjaSpawnerBehavior.Length; i++)
+        for (int i = 0; i < _ninjas.Length; i++)
         {
             //sets each index's active to true
-            ninjaSpawnerBehavior[i].IsActive = true;
+            _ninjas[i].gameObject.SetActive(true);
         }
     }
 }
