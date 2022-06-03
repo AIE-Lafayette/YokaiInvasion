@@ -8,8 +8,6 @@ public class DamageBuffPowerUPBehavior : PowerUpBehavior
     [SerializeField]
     ProjectitleBehaviour _bulletRef;
     private bool _active = false;
-    [SerializeField]
-    private float _timer;
 
     /// <summary>
     /// Chanages the values of the gun force and the bullet damage and scale
@@ -18,6 +16,7 @@ public class DamageBuffPowerUPBehavior : PowerUpBehavior
     {  
         _bulletRef.IncreaseDamage(10);
         FireBehaviour.instance.ForceNerf(5);
+        _bulletRef.GetComponentInChildren<TrailRenderer>().startColor = Color.red;
           _active = true;
         TimeLeft();
     }
@@ -38,7 +37,7 @@ public class DamageBuffPowerUPBehavior : PowerUpBehavior
     {
         if (_active)
         {
-            RoutineBehaviour.Instance.StartNewTimedAction(args =>Reset(), TimedActionCountType.UNSCALEDTIME, _timer);
+            RoutineBehaviour.Instance.StartNewTimedAction(args =>Reset(), TimedActionCountType.UNSCALEDTIME, 10);
         }
     }
 
@@ -49,5 +48,6 @@ public class DamageBuffPowerUPBehavior : PowerUpBehavior
     {
         _bulletRef.IncreaseDamage(-10);
         FireBehaviour.instance.ForceNerf(-5);
+        _bulletRef.GetComponentInChildren<TrailRenderer>().startColor = Color.cyan;
     }
 }
