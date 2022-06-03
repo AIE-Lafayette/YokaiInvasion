@@ -9,6 +9,7 @@ TagManager:
   - Rage
   - SpeedUp
   - Emitter
+  - Wall
   layers:
   - Default
   - TransparentFX

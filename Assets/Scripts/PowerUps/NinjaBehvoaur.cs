@@ -25,6 +25,6 @@ public class NinjaBehvoaur : MonoBehaviour
     {
         if (this == null)
             return;
-        RoutineBehaviour.Instance.StartNewTimedAction(args => Destroy(gameObject), TimedActionCountType.UNSCALEDTIME, 3);
+        RoutineBehaviour.Instance.StartNewTimedAction(args => gameObject.SetActive(false), TimedActionCountType.UNSCALEDTIME, 10);
     }
 }
