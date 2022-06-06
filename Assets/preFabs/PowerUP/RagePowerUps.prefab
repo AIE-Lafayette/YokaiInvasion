@@ -16,8 +16,13 @@ GameObject:
   - component: {fileID: 6801497602884872606}
   - component: {fileID: 3195285577283601411}
   m_Layer: 0
+<<<<<<< HEAD:Assets/preFabs/PowerUP/RagePowerUps.prefab
   m_Name: RagePowerUps
   m_TagString: Rage
+=======
+  m_Name: PowerUps
+  m_TagString: Ninja
+>>>>>>> parent of 139e3ee... Merge branch 'jasperBranch' into tjp:Assets/preFabs/PowerUP/PowerUps.prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,6 +117,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
+<<<<<<< HEAD:Assets/preFabs/PowerUP/RagePowerUps.prefab
+=======
+--- !u!114 &2125254664747955838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822933163534807813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e782c9f15533bd544820f88546332739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _PowerUps: {fileID: 822933163534807813}
+  PowerUpNumbers:
+  - Ninja
+  - SpeedUp
+  - Rage
+>>>>>>> parent of 139e3ee... Merge branch 'jasperBranch' into tjp:Assets/preFabs/PowerUP/PowerUps.prefab
 --- !u!54 &6801497602884872606
 Rigidbody:
   m_ObjectHideFlags: 0

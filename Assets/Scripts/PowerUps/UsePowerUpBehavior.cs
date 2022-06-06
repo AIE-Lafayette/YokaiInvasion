@@ -20,10 +20,9 @@ public class UsePowerUpBehavior : PowerUpBehavior
     //On collision with a powerUp it checks their tag and sets the currentPowerup
     private void OnTriggerEnter(Collider other)
     {
-          if (other.tag == "Rage")
+        if (other.tag == "Rage")
         {
             PowerUpBehavior powerUp = other.GetComponent<PowerUpBehavior>();
-
             if (powerUp)
             {
                 GetComponent<PowerUpBehavior>().CurrentPowerUp = powerUp.CurrentPowerUp;

@@ -31,8 +31,7 @@ public class HealthBehavior : MonoBehaviour
         if (tag == "Enemy")
         { 
              GameManager.Instace.AddPoint();
-            if (_powerUpSpawnerBehvour)
-                _powerUpSpawnerBehvour.SpawnPower();
+            _powerUpSpawnerBehvour.SpawnPower();
         }
         //sets it to be not alive
         _isAlive = false;
