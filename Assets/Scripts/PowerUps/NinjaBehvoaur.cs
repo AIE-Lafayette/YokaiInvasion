@@ -29,7 +29,10 @@ public class NinjaBehvoaur : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-       // if (other.tag == "Wall")
-          //  gameObject.transform.localPosition.y += 10;
+        if (other.tag == "WallL")
+            gameObject.transform.localPosition += new Vector3(0, 0, 8);
+
+        if (other.tag == "WallR")
+            gameObject.transform.localPosition += new Vector3(0, 0, -8);
     }
 }
