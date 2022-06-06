@@ -43,7 +43,7 @@ public class PlayerMovementBehavior : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void FixedUpdate() 
     {
         _rigidbody.MovePosition(transform.position + _velocity);
     }
