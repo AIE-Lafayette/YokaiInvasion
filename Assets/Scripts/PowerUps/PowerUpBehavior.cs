@@ -12,6 +12,15 @@ public class PowerUpBehavior : MonoBehaviour
     [SerializeField]
     private PowerUpBehavior _currentPowerUp;
 
+    [SerializeField]
+    private float _timer;
+
+
+    public float Timer
+    {
+        get { return _timer; }
+        set {_timer = value; }
+    }
     /// <summary>
     /// The current power up in use
     /// </summary>
