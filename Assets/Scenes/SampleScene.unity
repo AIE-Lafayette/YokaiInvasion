@@ -1315,6 +1315,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< cb9f79b8d6934657e66cd0397e33ea5956251bef
 --- !u!114 &992272936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1399,11 +1400,15 @@ Camera:
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
 --- !u!4 &992272939
+=======
+--- !u!4 &788272241
+>>>>>>> kept the modified version of
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< cb9f79b8d6934657e66cd0397e33ea5956251bef
   m_GameObject: {fileID: 992272935}
   m_LocalRotation: {x: 0.018905926, y: 0.008725013, z: 0.00016498972, w: 0.99978316}
   m_LocalPosition: {x: 1, y: 7.44, z: -60.66}
@@ -1449,6 +1454,15 @@ Transform:
   - {fileID: 1325987580}
   m_Father: {fileID: 0}
   m_RootOrder: 8
+=======
+  m_GameObject: {fileID: 788272240}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.4398606, y: -15.94598, z: 47.59828}
+  m_LocalScale: {x: 1.3757943, y: 1, z: 10}
+  m_Children: []
+  m_Father: {fileID: 273389495}
+  m_RootOrder: 1
+>>>>>>> kept the modified version of
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &788272242
 MeshCollider:
