@@ -10,6 +10,7 @@ public class PlayerMovementBehavior : MonoBehaviour
     private float _speed;
     private Rigidbody _rigidbody;
     private Vector3 _velocity;
+    private int _lane;
 
     public float Speed
     {
@@ -19,6 +20,7 @@ public class PlayerMovementBehavior : MonoBehaviour
     private void Awake()
     {
         Instace = this;
+        _lane = 2;
     }
     public Vector3 Velocity 
     {
@@ -39,6 +41,28 @@ public class PlayerMovementBehavior : MonoBehaviour
 
     public void Move(Vector3 direction) 
     {
+        // moving left
+        if (_lane < 4)
+        {
+            if (_lane == 0)
+            {
+
+            }
+
+            _lane--;
+        }
+
+        // moving right
+        else if (_lane == 4)
+        {
+            if (_lane > 0)
+            {
+
+            }
+
+            _lane++;
+        }
+
         _velocity = direction * _speed * Time.deltaTime;
     }
 
