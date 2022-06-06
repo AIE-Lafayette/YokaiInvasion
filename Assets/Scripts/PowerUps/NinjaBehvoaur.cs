@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NinjaBehvoaur : MonoBehaviour
+public class NinjaBehvoaur : PowerUpBehavior
 {
     [SerializeField]
     private GameObject _enemyBehaviour;
@@ -11,6 +11,7 @@ public class NinjaBehvoaur : MonoBehaviour
     [SerializeField]
     private GameObject _player;
     private Rigidbody _rigidbody;
+    
     public float Damage { get { return _damage; } set { _damage = value; } }
     /// <summary>
     /// The speed and direction of the game object.
@@ -25,7 +26,7 @@ public class NinjaBehvoaur : MonoBehaviour
     {
         if (this == null)
             return;
-        RoutineBehaviour.Instance.StartNewTimedAction(args => gameObject.SetActive(false), TimedActionCountType.UNSCALEDTIME, 10);
+        RoutineBehaviour.Instance.StartNewTimedAction(args => gameObject.SetActive(false), TimedActionCountType.UNSCALEDTIME, Timer);
     }
     private void OnTriggerEnter(Collider other)
     {
