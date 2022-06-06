@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.AdvanceForward:
                 _waveCount++;
-                _waveCounter.text = "EnemyAmount: " + _waveCount.ToString();
+                _waveCounter.text = "WaveCount: " + _waveCount.ToString();
                 EnvironmentSpawnerHolder.Instace.setActiveSpawners();
                 break;
             case GameState.EndScreen:
