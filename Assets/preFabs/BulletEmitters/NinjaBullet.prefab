@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 8322124320604981559}
   - component: {fileID: 6206681611907711863}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: NinjaBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

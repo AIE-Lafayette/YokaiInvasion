@@ -12,21 +12,31 @@ public class GameManager : MonoBehaviour
     public static event System.Action<GameState> OnGmaeStateChange;
     private EnemySpawnerBehavior enemySpawnerBehavior;
     private int _playerScore, _enemyCount, _waveCount;
-    public Text _enemycount;
-    public Text _waveCounter;
+    public Text _enemycount, _waveCounter, _powerUpTimer;
+    private PowerUpBehavior powerUpBehavior;
     private void Awake()  { Instace = this; }
     private void Start()
     {
         _enemycount.text = "Score: " + _playerScore.ToString();
         _waveCounter.text = "EnemyAmount: " + _waveCount.ToString();
+        _powerUpTimer.text = "TimeLeftForPowerUp: " + (powerUpBehavior.CurrentPowerUp.Timer == 0);
         caculatePoint();
     }
     // Update is called once per frame
     void Update()
     {
         if (_enemyCount == 0)
-        {
             UpdateGamestate(GameState.AdvanceForward);
+
+        if (powerUpBehavior == null)
+            return;
+        if (powerUpBehavior.CheckActive == true)
+        {
+            if (powerUpBehavior.CurrentPowerUp.Timer > 0)
+                powerUpBehavior.CurrentPowerUp.Timer--;
+
+            if (powerUpBehavior.CurrentPowerUp.Timer <= 0)
+                return;
         }
     }
 
