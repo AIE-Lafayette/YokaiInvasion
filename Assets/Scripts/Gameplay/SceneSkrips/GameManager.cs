@@ -11,12 +11,14 @@ public class GameManager : MonoBehaviour
     public GameState State;
     public static event System.Action<GameState> OnGmaeStateChange;
     private EnemySpawnerBehavior enemySpawnerBehavior;
-    private int _playerScore, _enemyCount;
+    private int _playerScore, _enemyCount, _waveCount;
     public Text _enemycount;
+    public Text _waveCounter;
     private void Awake()  { Instace = this; }
     private void Start()
     {
         _enemycount.text = "Score: " + _playerScore.ToString();
+        _waveCounter.text = "EnemyAmount: " + _waveCount.ToString();
         caculatePoint();
     }
     // Update is called once per frame
@@ -40,9 +42,11 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
                 break;
             case GameState.SpawnWave:
-                EnemyHolderManager.Instace.setActiveSpawners();
+                 EnemyHolderManager.Instace.setActiveSpawners();
                 break;
             case GameState.AdvanceForward:
+                _waveCount++;
+                _waveCounter.text = "EnemyAmount: " + _waveCount.ToString();
                 EnvironmentSpawnerHolder.Instace.setActiveSpawners();
                 break;
             case GameState.EndScreen:
@@ -59,13 +63,12 @@ public class GameManager : MonoBehaviour
     }
     public void AddEnemyCount()
     {
-        //asdfasdfasdf
         _enemyCount += 1;
         _enemycount.text = "Score: " + _playerScore.ToString();
     }
     public void AddPoint()
     {
-        _playerScore++;
+        _playerScore += 50;
         _enemyCount -= 1;
         _enemycount.text = "Score: " + _playerScore.ToString();
     }

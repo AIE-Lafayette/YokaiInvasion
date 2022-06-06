@@ -23,6 +23,8 @@ public class NinjaBehvoaur : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RoutineBehaviour.Instance.StartNewTimedAction(args => Destroy(gameObject), TimedActionCountType.UNSCALEDTIME, 3);
+        if (this == null)
+            return;
+        RoutineBehaviour.Instance.StartNewTimedAction(args => gameObject.SetActive(false), TimedActionCountType.UNSCALEDTIME, 10);
     }
 }

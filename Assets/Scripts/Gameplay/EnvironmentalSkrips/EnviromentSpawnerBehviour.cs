@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnviromentSpawnerBehavior : MonoBehaviour
+public class EnviromentSpawnerBehviour : MonoBehaviour
 {
-    public static EnviromentSpawnerBehavior Instace;
+    public static EnviromentSpawnerBehviour Instace;
     [SerializeField]
     private EnviromentBehavior _enviromentRef;
     private float _timer;
@@ -12,7 +12,7 @@ public class EnviromentSpawnerBehavior : MonoBehaviour
     //how meny enemies 
     public bool IsActive { get { return _isActive; } set { _isActive = value; } }
     private void Awake() { Instace = this; }
-    
+
     // Update is called once per frame
     void Update()
     {
@@ -21,15 +21,15 @@ public class EnviromentSpawnerBehavior : MonoBehaviour
         {
             _isActive = false;
             RoutineBehaviour.Instance.StartNewTimedAction(args => Spawn(), TimedActionCountType.UNSCALEDTIME, 1);
-            RoutineBehaviour.Instance.StartNewTimedAction(args => Spawn(), TimedActionCountType.UNSCALEDTIME, 3);
             if (!IsActive)
+            {
                 GameManager.Instace.UpdateGamestate(GameState.SpawnWave);
+            }
         }
     }
-    
+
     void Spawn()
     {
         GameObject enviroment = Instantiate(_enviromentRef.gameObject, transform.position, transform.rotation);
     }
-
 }

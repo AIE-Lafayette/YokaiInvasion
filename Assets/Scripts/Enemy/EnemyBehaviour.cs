@@ -28,7 +28,6 @@ public class EnemyBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //asdfasdfads
         //makes movedirection into a new vecotor3 that uses speed to move
         MoveDirection = new Vector3(0, 0, -_speed);
         //addes the move direction scaled up by  the deltatime to position
