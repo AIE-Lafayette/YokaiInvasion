@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6801497602884872606}
   m_Layer: 0
   m_Name: PowerUps
-  m_TagString: Ninja
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,7 +127,6 @@ MonoBehaviour:
   _PowerUps: {fileID: 822933163534807813}
   PowerUpNumbers:
   - Ninja
-  - SpeedUp
   - Rage
 --- !u!54 &6801497602884872606
 Rigidbody:
