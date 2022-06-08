@@ -4,7 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public class UsePowerUpBehavior : PowerUpBehavior
 {
-
+    
     /// <summary>
     /// Checks if there is a powerup in use and activates it
     /// </summary>
