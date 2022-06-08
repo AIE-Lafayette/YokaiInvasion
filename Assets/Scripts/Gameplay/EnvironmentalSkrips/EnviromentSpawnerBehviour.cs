@@ -30,6 +30,7 @@ public class EnviromentSpawnerBehviour : MonoBehaviour
 
     void Spawn()
     {
+        //asdfasdfasdfasdf
         //make the refereces speed
         GameObject enviroment = Instantiate(_enviromentRef.gameObject, transform.position, transform.rotation);
     }
