@@ -15,6 +15,13 @@ public class PowerUpBehavior : MonoBehaviour
     [SerializeField]
     private float _timer;
 
+    private bool _checkActive;
+
+    public bool CheckActive
+    {
+        get { return _checkActive; }
+        set { _checkActive = value; }
+    }
 
     public float Timer
     {
@@ -38,7 +45,20 @@ public class PowerUpBehavior : MonoBehaviour
         get { return _owner; }
         set { _owner = value; }
     }
-    
+
+    private void Awake()
+    {
+        _checkActive = false;
+    }
+
+    private void Update()
+    {
+        if (CurrentPowerUp == null)
+            _checkActive = false;
+        else
+            _checkActive = true;
+    }
+
     /// <summary>
     /// How the power up functions
     /// </summary>
