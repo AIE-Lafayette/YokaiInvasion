@@ -38,7 +38,7 @@
                     "name": "Left to right",
                     "id": "43a303c8-5432-4b9b-afba-a9838e4e1906",
                     "path": "2DVector",
-                    "interactions": "Press(behavior=2)",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "",
                     "action": "Movement",
