@@ -25,6 +25,11 @@ public class NinjaBehvoaur : MonoBehaviour
     {
         if (this == null)
             return;
-        RoutineBehaviour.Instance.StartNewTimedAction(args => Destroy(gameObject), TimedActionCountType.UNSCALEDTIME, 3);
+        RoutineBehaviour.Instance.StartNewTimedAction(args => gameObject.SetActive(false), TimedActionCountType.UNSCALEDTIME, 10);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+       // if (other.tag == "Wall")
+          //  gameObject.transform.localPosition.y += 10;
     }
 }
