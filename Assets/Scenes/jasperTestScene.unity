@@ -660,13 +660,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 397258054}
-  m_LocalRotation: {x: -0, y: -0.75144285, z: -0, w: 0.65979826}
+  m_LocalRotation: {x: -0, y: -0.69966096, z: -0, w: 0.71447504}
   m_LocalPosition: {x: 1.1, y: -11, z: 71}
-  m_LocalScale: {x: 0.1, y: 10.0186, z: 11.4624}
+  m_LocalScale: {x: -0.010668, y: 10.0186, z: 11.4624}
   m_Children: []
   m_Father: {fileID: 969707555}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: -97.431, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -88.8, z: 0}
 --- !u!65 &397258056
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -926,6 +926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   State: 1
+  _advaceForwardTrue: 0
   _enemycount: {fileID: 955620607}
   _waveCounter: {fileID: 2034982360}
 --- !u!4 &561653749
