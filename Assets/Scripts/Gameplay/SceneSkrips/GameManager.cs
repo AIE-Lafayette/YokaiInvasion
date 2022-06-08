@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         _enemycount.text = "Score: " + _playerScore.ToString();
-        _waveCounter.text = "EnemyAmount: " + _waveCount.ToString();
+        _waveCounter.text = "WaveAmount: " + _waveCount.ToString();
         caculatePoint();
     }
     // Update is called once per frame
