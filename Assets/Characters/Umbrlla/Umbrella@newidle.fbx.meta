@@ -1,8 +1,11 @@
 fileFormatVersion: 2
-guid: d6d80962553ba7e4aab70cea0bf7e4ad
+guid: c1524fddc21543640a8ed38f118c8711
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 1827226128182048838
+    second: Take 001
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -72,9 +75,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips:
-  - c1524fddc21543640a8ed38f118c8711
-  - 08f7f8f388847f4439d7f959495708d5
+  referencedClips: []
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
@@ -88,7 +89,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: ControlRig
+    rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
@@ -96,7 +97,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 2
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 

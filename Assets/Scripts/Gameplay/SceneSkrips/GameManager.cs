@@ -25,9 +25,7 @@ public class GameManager : MonoBehaviour
     {
 
         if (_enemyCount == 0)
-        {
             UpdateGamestate(GameState.AdvanceForward);
-        }
     }
 
     public void UpdateGamestate(GameState newState)
