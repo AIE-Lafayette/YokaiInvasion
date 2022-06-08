@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnviromentBehavior : MonoBehaviour
 {
+    public static EnviromentBehavior ToryGateInstace;
     [SerializeField]
     private GameObject _enviromentRef;
     [SerializeField]
@@ -24,6 +25,7 @@ public class EnviromentBehavior : MonoBehaviour
     {
         if (other.tag == "Wall")
         {
+            ToryGateInstace = this;
             GetComponent<MovementBehavior>().Speed = 0;
         }
     }
