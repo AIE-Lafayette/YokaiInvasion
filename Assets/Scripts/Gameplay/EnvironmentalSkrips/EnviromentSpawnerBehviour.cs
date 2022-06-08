@@ -30,7 +30,7 @@ public class EnviromentSpawnerBehviour : MonoBehaviour
 
     void Spawn()
     {
-        //EnviromentBehavior.ToryGateInstace.GetComponent<MovementBehavior>().Speed = 0;
+        EnviromentBehavior.ToryGateInstace.enabled = true;
         //make the refereces speed
         GameObject enviroment = Instantiate(_enviromentRef.gameObject, transform.position, transform.rotation);
     }
