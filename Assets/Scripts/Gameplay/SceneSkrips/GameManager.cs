@@ -12,22 +12,19 @@ public class GameManager : MonoBehaviour
     public static event System.Action<GameState> OnGmaeStateChange;
     private EnemySpawnerBehavior enemySpawnerBehavior;
     private int _playerScore, _enemyCount, _waveCount;
-    public Text _enemycount;
-    public Text _waveCounter;
+    public Text _enemycount, _waveCounter;
     private void Awake()  { Instace = this; }
     private void Start()
     {
         _enemycount.text = "Score: " + _playerScore.ToString();
-        _waveCounter.text = "EnemyAmount: " + _waveCount.ToString();
+        _waveCounter.text = "Current Wave: " + _waveCount.ToString();
         caculatePoint();
     }
     // Update is called once per frame
     void Update()
     {
         if (_enemyCount == 0)
-        {
             UpdateGamestate(GameState.AdvanceForward);
-        }
     }
 
     public void UpdateGamestate(GameState newState)
