@@ -42,28 +42,36 @@ public class PlayerMovementBehavior : MonoBehaviour
     public void Move(int _lane) 
     {
         _lanes += _lane;
+        if (_lanes > 4)
+        {
+            _lanes = 4;
+        }
+        else if (_lanes < 0)
+        {
+            _lanes = 0;
+        }
         //using lerp, the player should switch between the lanes, lane 0 is all the way to the left, lane 4 is all the way to the right.
-        switch(_lanes)
+        switch (_lanes)
         {
             case 0:
                 transform.position = Vector3.Lerp(transform.position, new Vector3(-5, transform.position.y, transform.position.z),
-                    50 * Time.deltaTime);
+                    30 * Time.deltaTime);
                 break;
             case 1:
                 transform.position = Vector3.Lerp(transform.position, new Vector3(-2, transform.position.y, transform.position.z),
-                    50 * Time.deltaTime);
+                    30 * Time.deltaTime);
                 break;
             case 2:
                 transform.position = Vector3.Lerp(transform.position, new Vector3(1, transform.position.y, transform.position.z),
-                    50 * Time.deltaTime);
+                    30 * Time.deltaTime);
                 break;
             case 3:
                 transform.position = Vector3.Lerp(transform.position, new Vector3(4, transform.position.y, transform.position.z),
-                    50 * Time.deltaTime);
+                    30 * Time.deltaTime);
                 break;
             case 4:
                 transform.position = Vector3.Lerp(transform.position, new Vector3(7, transform.position.y, transform.position.z),
-                    50 * Time.deltaTime);
+                    30 * Time.deltaTime);
                 break;
         }
       
