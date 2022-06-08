@@ -11,6 +11,7 @@ public class InputDelegateBehavior : MonoBehaviour
     private FireBehaviour _gun;
 
     private float _laneChange;
+    private float _numberOfHits;
 
     private void Awake()
     {
@@ -40,7 +41,15 @@ public class InputDelegateBehavior : MonoBehaviour
         
         Vector2 moveDirection = _playerControls.Player.Movement.ReadValue<Vector2>();
         _laneChange = moveDirection.x;
-        _playerMovement.Move((int)(_laneChange));
+        _numberOfHits++;
+        if(_numberOfHits == 4)
+        {
+            _playerMovement.Move((int)(_laneChange));
+
+            _numberOfHits = 0;
+        }
+
+        
         //_playerControls.Player.Movement.activeControl.
         
     }
