@@ -25,8 +25,6 @@ public class EnviromentBehavior : MonoBehaviour
         if (other.tag == "Wall")
         {
             GetComponent<MovementBehavior>().Speed = 0;
-            
-            RoutineBehaviour.Instance.StartNewTimedAction(args => GetComponent<MovementBehavior>().enabled = false, TimedActionCountType.UNSCALEDTIME, 10);
         }
     }
 }
