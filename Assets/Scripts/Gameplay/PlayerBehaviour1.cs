@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PlayerBehaviour1 : HealthBehavior
 {
+    
     public override void OnDeath()
     {
         base.OnDeath();

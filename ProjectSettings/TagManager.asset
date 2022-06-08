@@ -10,6 +10,8 @@ TagManager:
   - SpeedUp
   - Emitter
   - Wall
+  - WallR
+  - WallL
   layers:
   - Default
   - TransparentFX

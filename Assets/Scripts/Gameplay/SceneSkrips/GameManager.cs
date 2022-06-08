@@ -17,12 +17,13 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         _enemycount.text = "Score: " + _playerScore.ToString();
-        _waveCounter.text = "Current Wave: " + _waveCount.ToString();
+        _waveCounter.text = "WaveAmount: " + _waveCount.ToString();
         caculatePoint();
     }
     // Update is called once per frame
     void Update()
     {
+
         if (_enemyCount == 0)
             UpdateGamestate(GameState.AdvanceForward);
     }
