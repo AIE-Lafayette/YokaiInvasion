@@ -9,23 +9,15 @@ public class PlayerMovementBehavior : MonoBehaviour
     [SerializeField]
     private float _speed;
     private Rigidbody _rigidbody;
-    private Vector3 _velocity;
-    private int _lane,_lanes;
+    private int _lanes;
 
-    public float Speed
-    {
-        get { return _speed; }
-        set { Speed = value; }
-    }
+
     private void Awake()
     {
         Instace = this;
         _lanes = 2;
     }
-    public Vector3 Velocity 
-    {
-        get { return _velocity; }
-    }
+
     public virtual float IncreaseSpeed(float SpeedIncrease)
     {
         _speed += SpeedIncrease;
@@ -73,14 +65,6 @@ public class PlayerMovementBehavior : MonoBehaviour
                 transform.position = Vector3.Lerp(transform.position, new Vector3(7, transform.position.y, transform.position.z),
                     30 * Time.deltaTime);
                 break;
-        }
-      
-       // _velocity = direction * _speed * Time.deltaTime;    
-    }
-
-    // Update is called once per frame
-    void FixedUpdate() 
-    {
-        //_rigidbody.MovePosition(transform.position + _velocity);
+        }  
     }
 }

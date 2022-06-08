@@ -42,10 +42,12 @@ public class InputDelegateBehavior : MonoBehaviour
         Vector2 moveDirection = _playerControls.Player.Movement.ReadValue<Vector2>();
         _laneChange = moveDirection.x;
         _numberOfHits++;
-        if(_numberOfHits == 4)
+        //sets an artificial timer in order to slow down the movement of the player.
+        if(_numberOfHits == 3)
         {
             _playerMovement.Move((int)(_laneChange));
 
+            //Reset this number every time this function is called.
             _numberOfHits = 0;
         }
 
