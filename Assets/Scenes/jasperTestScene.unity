@@ -1343,36 +1343,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6e7e312795c5c88409ff170d76ca9a8a, type: 3}
   m_PrefabInstance: {fileID: 32104102}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &724081240
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 724081241}
-  m_Layer: 0
-  m_Name: ninjaSpawnsPoints
-  m_TagString: NinjaSpawnPointR
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &724081241
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 724081240}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.32, y: -0.38, z: 2.66}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1059705037}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &733630134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1387,6 +1357,14 @@ PrefabInstance:
     - target: {fileID: -4409403880236961455, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
       propertyPath: m_Constraints
       value: 124
+      objectReference: {fileID: 0}
+    - target: {fileID: 724081241, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1960728388, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 272079041844877544, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
       propertyPath: m_RootOrder
@@ -1459,11 +1437,11 @@ PrefabInstance:
     - target: {fileID: 3469858923985202347, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
       propertyPath: _leftSpawnPoint
       value: 
-      objectReference: {fileID: 1960728387}
+      objectReference: {fileID: 0}
     - target: {fileID: 3469858923985202347, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
       propertyPath: _rightSpawnPoint
       value: 
-      objectReference: {fileID: 724081240}
+      objectReference: {fileID: 0}
     - target: {fileID: 3469858924967651666, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
       propertyPath: _owner
       value: 
@@ -1471,11 +1449,11 @@ PrefabInstance:
     - target: {fileID: 3469858924967651666, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
       propertyPath: _leftSpawnPoint
       value: 
-      objectReference: {fileID: 1960728387}
+      objectReference: {fileID: 0}
     - target: {fileID: 3469858924967651666, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
       propertyPath: _rightSpawnPoint
       value: 
-      objectReference: {fileID: 724081240}
+      objectReference: {fileID: 0}
     - target: {fileID: 3923458405677812800, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
       propertyPath: Instace
       value: 
@@ -2078,11 +2056,6 @@ Transform:
 --- !u!1 &1059705027 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 675629193992820222, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
-  m_PrefabInstance: {fileID: 733630134}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1059705037 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 272079041844877544, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
   m_PrefabInstance: {fileID: 733630134}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1073507650
@@ -3430,7 +3403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2399610200242772806, guid: 83e0fee9dfbbf20479a743e8b3f955da, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.6643259
       objectReference: {fileID: 0}
     - target: {fileID: 2399610200242772806, guid: 83e0fee9dfbbf20479a743e8b3f955da, type: 3}
       propertyPath: m_LocalRotation.x
@@ -3438,7 +3411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2399610200242772806, guid: 83e0fee9dfbbf20479a743e8b3f955da, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.7474431
       objectReference: {fileID: 0}
     - target: {fileID: 2399610200242772806, guid: 83e0fee9dfbbf20479a743e8b3f955da, type: 3}
       propertyPath: m_LocalRotation.z
@@ -3446,11 +3419,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2399610200242772806, guid: 83e0fee9dfbbf20479a743e8b3f955da, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2399610200242772806, guid: 83e0fee9dfbbf20479a743e8b3f955da, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: -96.739
       objectReference: {fileID: 0}
     - target: {fileID: 2399610200242772806, guid: 83e0fee9dfbbf20479a743e8b3f955da, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -3462,36 +3435,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83e0fee9dfbbf20479a743e8b3f955da, type: 3}
---- !u!1 &1960728387
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1960728388}
-  m_Layer: 0
-  m_Name: ninjaSpawnspoints
-  m_TagString: NinjaSpawnPointL
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1960728388
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960728387}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.32, y: -0.38, z: -2.31}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1059705037}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2023140884 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4433230293350011103, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
