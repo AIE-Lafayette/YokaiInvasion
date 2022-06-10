@@ -6,8 +6,7 @@ public class PlayerMovementBehavior : MonoBehaviour
 {
 
     public static PlayerMovementBehavior Instace;
-    [SerializeField]
-    private float _speed;
+
     private Rigidbody _rigidbody;
     private int _lanes;
 
@@ -18,12 +17,6 @@ public class PlayerMovementBehavior : MonoBehaviour
         _lanes = 2;
     }
 
-    public virtual float IncreaseSpeed(float SpeedIncrease)
-    {
-        _speed += SpeedIncrease;
-
-        return SpeedIncrease;
-    }
 
     // Start is called before the first frame update
     void Start()
