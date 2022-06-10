@@ -10,6 +10,9 @@ public class InputDelegateBehavior : MonoBehaviour
     [SerializeField]
     private FireBehaviour _gun;
 
+    private float _laneChange;
+    private float _numberOfHits;
+
     private void Awake()
     {
         _playerControls = new PlayerControls();
@@ -35,7 +38,19 @@ public class InputDelegateBehavior : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        
         Vector2 moveDirection = _playerControls.Player.Movement.ReadValue<Vector2>();
-        _playerMovement.Move(moveDirection);
+        _laneChange = moveDirection.x;
+        _numberOfHits++;
+        if(_numberOfHits == 4)
+        {
+            _playerMovement.Move((int)(_laneChange));
+
+            _numberOfHits = 0;
+        }
+
+        
+        //_playerControls.Player.Movement.activeControl.
+        
     }
 }

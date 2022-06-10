@@ -14,6 +14,8 @@ public class JumpingEnemyScript : EnemyBehaviour
     [SerializeField]
     private float _jumpForce;
 
+    public bool IsGrounded { get => _isGrounded; }
+
     public Vector3 Jump
     {
         get { return _jump; }

@@ -5,23 +5,23 @@ using UnityEngine.InputSystem;
 
 public class InputEventBehavior : MonoBehaviour
 {
-    private PlayerMovementBehavior _playerMovement;
-    [SerializeField]
-    private FireBehaviour _gun;
+    //private PlayerMovementBehavior _playerMovement;
+    //[SerializeField]
+    //private FireBehaviour _gun;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        _playerMovement = GetComponent<PlayerMovementBehavior>();
-    }
+    //// Start is called before the first frame update
+    //void Start()
+    //{
+    //    _playerMovement = GetComponent<PlayerMovementBehavior>();
+    //}
 
-    public void OnMove(InputAction.CallbackContext context)
-    {
-        _playerMovement.Move(context.ReadValue<Vector2>());
-    }
+    //public void OnMove(InputAction.CallbackContext context)
+    //{
+    //    _playerMovement.Move(context.ReadValue<Vector2>());
+    //}
 
-    public void OnFire(InputAction.CallbackContext context)
-    {
-        _gun.Fire();
-    }
+    //public void OnFire(InputAction.CallbackContext context)
+    //{
+    //    _gun.Fire();
+    //}
 }
