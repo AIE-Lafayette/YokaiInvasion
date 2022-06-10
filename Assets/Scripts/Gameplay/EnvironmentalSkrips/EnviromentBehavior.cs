@@ -20,7 +20,7 @@ public class EnviromentBehavior : MonoBehaviour
     void Update()
     {
         RoutineBehaviour.Instance.StartNewTimedAction(args => Destroy(this), TimedActionCountType.UNSCALEDTIME, _lifeTime );
-        if (GameManager.Instace._advaceForwardTrue = true)
+        if (GameManager.Instace._advaceForwardTrue == true)
         {
             GetComponent<MovementBehavior>().Speed = 40;
             GameManager.Instace._advaceForwardTrue = false;

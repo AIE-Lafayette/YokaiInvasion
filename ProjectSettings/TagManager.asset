@@ -12,6 +12,10 @@ TagManager:
   - Wall
   - WallR
   - WallL
+  - NinjaL
+  - NinjaR
+  - NinjaSpawnPointR
+  - NinjaSpawnPointL
   layers:
   - Default
   - TransparentFX
