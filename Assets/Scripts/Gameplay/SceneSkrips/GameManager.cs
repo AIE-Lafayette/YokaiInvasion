@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public static event System.Action<GameState> OnGmaeStateChange;
     private EnemySpawnerBehavior enemySpawnerBehavior;
     private int _playerScore, _enemyCount, _waveCount;
+    public bool _advaceForwardTrue;
     public Text _enemycount, _waveCounter;
     private void Awake()  { Instace = this; }
     private void Start()
@@ -43,6 +44,7 @@ public class GameManager : MonoBehaviour
                  EnemyHolderManager.Instace.setActiveSpawners();
                 break;
             case GameState.AdvanceForward:
+                _advaceForwardTrue = true;
                 _waveCount++;
                 _waveCounter.text = "WaveCount: " + _waveCount.ToString();
                 EnvironmentSpawnerHolder.Instace.setActiveSpawners();

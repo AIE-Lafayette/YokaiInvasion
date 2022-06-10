@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NinjaBehvoaur : PowerUpBehavior
+public class NinjaBehvoaur : MonoBehaviour
 {
     [SerializeField]
     private GameObject _enemyBehaviour;
@@ -10,6 +10,9 @@ public class NinjaBehvoaur : PowerUpBehavior
     private float _damage;
     [SerializeField]
     private GameObject _player;
+    private PlayerMovementBehavior _PlayerMovementBehavior;
+    [SerializeField]
+    private GameObject _leftSpawnPoint, _rightSpawnPoint;
     private Rigidbody _rigidbody;
     
     public float Damage { get { return _damage; } set { _damage = value; } }
@@ -20,20 +23,29 @@ public class NinjaBehvoaur : PowerUpBehavior
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        _PlayerMovementBehavior = GetComponent<PlayerMovementBehavior>();
     }
     // Update is called once per frame
     void Update()
     {
         if (this == null)
             return;
-        RoutineBehaviour.Instance.StartNewTimedAction(args => gameObject.SetActive(false), TimedActionCountType.UNSCALEDTIME, Timer);
+        RoutineBehaviour.Instance.StartNewTimedAction(args => ResetGameObject(), TimedActionCountType.UNSCALEDTIME, 10);
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "WallL")
-            gameObject.transform.localPosition += new Vector3(0, 0, 8);
+            _PlayerMovementBehavior.Move(3);
 
         if (other.tag == "WallR")
-            gameObject.transform.localPosition += new Vector3(0, 0, -8);
+            _PlayerMovementBehavior.Move(-3);
+    }
+    private void ResetGameObject() 
+    {
+        if (gameObject.tag == "NinjaL")
+           transform.position = _leftSpawnPoint.transform.position;
+        if (gameObject.tag == "NinjaR")
+            transform.position = _rightSpawnPoint.transform.position;
+        gameObject.SetActive(false);
     }
 }
