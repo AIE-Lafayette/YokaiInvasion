@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3349976831511827480}
   m_Layer: 0
   m_Name: New Prefab
-  m_TagString: Untagged
+  m_TagString: ToriGate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enviromentRef: {fileID: 3147653416609336125}
-  _lifeTime: 10
+  _lifeTime: 30
 --- !u!114 &4497606105568475159
 MonoBehaviour:
   m_ObjectHideFlags: 0
