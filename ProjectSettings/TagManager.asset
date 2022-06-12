@@ -7,11 +7,14 @@ TagManager:
   - Enemy
   - Ninja
   - Rage
-  - SpeedUp
   - Emitter
   - Wall
   - WallR
   - WallL
+  - NinjaR
+  - NinjaL
+  - ToriGate
+  - Lanter
   layers:
   - Default
   - TransparentFX
