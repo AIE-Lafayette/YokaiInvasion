@@ -8,10 +8,17 @@ public class EnvironmentSpawnerHolder : MonoBehaviour
     [SerializeField]
     private EnviromentSpawnerBehviour[] _enviromentRef;
     private bool _isActive;
+    private GameObject[] _arrayEnviromentRef;
+    //how meny enemies 
+    public GameObject[] arrayEnviromentRef { get { return _arrayEnviromentRef; } set { _arrayEnviromentRef = value; } }
 
     public bool IsActive { get { return _isActive; } set { _isActive = value; } }
     private void Awake() { Instace = this; }
     // Update is called once per frame
+    private void Update()
+    {
+        _arrayEnviromentRef = GameObject.FindGameObjectsWithTag("ToriGate");
+    }
     /// <summary>
     /// set the spawner instences to be active
     /// </summary>
@@ -22,5 +29,10 @@ public class EnvironmentSpawnerHolder : MonoBehaviour
             _enviromentRef[i].IsActive = true;//set each index to true
         }
         
+    }
+    public void DestroyTheEnviroment()
+    {
+        _arrayEnviromentRef = GameObject.FindGameObjectsWithTag("ToriGate");
+        Destroy(_arrayEnviromentRef[0]);
     }
 }

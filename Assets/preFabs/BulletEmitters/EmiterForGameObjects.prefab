@@ -109,7 +109,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemy:
-  - {fileID: 7749460261752766541, guid: a104d545f5ded96428603a30710d8751, type: 3}
   - {fileID: 7657507282198726864, guid: 24189b5777cbbaa4482dab60df254868, type: 3}
   - {fileID: 7749460261752766541, guid: 0115588eb856ee34a856ed23a844f1c1, type: 3}
   - {fileID: 3515521973886359250, guid: 5f9e638f4923a2c4fb5f99a8479bb621, type: 3}

@@ -10,6 +10,14 @@ public class DeathWallbehavior : MonoBehaviour
         {
           GameManager.Instace.UpdateGamestate(GameState.EndScreen);
         }
+        if (other.tag == "Ninja")
+            Destroy(other);
+        if (other.tag == "Rage")
+            Destroy(other);
+        if (other.tag == "ToriGate")
+            EnvironmentSpawnerHolder.Instace.DestroyTheEnviroment();
+        if (other.tag == "Lanter")
+            Destroy(other);
         if (other.tag == "Untagged")
             return;
     }
