@@ -338,7 +338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 20
-  _maxHealth: 20
+  _maxHealth: 40
   _isAlive: 1
   _destroyOnDeath: 1
   _powerUpSpawnerBehvour: {fileID: 7473703638417509192}

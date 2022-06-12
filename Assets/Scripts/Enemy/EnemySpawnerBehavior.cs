@@ -42,8 +42,10 @@ public class EnemySpawnerBehavior : MonoBehaviour
     /// </summary>
     public void SpawnEnemy()
     {
+        
         //keeps adding in enemyes based on the waves
         EnemyBehaviour spawnedEnemy = Instantiate(_enemy[Random.Range(0, _enemy.Length)], transform.position, transform.rotation);
+        
         
     }
 }
