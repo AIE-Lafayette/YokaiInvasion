@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 7646001092358185440}
   - component: {fileID: 3469858923830998780}
   - component: {fileID: 179042125868074917}
-  - component: {fileID: -2213792331764985375}
-  - component: {fileID: -2551972079980126378}
+  - component: {fileID: 6596785340115341965}
+  - component: {fileID: 7671766992177575766}
   m_Layer: 0
   m_Name: Ninja
   m_TagString: Ninja
@@ -129,9 +129,9 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 124
   m_CollisionDetection: 0
---- !u!114 &-2213792331764985375
+--- !u!114 &6596785340115341965
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,11 +140,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 4349741689220008346}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e43926789d5af44b26c6d11bf22702, type: 3}
+  m_Script: {fileID: 11500000, guid: a8c0a4cee058a2b4da96d739b3518284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 2
   _gun: {fileID: 1662813917354653713}
---- !u!114 &-2551972079980126378
+  _bulletCooldown: 1.5
+  _destroyOnHit: 1
+--- !u!114 &7671766992177575766
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,7 +159,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0525993bb04f57a4bb69354e862500bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Instace: {fileID: 0}
   _speed: 10
 --- !u!1001 &4822691361927367425
 PrefabInstance:
