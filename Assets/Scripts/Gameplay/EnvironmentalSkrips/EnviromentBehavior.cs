@@ -9,6 +9,8 @@ public class EnviromentBehavior : MonoBehaviour
     private GameObject _enviromentRef;
     [SerializeField]
     private float _lifeTime;
+    private GameManager _gameManager;
+    private EnvironmentSpawnerHolder _environmentSpawnerHolder;
     private float _timer;
    
     private int _hitCount;
@@ -16,22 +18,17 @@ public class EnviromentBehavior : MonoBehaviour
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
+
     }
     // Update is called once per frame
     void Update()
     {
-        //RoutineBehaviour.Instance.StartNewTimedAction(args => DestroyTheEnviroment(), TimedActionCountType.UNSCALEDTIME, _lifeTime);
-       // _arrayEnviromentRef = GameObject.FindGameObjectsWithTag("ToriGate");
-       
-        if ( EnvironmentSpawnerHolder.Instace.arrayEnviromentRef[1].active)
-        {
+        //here is the null error
+        if ( EnvironmentSpawnerHolder.Instace.arrayEnviromentRef[1].activeInHierarchy == true)
             EnvironmentSpawnerHolder.Instace.arrayEnviromentRef[0].GetComponent<MovementBehavior>().Speed = 40;
-        }
-
     }
     private void OnTriggerEnter(Collider other)
     {
-
         if (other.tag == "Wall")
         {
             _hitCount++;
@@ -39,8 +36,4 @@ public class EnviromentBehavior : MonoBehaviour
                 GetComponent<MovementBehavior>().Speed = 0;
         }
     }
-    //public void DestroyTheEnviroment()
-    //{
-    //    Destroy(_arrayEnviromentRef[0]);
-    //}
 }
