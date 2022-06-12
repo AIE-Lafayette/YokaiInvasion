@@ -58,7 +58,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 272079041844877544}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &315089756899337247
 GameObject:
@@ -151,7 +151,7 @@ SphereCollider:
   m_GameObject: {fileID: 315089756899337247}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -189,7 +189,7 @@ Transform:
   m_GameObject: {fileID: 675629193992820222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 40.09, y: 1.1, z: -0.22}
-  m_LocalScale: {x: 1, y: 1, z: 0.99974}
+  m_LocalScale: {x: 1, y: 1, z: 0.99974024}
   m_Children:
   - {fileID: 793573625260319013}
   - {fileID: 1988310884922562056}
@@ -197,8 +197,8 @@ Transform:
   - {fileID: 6051660920203556128}
   - {fileID: 1484468697452505979}
   - {fileID: 5170054554279135827}
-  - {fileID: 5170054555240746922}
   - {fileID: 1960728388}
+  - {fileID: 5170054555240746922}
   - {fileID: 724081241}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -278,7 +278,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0525993bb04f57a4bb69354e862500bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 10
 --- !u!114 &-9053783190085303994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353,7 +352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _owner: {fileID: 675629193992820222}
-  _currentPowerUp: {fileID: 0}
+  _currentPowerUp: {fileID: 8776856031297994836, guid: 83e0fee9dfbbf20479a743e8b3f955da, type: 3}
   _timer: 10
 --- !u!1 &4212918487032482956
 GameObject:
@@ -589,7 +588,7 @@ BoxCollider:
   m_GameObject: {fileID: 5966139742162765515}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -779,7 +778,7 @@ SphereCollider:
   m_GameObject: {fileID: 7026970227285983728}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -917,7 +916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5170054554632572932, guid: a1b2bf01791a91546bb5ce6d096882ec, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5170054554632572932, guid: a1b2bf01791a91546bb5ce6d096882ec, type: 3}
       propertyPath: m_LocalPosition.x

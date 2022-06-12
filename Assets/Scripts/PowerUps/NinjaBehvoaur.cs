@@ -5,14 +5,10 @@ using UnityEngine;
 public class NinjaBehvoaur : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _enemyBehaviour;
-    [SerializeField]
     private float _damage;
-    [SerializeField]
-    private GameObject _player;
     private PlayerMovementBehavior _PlayerMovementBehavior;
     [SerializeField]
-    private GameObject _leftSpawnPoint, _rightSpawnPoint;
+    private GameObject _leftSpawnPoint, _rightSpawnPoint, _player, _enemyBehaviour;
     private Rigidbody _rigidbody;
     
     public float Damage { get { return _damage; } set { _damage = value; } }
@@ -38,8 +34,11 @@ public class NinjaBehvoaur : MonoBehaviour
             _PlayerMovementBehavior.Move(3);
 
         if (other.tag == "WallR")
-            _PlayerMovementBehavior.Move(-3);
+            _PlayerMovementBehavior.Move(-4);
     }
+    /// <summary>
+    /// Resets the posistion of the ninjas
+    /// </summary>
     private void ResetGameObject() 
     {
         if (gameObject.tag == "NinjaL")

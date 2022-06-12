@@ -29,11 +29,11 @@ public class EnviromentSpawnerBehviour : MonoBehaviour
             }
         }
     }
-
+    /// <summary>
+    /// spawns a instance of a enviroment reference
+    /// </summary>
     void Spawn()
     {
-        //EnviromentBehavior.ToryGateInstace.enabled = true;
-        //make the refereces speed
         GameObject enviroment = Instantiate(_enviromentRef.gameObject, transform.position, transform.rotation);
     }
     
