@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PlayerBehaviour1 : HealthBehavior
 {
-    
     public override void OnDeath()
     {
         base.OnDeath();
@@ -15,8 +14,12 @@ public class PlayerBehaviour1 : HealthBehavior
         EnemyBehaviour enemyBehaviour = other.GetComponent<EnemyBehaviour>();
         if (other.tag == "Enemy")
             TakeDamage(enemyBehaviour.Damage);
-
+        //starts the ninjas
         if (other.tag == "Ninja")
+        {
             NinjaHolderBehaviour.Instace.setActiveSpawners();
+            Destroy(other);
+        }
+            
     }
 }

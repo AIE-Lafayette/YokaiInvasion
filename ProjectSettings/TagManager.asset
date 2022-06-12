@@ -15,6 +15,9 @@ TagManager:
   - NinjaL
   - ToriGate
   - Lanter
+  - NinjaSpawnPointR
+  - NinjaSpawnPointL
+  - Gamemanager
   layers:
   - Default
   - TransparentFX
