@@ -10,21 +10,21 @@ public class EnviromentBehavior : MonoBehaviour
         if (GameManager.Instace.State != GameState.AdvanceForward)
             GetComponent<MovementBehavior>().Speed = 0;
         if (GameManager.Instace.State == GameState.AdvanceForward)
-            GetComponent<MovementBehavior>().Speed = 40;
+            GetComponent<MovementBehavior>().Speed = 20;
     }
     private void OnTriggerEnter(Collider other)
     {
-        //if (other.tag == "Wall")
-        //{
-        //    _hitCount++;
-        //    if (_hitCount <= 1)
-        //    {
-        //        for (int i = 0; i < EnviromentSpawnerBehviour.Instace._arrayEnviromentRef.Length; i++)
-        //        {
-                    
-        //        }
-        //    }
-                
-        //}
+        if (other.tag == "Wall")
+        {
+            _hitCount++;
+            if (_hitCount <= 1)
+            {
+                for (int i = 0; i < EnviromentSpawnerBehviour.Instace._arrayEnviromentRef.Length; i++)
+                {
+                    GetComponent<MovementBehavior>().Speed = 0;
+                }
+            }
+
+        }
     }
 }

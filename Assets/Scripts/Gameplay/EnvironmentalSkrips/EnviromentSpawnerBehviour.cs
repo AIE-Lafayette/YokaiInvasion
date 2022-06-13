@@ -25,9 +25,9 @@ public class EnviromentSpawnerBehviour : MonoBehaviour
             {
                 for (int i = 0; i < _arrayEnviromentRef.Length; i++)
                 {
-                    _arrayEnviromentRef[i].GetComponent<MovementBehavior>().enabled = false;
+                    //_arrayEnviromentRef[i].GetComponent<MovementBehavior>().enabled = false;
                 }
-                GameManager.Instace.UpdateGamestate(GameState.SpawnWave);
+                RoutineBehaviour.Instance.StartNewTimedAction(args => GameManager.Instace.UpdateGamestate(GameState.SpawnWave), TimedActionCountType.UNSCALEDTIME, 10);
             }
         }
     }

@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instace;
     public GameState State;
     public static event System.Action<GameState> OnGmaeStateChange;//a varable to call when needeing the game states
+    [SerializeField]
     private EnemySpawnerBehavior enemySpawnerBehavior;
     private int _playerScore, _enemyCount, _waveCount;
     //[SerializeField]
@@ -26,6 +27,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //caculatePoint();
+       
         if (_enemyCount == 0)
             UpdateGamestate(GameState.AdvanceForward);
     }
