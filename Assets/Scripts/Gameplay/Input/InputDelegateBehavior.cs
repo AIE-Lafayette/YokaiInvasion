@@ -64,11 +64,4 @@ public class InputDelegateBehavior : MonoBehaviour
         _isShooting = _playerControls.Player.Shoot.activeControl.IsPressed();
     }
 
-    /// <summary>
-    /// Checks to see if th eplayer is moving or shooting
-    /// </summary>
-    public void Update()
-    {
-        _isMoving = _playerControls.Player.Movement.activeControl.IsPressed();
-    }
 }
