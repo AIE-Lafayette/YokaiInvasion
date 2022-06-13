@@ -16,6 +16,10 @@ public class EnvironmentSpawnerHolder : MonoBehaviour
 
     public bool IsActive { get { return _isActive; } set { _isActive = value; } }
     private void Awake() { Instace = this; }
+    private void Start()
+    {
+        _arrayEnviromentRef = GameObject.FindGameObjectsWithTag("ToriGate");
+    }
     // Update is called once per frame
     private void Update()
     {
