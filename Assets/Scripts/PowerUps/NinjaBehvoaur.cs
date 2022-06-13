@@ -6,22 +6,9 @@ public class NinjaBehvoaur : PowerUpBehavior
 {
     [SerializeField]
     private float _damage;
-    private PlayerMovementBehavior _PlayerMovementBehavior;
     [SerializeField]
     private GameObject _leftSpawnPoint, _rightSpawnPoint, _player;
-    private GameObject _enemyBehaviour;
-    private Rigidbody _rigidbody;
-    
     public float Damage { get { return _damage; } set { _damage = value; } }
-    /// <summary>
-    /// The speed and direction of the game object.
-    /// </summary>
-    // public Vector3 MoveDirection { get { return _moveDirection; } set { _moveDirection = value; } }
-    private void Start()
-    {
-        _rigidbody = GetComponent<Rigidbody>();
-        _PlayerMovementBehavior = _player.GetComponent<PlayerMovementBehavior>();
-    }
     // Update is called once per frame
     void Update()
     {
@@ -36,14 +23,13 @@ public class NinjaBehvoaur : PowerUpBehavior
             if (tag == "NinjaL")
                 transform.position = new Vector3(1, transform.position.y, transform.position.z);
             if (tag == "NinjaR")
-                transform.position = new Vector3(4, transform.position.y, transform.position.z);
+                transform.position = new Vector3(1, transform.position.y, transform.position.z);
         }
-        //_PlayerMovementBehavior.Move(1);
 
         if (other.tag == "WallR")
         {
             if (tag == "NinjaL")
-                transform.position = new Vector3(-2, transform.position.y, transform.position.z);
+                transform.position = new Vector3(1, transform.position.y, transform.position.z);
             if (tag == "NinjaR")
                 transform.position = new Vector3(1, transform.position.y, transform.position.z);
         }

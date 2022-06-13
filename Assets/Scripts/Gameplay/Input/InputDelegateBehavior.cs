@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class InputDelegateBehavior : MonoBehaviour
 {
+    public static InputDelegateBehavior Instance;
     private PlayerControls _playerControls;
     private PlayerMovementBehavior _playerMovement;
     [SerializeField]
@@ -14,6 +15,7 @@ public class InputDelegateBehavior : MonoBehaviour
 
     private void Awake()
     {
+        Instance = this;
         _playerControls = new PlayerControls();
         _playerMovement = GetComponent<PlayerMovementBehavior>();
         
