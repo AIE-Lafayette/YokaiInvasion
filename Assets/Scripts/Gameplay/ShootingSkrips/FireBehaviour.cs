@@ -10,6 +10,7 @@ public class FireBehaviour : MonoBehaviour
     [SerializeField]
     private float _bulletForce;
     private ProjectitleBehaviour bulletBehaviour;
+
     /// <summary>
     /// makes the bullet not hit the owner to kill its self
     /// </summary>
@@ -39,6 +40,7 @@ public class FireBehaviour : MonoBehaviour
         instance = this;
         bulletBehaviour = GetComponent<ProjectitleBehaviour>();
     }
+
     //Spawns a bullet and gives it a force 
     public void Fire()
     {
