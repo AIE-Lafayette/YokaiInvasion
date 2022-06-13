@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     {
         _enemycount.text = "Score: " + _playerScore.ToString();
         _waveCounter.text = "WaveAmount: " + _waveCount.ToString();
+        caculatePoint();
     }
     // Update is called once per frame
     void Update()
@@ -48,8 +49,8 @@ public class GameManager : MonoBehaviour
                 EnemyHolderManager.Instace.setActiveSpawners();
                 break;
             case GameState.AdvanceForward:
-                EnvironmentSpawnerHolder.Instace.setActiveSpawners();
                 increaseWaveCount();
+                EnvironmentSpawnerHolder.Instace.setActiveSpawners();
                 break;
             case GameState.EndScreen:
                 SceneManager.LoadScene("DeathScene",LoadSceneMode.Single );
@@ -58,6 +59,11 @@ public class GameManager : MonoBehaviour
                 break;
         }
         OnGmaeStateChange?.Invoke(newState);
+    }
+    //gets the amount of points the player has
+    public void caculatePoint()
+    {
+        _enemyCount = enemySpawnerBehavior.EnemyCount;
     }
     /// <summary>
     /// incease the enemy count by 1 when called
@@ -81,7 +87,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void increaseWaveCount()
     {
-        _waveCount++;
+        _waveCount += 1;
         _waveCounter.text = "WaveCount: " + _waveCount.ToString();
     }
 }

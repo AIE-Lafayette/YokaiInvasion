@@ -23,6 +23,10 @@ public class EnviromentSpawnerBehviour : MonoBehaviour
             
             if (!IsActive)
             {
+                for (int i = 0; i < _arrayEnviromentRef.Length; i++)
+                {
+                    _arrayEnviromentRef[i].GetComponent<MovementBehavior>().enabled = false;
+                }
                 GameManager.Instace.UpdateGamestate(GameState.SpawnWave);
             }
         }
@@ -34,7 +38,7 @@ public class EnviromentSpawnerBehviour : MonoBehaviour
     {
         for (int i = 0; i < _arrayEnviromentRef.Length; i++)
         {
-            _arrayEnviromentRef[i].GetComponent<MovementBehavior>().Speed = 40;
+            _arrayEnviromentRef[i].GetComponent<MovementBehavior>().enabled = true;
         }
     }
     

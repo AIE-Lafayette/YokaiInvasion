@@ -28,11 +28,6 @@ public class JumpingEnemyScript : EnemyBehaviour
         Jump = new Vector3(0.0f, _jumpForce, -_direction);
     }
 
-    private void OnCollisionStay(Collision collision)
-    {
-        _isGrounded = true;
-    }
-
     private void Update()
     {
         //If the enemy is on the ground
@@ -55,5 +50,10 @@ public class JumpingEnemyScript : EnemyBehaviour
             }
             
         }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Ground")
+            _isGrounded = true;
     }
 }

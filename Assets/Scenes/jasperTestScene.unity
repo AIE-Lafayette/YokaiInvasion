@@ -982,6 +982,7 @@ GameObject:
   - component: {fileID: 159540824}
   - component: {fileID: 159540825}
   - component: {fileID: 159540826}
+  - component: {fileID: 159540827}
   m_Layer: 0
   m_Name: jasperSceneLand
   m_TagString: Untagged
@@ -1042,6 +1043,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &159540827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159540823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 845610d8ea64e7f439e5fcded10563ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &161726780
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1131,6 +1144,7 @@ GameObject:
   - component: {fileID: 176627355}
   - component: {fileID: 176627354}
   - component: {fileID: 176627353}
+  - component: {fileID: 176627356}
   m_Layer: 0
   m_Name: jasperSceneLand (1)
   m_TagString: Untagged
@@ -1191,6 +1205,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &176627356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176627352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 845610d8ea64e7f439e5fcded10563ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &177078017
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1598,7 +1624,7 @@ GameObject:
   - component: {fileID: 339352251}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2675,11 +2701,11 @@ PrefabInstance:
       objectReference: {fileID: 1604868908}
     - target: {fileID: 5170054554279135827, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.28
+      value: 2.91
       objectReference: {fileID: 0}
     - target: {fileID: 5170054555240746922, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.21
+      value: -3.09
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
@@ -2695,9 +2721,10 @@ GameObject:
   - component: {fileID: 596952726}
   - component: {fileID: 596952725}
   - component: {fileID: 596952724}
+  - component: {fileID: 596952727}
   m_Layer: 0
   m_Name: Plane (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2779,6 +2806,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596952722}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &596952727
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596952722}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2.220446e-16, z: 9.999999}
+  m_Center: {x: 0, y: 0.0000004991889, z: -0.00000027328417}
 --- !u!1001 &601150490
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3077,6 +3117,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6e7e312795c5c88409ff170d76ca9a8a, type: 3}
   m_PrefabInstance: {fileID: 1845633273}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &696947735 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6208545980396034979, guid: 9925e892125641b40bcd71c459eb78e5, type: 3}
+  m_PrefabInstance: {fileID: 1555418009}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &696947736
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696947735}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &703815782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3310,9 +3368,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _arrayEnviromentRef:
   - {fileID: 159540823}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 176627352}
+  - {fileID: 1406681891}
+  - {fileID: 1792421037}
 --- !u!4 &788670789
 Transform:
   m_ObjectHideFlags: 0
@@ -3325,7 +3383,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &794352433
 PrefabInstance:
@@ -5385,6 +5443,7 @@ GameObject:
   - component: {fileID: 1406681894}
   - component: {fileID: 1406681893}
   - component: {fileID: 1406681892}
+  - component: {fileID: 1406681895}
   m_Layer: 0
   m_Name: jasperSceneLand (2)
   m_TagString: Untagged
@@ -5445,6 +5504,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1406681895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406681891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 845610d8ea64e7f439e5fcded10563ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1414279623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6102,6 +6173,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wallholder (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6208545980396034979, guid: 9925e892125641b40bcd71c459eb78e5, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9925e892125641b40bcd71c459eb78e5, type: 3}
 --- !u!4 &1558505213 stripped
@@ -6608,6 +6683,7 @@ GameObject:
   - component: {fileID: 1792421040}
   - component: {fileID: 1792421039}
   - component: {fileID: 1792421038}
+  - component: {fileID: 1792421041}
   m_Layer: 0
   m_Name: jasperSceneLand (3)
   m_TagString: Untagged
@@ -6668,6 +6744,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1792421041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792421037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 845610d8ea64e7f439e5fcded10563ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1815171484 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6e7e312795c5c88409ff170d76ca9a8a, type: 3}
@@ -7869,6 +7957,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 405707171752238692, guid: 77bec62dbd011914681cb64594570b2d, type: 3}
+      propertyPath: m_Size.x
+      value: 43.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 405707171752238692, guid: 77bec62dbd011914681cb64594570b2d, type: 3}
+      propertyPath: m_Size.y
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 1594023708424851209, guid: 77bec62dbd011914681cb64594570b2d, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -7925,6 +8021,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deathwall
       objectReference: {fileID: 0}
+    - target: {fileID: 2508814129329450561, guid: 77bec62dbd011914681cb64594570b2d, type: 3}
+      propertyPath: m_Size.x
+      value: 43.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 2508814129329450561, guid: 77bec62dbd011914681cb64594570b2d, type: 3}
+      propertyPath: m_Size.y
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 2861492907119671730, guid: 77bec62dbd011914681cb64594570b2d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 560
@@ -7935,7 +8039,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3630435361733095977, guid: 77bec62dbd011914681cb64594570b2d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.289
+      value: -0.336
       objectReference: {fileID: 0}
     - target: {fileID: 4764657477854391650, guid: 77bec62dbd011914681cb64594570b2d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7943,7 +8047,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4764657477854391650, guid: 77bec62dbd011914681cb64594570b2d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.283
+      value: 0.342
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77bec62dbd011914681cb64594570b2d, type: 3}
@@ -7956,7 +8060,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3571752877331158604, guid: 99c63b066e6515040a1b21a7aa8dc850, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3571752877331158604, guid: 99c63b066e6515040a1b21a7aa8dc850, type: 3}
       propertyPath: m_LocalPosition.x
