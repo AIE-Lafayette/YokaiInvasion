@@ -18,12 +18,12 @@ public class EnvironmentSpawnerHolder : MonoBehaviour
     private void Awake() { Instace = this; }
     private void Start()
     {
-        _arrayEnviromentRef = GameObject.FindGameObjectsWithTag("ToriGate");
+        //_arrayEnviromentRef = GameObject.FindGameObjectsWithTag("ToriGate");
     }
     // Update is called once per frame
     private void Update()
     {
-        _arrayEnviromentRef = GameObject.FindGameObjectsWithTag("ToriGate");
+        //_arrayEnviromentRef = GameObject.FindGameObjectsWithTag("ToriGate");
     }
     /// <summary>
     /// set the spawner instences to be active
@@ -40,7 +40,7 @@ public class EnvironmentSpawnerHolder : MonoBehaviour
     /// </summary>
     public void DestroyTheEnviroment()
     {
-        _arrayEnviromentRef = GameObject.FindGameObjectsWithTag("ToriGate");
         Destroy(_arrayEnviromentRef[0]);
+        _arrayEnviromentRef = GameObject.FindGameObjectsWithTag("ToriGate");
     }
 }
