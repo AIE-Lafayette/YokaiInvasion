@@ -6,20 +6,21 @@ public class PlayerAnimationBehavior : MonoBehaviour
 {
     [SerializeField]
     private InputDelegateBehavior _playermovement;
-    private PlayerControls _playerControls;
     [SerializeField]
     private Animator _animator;
 
     private void Awake()
     {
-        //PlayerBehaviour1.OnDeath = () => _animator.SetTrigger("Win");
+        //PlayerBehaviour1.OnDeath = () => _animator.SetTrigger("Death");
     }
 
-    // Update is called once per frame
+    //Goes through the animations of the player
     void Update()
     {
-        _animator.SetBool("Speed", _playerControls.Player.Movement.triggered);
+        //While not moving it idles and when moving it dashes
+        _animator.SetBool("IsMoving", _playermovement.IsMoving);
 
-        _animator.SetBool("IsShooting", _playerControls.Player.Shoot.triggered);
+        //while not shoooting it idles and when it does starts attack animation
+        _animator.SetBool("IsShooting", _playermovement.IsShooting);
     }
 }

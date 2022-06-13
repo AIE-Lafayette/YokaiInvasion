@@ -10,6 +10,7 @@ public class FireBehaviour : MonoBehaviour
     [SerializeField]
     private float _bulletForce;
     private ProjectitleBehaviour bulletBehaviour;
+
     /// <summary>
     /// makes the bullet not hit the owner to kill its self
     /// </summary>
@@ -21,6 +22,11 @@ public class FireBehaviour : MonoBehaviour
         get { return _bulletForce; }
     }
 
+    /// <summary>
+    /// reduces the force of the bullet 
+    /// </summary>
+    /// <param name="ForceDecrease"></param>
+    /// <returns></returns>
     public virtual float ForceNerf(float ForceDecrease)
     {
         _bulletForce -= ForceDecrease;
@@ -33,6 +39,7 @@ public class FireBehaviour : MonoBehaviour
         instance = this;
         bulletBehaviour = GetComponent<ProjectitleBehaviour>();
     }
+
     //Spawns a bullet and gives it a force 
     public void Fire()
     {
