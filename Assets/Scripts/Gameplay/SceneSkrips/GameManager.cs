@@ -14,15 +14,14 @@ public class GameManager : MonoBehaviour
     private int _playerScore, _enemyCount, _waveCount;
     //[SerializeField]
     //private GameObject _player;
-    
-    public InputDelegateBehavior _inputDelegateBehavior;
+
+    // public InputDelegateBehavior _inputDelegateBehavior;
     public Text _enemycount, _waveCounter;
     private void Awake()  { Instace = this; }
     private void Start()
     {
         _enemycount.text = "Score: " + _playerScore.ToString();
         _waveCounter.text = "WaveAmount: " + _waveCount.ToString();
-        caculatePoint();
     }
     // Update is called once per frame
     void Update()
@@ -46,17 +45,11 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene("BackUpScene", LoadSceneMode.Single);
                 break;
             case GameState.SpawnWave:
-                
                 EnemyHolderManager.Instace.setActiveSpawners();
-                //_playerMovementBehavior.enabled = true;
-                _inputDelegateBehavior.Enable();
                 break;
             case GameState.AdvanceForward:
-                 //_inputDelegateBehavior.enabled = false;
-                _inputDelegateBehavior.Disable();
-                //_playerMovementBehavior.enabled = false;
-                increaseWaveCount();
                 EnvironmentSpawnerHolder.Instace.setActiveSpawners();
+                increaseWaveCount();
                 break;
             case GameState.EndScreen:
                 SceneManager.LoadScene("DeathScene",LoadSceneMode.Single );
@@ -65,11 +58,6 @@ public class GameManager : MonoBehaviour
                 break;
         }
         OnGmaeStateChange?.Invoke(newState);
-    }
-    //gets the amount of points the player has
-    public void caculatePoint()
-    {
-        _enemyCount = enemySpawnerBehavior.EnemyCount;
     }
     /// <summary>
     /// incease the enemy count by 1 when called
