@@ -10,7 +10,6 @@ public class NinjaBehvoaur : MonoBehaviour
     [SerializeField]
     private GameObject _leftSpawnPoint, _rightSpawnPoint, _player, _enemyBehaviour;
     private Rigidbody _rigidbody;
-    
     public float Damage { get { return _damage; } set { _damage = value; } }
     /// <summary>
     /// The speed and direction of the game object.

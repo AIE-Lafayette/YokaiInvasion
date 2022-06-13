@@ -75,6 +75,8 @@ ModelImporter:
   referencedClips:
   - 36ff9f32802bbb64aa3baa451a48104d
   - ad8c2516fca6e364dbf3627720598711
+  - 4966a35d2b082274896857909df70f2c
+  - aa52cd43a288a5f4dbd9ff8eaa0ebaad
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
@@ -96,7 +98,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 

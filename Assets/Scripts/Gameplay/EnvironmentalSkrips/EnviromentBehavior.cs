@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnviromentBehavior : MonoBehaviour
 {
-    public static EnviromentBehavior ToryGateInstace;
     [SerializeField]
     private GameObject _enviromentRef;
     [SerializeField]

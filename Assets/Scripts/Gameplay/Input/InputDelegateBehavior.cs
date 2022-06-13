@@ -12,7 +12,6 @@ public class InputDelegateBehavior : MonoBehaviour
     private FireBehaviour _gun;
     private bool _ableToGetInput = true;
     private float _laneChange;
-    private float _numberOfHits;
 
     private bool _isMoving;
     private bool _isShooting;
