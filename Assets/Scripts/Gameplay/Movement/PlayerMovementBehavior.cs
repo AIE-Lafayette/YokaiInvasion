@@ -40,23 +40,23 @@ public class PlayerMovementBehavior : MonoBehaviour
         {
             case 0:
                 transform.position = Vector3.Lerp(transform.position, new Vector3(-5, transform.position.y, transform.position.z),
-                    30 * Time.deltaTime);
+                    45 * Time.deltaTime);
                 break;
             case 1:
                 transform.position = Vector3.Lerp(transform.position, new Vector3(-2, transform.position.y, transform.position.z),
-                    30 * Time.deltaTime);
+                    45 * Time.deltaTime);
                 break;
             case 2:
                 transform.position = Vector3.Lerp(transform.position, new Vector3(1, transform.position.y, transform.position.z),
-                    30 * Time.deltaTime);
+                    45 * Time.deltaTime);
                 break;
             case 3:
                 transform.position = Vector3.Lerp(transform.position, new Vector3(4, transform.position.y, transform.position.z),
-                    30 * Time.deltaTime);
+                    45 * Time.deltaTime);
                 break;
             case 4:
                 transform.position = Vector3.Lerp(transform.position, new Vector3(7, transform.position.y, transform.position.z),
-                    30 * Time.deltaTime);
+                    45 * Time.deltaTime);
                 break;
         }  
     }

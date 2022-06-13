@@ -46,14 +46,16 @@ public class InputDelegateBehavior : MonoBehaviour
     void FixedUpdate()
     {
             Vector2 moveDirection = _playerControls.Player.Movement.ReadValue<Vector2>();
+
             _laneChange = moveDirection.x;
             _numberOfHits++;
-            if (_numberOfHits == 4)
-            {
-                _playerMovement.Move((int)(_laneChange));
 
-                _numberOfHits = 0;
-            }
+        if (_numberOfHits == 5)
+        {
+            _playerMovement.Move((int)(_laneChange));
+            _numberOfHits = 0;
+
+        }
         //_playerControls.Player.Movement.activeControl.
     }
     public void Disable() 
