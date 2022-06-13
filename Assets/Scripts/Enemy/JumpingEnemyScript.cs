@@ -14,6 +14,9 @@ public class JumpingEnemyScript : EnemyBehaviour
     [SerializeField]
     private float _jumpForce;
 
+    private Collider _collider;
+    private float _distanceToGround;
+
     public bool IsGrounded { get => _isGrounded; }
 
     public Vector3 Jump
@@ -26,12 +29,36 @@ public class JumpingEnemyScript : EnemyBehaviour
     {
         _rigidbody = GetComponent<Rigidbody>();
         Jump = new Vector3(0.0f, _jumpForce, -_direction);
+        _collider = GetComponent<Collider>();
+
+        //Get the the distance from the object center to the ground 
+        _distanceToGround = _collider.bounds.extents.y;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Ground")
+        {
+            _isGrounded = true;
+        }
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.rigidbody.tag == "JumpFix")
+            return;
+    }
+
+    private void FixedUpdate()
+    {
+        // Cast a ray downward to see if the enemy is touching the ground
+        _isGrounded = Physics.Raycast(transform.position, Vector3.down, _distanceToGround + 0.01f);
     }
 
     private void Update()
     {
         //If the enemy is on the ground
-        if (_isGrounded == true)
+        if (_isGrounded)
         {
             //if the timer is above 0
             if(_timer > 0f)
