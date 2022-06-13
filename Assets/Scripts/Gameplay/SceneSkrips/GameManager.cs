@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene("StartScreen", LoadSceneMode.Single);
                 break;
             case GameState.MainGameScene:
-                SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
+                SceneManager.LoadScene("BackUpScene", LoadSceneMode.Single);
                 break;
             case GameState.SpawnWave:
                 

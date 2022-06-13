@@ -24,16 +24,16 @@ public class EnviromentBehavior : MonoBehaviour
     void Update()
     {
         //here is the null error
-        //if ( EnvironmentSpawnerHolder.Instace.arrayEnviromentRef[1].activeInHierarchy == true)
-        //    EnvironmentSpawnerHolder.Instace.arrayEnviromentRef[0].GetComponent<MovementBehavior>().Speed = 40;
+        if (EnvironmentSpawnerHolder.Instace.arrayEnviromentRef[1].activeInHierarchy == true)
+            EnvironmentSpawnerHolder.Instace.arrayEnviromentRef[0].GetComponent<MovementBehavior>().Speed = 40;
     }
     private void OnTriggerEnter(Collider other)
     {
-        //if (other.tag == "Wall")
-        //{
-        //    _hitCount++;
-        //    if (_hitCount <= 1)
-        //        GetComponent<MovementBehavior>().Speed = 0;
-        //}
+        if (other.tag == "Wall")
+        {
+            _hitCount++;
+            if (_hitCount <= 1)
+                GetComponent<MovementBehavior>().Speed = 0;
+        }
     }
 }
