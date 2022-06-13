@@ -5,11 +5,12 @@ using UnityEngine.InputSystem;
 
 public class InputDelegateBehavior : MonoBehaviour
 {
+    public static InputDelegateBehavior Instatce;
     private PlayerControls _playerControls;
     private PlayerMovementBehavior _playerMovement;
     [SerializeField]
     private FireBehaviour _gun;
-
+    private bool _ableToGetInput = true;
     private float _laneChange;
     private float _numberOfHits;
 
@@ -23,15 +24,18 @@ public class InputDelegateBehavior : MonoBehaviour
     {
         _playerControls = new PlayerControls();
         _playerMovement = GetComponent<PlayerMovementBehavior>();
+        
     }
 
     private void OnEnable()
     {
+       
         _playerControls.Enable();
     }
 
     private void OnDisable()
     {
+        
         _playerControls.Disable();
     }
 
@@ -68,5 +72,17 @@ public class InputDelegateBehavior : MonoBehaviour
         }
         //_playerControls.Player.Movement.activeControl.
 
+    }
+    public void Disable() 
+    {
+        _ableToGetInput = false;
+        //Instatce.enabled = false;
+       // this.enabled = false;
+    }
+    public void Enable()
+    {
+        _ableToGetInput = true;
+       // Instatce.enabled = true;
+       // this.enabled = true;
     }
 }

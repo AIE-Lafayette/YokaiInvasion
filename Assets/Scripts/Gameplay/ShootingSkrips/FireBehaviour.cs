@@ -16,16 +16,17 @@ public class FireBehaviour : MonoBehaviour
     /// </summary>
     [SerializeField]
     private GameObject _owner;
-
+    /// <summary>
+    /// it the total force that the bullet gives off
+    /// </summary>
     public float BulletForce
     {
         get { return _bulletForce; }
     }
-
     /// <summary>
-    /// reduces the force of the bullet 
+    /// decreases the damage of the bullet
     /// </summary>
-    /// <param name="ForceDecrease"></param>
+    /// <param name="ForceDecrease">is the amount that it is decreased</param>
     /// <returns></returns>
     public virtual float ForceNerf(float ForceDecrease)
     {

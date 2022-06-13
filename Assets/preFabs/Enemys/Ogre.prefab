@@ -135,8 +135,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7412421721390105382}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.000000047342, y: 0.804, z: 0}
-  m_LocalScale: {x: 2.088446, y: 2.4446018, z: 1.4530342}
+  m_LocalPosition: {x: -0.0000001657, y: 0.804, z: 0}
+  m_LocalScale: {x: 3.4829013, y: 4.0768623, z: 2.4232252}
   m_Children: []
   m_Father: {fileID: 8401789038748267167}
   m_RootOrder: 3
@@ -338,7 +338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 20
-  _maxHealth: 20
+  _maxHealth: 40
   _isAlive: 1
   _destroyOnDeath: 1
   _powerUpSpawnerBehvour: {fileID: 7473703638417509192}
