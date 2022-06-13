@@ -42,8 +42,10 @@ public class InputDelegateBehavior : MonoBehaviour
         _playerControls.Player.Shoot.performed += context => _gun.Fire();
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    /// <summary>
+    /// Checks to see if th eplayer is moving or shooting
+    /// </summary>
+    public void Update()
     {
         Vector2 moveDirection = _playerControls.Player.Movement.ReadValue<Vector2>();
         _laneChange = moveDirection.x;
@@ -68,18 +70,5 @@ public class InputDelegateBehavior : MonoBehaviour
     public void Update()
     {
         _isMoving = _playerControls.Player.Movement.activeControl.IsPressed();
-    }
-
-    public void Disable() 
-    {
-        _ableToGetInput = false;
-        //Instatce.enabled = false;
-       // this.enabled = false;
-    }
-    public void Enable()
-    {
-        _ableToGetInput = true;
-       // Instatce.enabled = true;
-       // this.enabled = true;
     }
 }

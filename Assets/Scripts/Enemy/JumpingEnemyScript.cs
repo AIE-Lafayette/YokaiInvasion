@@ -78,9 +78,4 @@ public class JumpingEnemyScript : EnemyBehaviour
             
         }
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Ground")
-            _isGrounded = true;
-    }
 }
