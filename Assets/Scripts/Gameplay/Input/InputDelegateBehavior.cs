@@ -5,12 +5,10 @@ using UnityEngine.InputSystem;
 
 public class InputDelegateBehavior : MonoBehaviour
 {
-    public static InputDelegateBehavior Instatce;
     private PlayerControls _playerControls;
     private PlayerMovementBehavior _playerMovement;
     [SerializeField]
     private FireBehaviour _gun;
-    private bool _ableToGetInput = true;
     private float _laneChange;
     private float _numberOfHits;
 
@@ -20,26 +18,20 @@ public class InputDelegateBehavior : MonoBehaviour
         _playerMovement = GetComponent<PlayerMovementBehavior>();
         
     }
-
     private void OnEnable()
     {
-       
         _playerControls.Enable();
     }
 
     private void OnDisable()
     {
-        
         _playerControls.Disable();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        if (_ableToGetInput)
-        {
-            _playerControls.Player.Shoot.performed += context => _gun.Fire();
-        }
+          _playerControls.Player.Shoot.performed += context => _gun.Fire();
     }
 
     // Update is called once per frame
@@ -55,17 +47,5 @@ public class InputDelegateBehavior : MonoBehaviour
                 _numberOfHits = 0;
             }
         //_playerControls.Player.Movement.activeControl.
-    }
-    public void Disable() 
-    {
-        _ableToGetInput = false;
-        //Instatce.enabled = false;
-       // this.enabled = false;
-    }
-    public void Enable()
-    {
-        _ableToGetInput = true;
-       // Instatce.enabled = true;
-       // this.enabled = true;
     }
 }

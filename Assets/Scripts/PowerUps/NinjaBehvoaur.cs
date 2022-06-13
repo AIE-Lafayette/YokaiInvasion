@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NinjaBehvoaur : MonoBehaviour
+public class NinjaBehvoaur : PowerUpBehavior
 {
     [SerializeField]
     private float _damage;
     private PlayerMovementBehavior _PlayerMovementBehavior;
     [SerializeField]
-    private GameObject _leftSpawnPoint, _rightSpawnPoint, _player, _enemyBehaviour;
+    private GameObject _leftSpawnPoint, _rightSpawnPoint, _player;
+    private GameObject _enemyBehaviour;
     private Rigidbody _rigidbody;
     
     public float Damage { get { return _damage; } set { _damage = value; } }
@@ -19,7 +20,7 @@ public class NinjaBehvoaur : MonoBehaviour
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        _PlayerMovementBehavior = GetComponent<PlayerMovementBehavior>();
+        _PlayerMovementBehavior = _player.GetComponent<PlayerMovementBehavior>();
     }
     // Update is called once per frame
     void Update()
@@ -31,10 +32,21 @@ public class NinjaBehvoaur : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "WallL")
-            _PlayerMovementBehavior.Move(3);
+        {
+            if (tag == "NinjaL")
+                transform.position = new Vector3(1, transform.position.y, transform.position.z);
+            if (tag == "NinjaR")
+                transform.position = new Vector3(4, transform.position.y, transform.position.z);
+        }
+        //_PlayerMovementBehavior.Move(1);
 
         if (other.tag == "WallR")
-            _PlayerMovementBehavior.Move(-4);
+        {
+            if (tag == "NinjaL")
+                transform.position = new Vector3(-2, transform.position.y, transform.position.z);
+            if (tag == "NinjaR")
+                transform.position = new Vector3(1, transform.position.y, transform.position.z);
+        }
     }
     /// <summary>
     /// Resets the posistion of the ninjas

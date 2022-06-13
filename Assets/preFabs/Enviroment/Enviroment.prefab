@@ -106,8 +106,6 @@ GameObject:
   - component: {fileID: 646027288103257144}
   - component: {fileID: 2326809399625489980}
   - component: {fileID: 140881257}
-  - component: {fileID: 140881251}
-  - component: {fileID: 7014470039886507317}
   m_Layer: 0
   m_Name: Enviroment
   m_TagString: Lanter
@@ -209,33 +207,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &140881251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2601307085595849468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0a4b83d363ea694a9e349d7279b806c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 40
---- !u!114 &7014470039886507317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2601307085595849468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 845610d8ea64e7f439e5fcded10563ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _enviromentRef: {fileID: 2601307085595849468}
-  _lifeTime: 4
 --- !u!1 &4752965752295394978
 GameObject:
   m_ObjectHideFlags: 0
