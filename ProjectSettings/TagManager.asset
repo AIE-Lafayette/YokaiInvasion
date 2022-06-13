@@ -18,11 +18,12 @@ TagManager:
   - NinjaSpawnPointR
   - NinjaSpawnPointL
   - Gamemanager
+  - JumpFix
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Umbrella
   - Water
   - UI
   - 
