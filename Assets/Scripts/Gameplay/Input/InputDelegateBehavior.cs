@@ -13,6 +13,12 @@ public class InputDelegateBehavior : MonoBehaviour
     private bool _ableToGetInput = true;
     private float _laneChange;
 
+    private bool _isMoving;
+    private bool _isShooting;
+    public bool IsShooting { get => _isShooting; set => _isShooting = value; }
+
+    public bool IsMoving {get => _isMoving; }
+
     private void Awake()
     {
         _playerControls = new PlayerControls();
@@ -34,27 +40,38 @@ public class InputDelegateBehavior : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-        if (_ableToGetInput)
-        {
-            _playerControls.Player.Shoot.performed += context => _gun.Fire();
-        }
+    { 
+        _playerControls.Player.Shoot.performed += context => _gun.Fire();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-            Vector2 moveDirection = _playerControls.Player.Movement.ReadValue<Vector2>();
-            _laneChange = moveDirection.x;
-            _numberOfHits++;
-            if (_numberOfHits == 4)
-            {
-                _playerMovement.Move((int)(_laneChange));
+        Vector2 moveDirection = _playerControls.Player.Movement.ReadValue<Vector2>();
+        _laneChange = moveDirection.x;
+        _numberOfHits++;
+        if(_numberOfHits == 4)
+        {
+            _playerMovement.Move((int)(_laneChange));
 
-                _numberOfHits = 0;
-            }
-        //_playerControls.Player.Movement.activeControl.
+            _numberOfHits = 0;
+        }
+
+        //After the player moves sets the animation to false
+        if (IsMoving)
+            _isMoving = false;
+
+        _isShooting = _playerControls.Player.Shoot.activeControl.IsPressed();
     }
+
+    /// <summary>
+    /// Checks to see if th eplayer is moving or shooting
+    /// </summary>
+    public void Update()
+    {
+        _isMoving = _playerControls.Player.Movement.activeControl.IsPressed();
+    }
+
     public void Disable() 
     {
         _ableToGetInput = false;
