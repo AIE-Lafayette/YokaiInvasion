@@ -2,10 +2,7 @@ fileFormatVersion: 2
 guid: b107d2a12e594484aa61f76828eb619c
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable:
-  - first:
-      74: 1827226128182048838
-    second: Take 001
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -76,8 +73,8 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips:
-  - 74a113d5c2fffd54c98408330e3713a9
   - 84afc8e1b8ebbd2429736ac790775ccd
+  - a97aa1d80aa3b7840bdf1b0de2b91925
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
