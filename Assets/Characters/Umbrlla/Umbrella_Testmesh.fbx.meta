@@ -73,8 +73,8 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips:
-  - c1524fddc21543640a8ed38f118c8711
-  - 08f7f8f388847f4439d7f959495708d5
+  - bfb52ba1067015d4ea70902a7f64c786
+  - e4757ac411afb0b40899e51c04a6f7c8
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
@@ -88,7 +88,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: ControlRig
+    rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
@@ -96,7 +96,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 

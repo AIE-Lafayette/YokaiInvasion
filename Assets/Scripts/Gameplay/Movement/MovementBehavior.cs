@@ -8,12 +8,6 @@ public class MovementBehavior : MonoBehaviour
     [SerializeField]
     private int _speed;
 
-
-    public int Speed 
-    {
-        get { return _speed; }
-        set { _speed = value; }
-    }
     /// <summary>
     /// The speed and direction of the game object.
     /// </summary>
