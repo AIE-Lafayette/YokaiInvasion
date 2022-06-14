@@ -17,14 +17,14 @@ public class InputDelegateBehavior : MonoBehaviour
     private bool _isShooting;
     public bool IsShooting { get => _isShooting; set => _isShooting = value; }
 
-    public bool IsMoving {get => _isMoving; }
+    public bool IsMoving { get => _isMoving; }
 
     private void Awake()
     {
         Instance = this;
         _playerControls = new PlayerControls();
         _playerMovement = GetComponent<PlayerMovementBehavior>();
-        
+
     }
     private void OnEnable()
     {
@@ -50,7 +50,7 @@ public class InputDelegateBehavior : MonoBehaviour
         Vector2 moveDirection = _playerControls.Player.Movement.ReadValue<Vector2>();
         _laneChange = moveDirection.x;
         _numberOfHits++;
-        if(_numberOfHits == 4)
+        if (_numberOfHits == 4)
         {
             _playerMovement.Move((int)(_laneChange));
 

@@ -13,7 +13,7 @@ public class EnemyProjectitleBehavior : MonoBehaviour
     private float _bulletCooldown, _destroyOnHit;
     private float _bulletTimer;
 
-    public string OwnerTag {get { return _ownerTag; } set { _ownerTag = value; }}
+    public string OwnerTag { get { return _ownerTag; } set { _ownerTag = value; } }
 
     // Update is called once per frame
     void Update()

@@ -9,7 +9,7 @@ public class PlayerMovementBehavior : MonoBehaviour
 
     private Rigidbody _rigidbody;
     private Vector3 _velocity;
-    private int _lane,_lanes;
+    private int _lane, _lanes;
 
 
     private void Awake()
@@ -25,7 +25,7 @@ public class PlayerMovementBehavior : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    public void Move(int _lane) 
+    public void Move(int _lane)
     {
         _lanes += _lane;
         if (_lanes > 4)
@@ -60,12 +60,12 @@ public class PlayerMovementBehavior : MonoBehaviour
                     30 * Time.deltaTime);
                 break;
         }
-      
-       // _velocity = direction * _speed * Time.deltaTime;    
+
+        // _velocity = direction * _speed * Time.deltaTime;    
     }
 
     // Update is called once per frame
-    void FixedUpdate() 
+    void FixedUpdate()
     {
         //_rigidbody.MovePosition(transform.position + _velocity);
     }

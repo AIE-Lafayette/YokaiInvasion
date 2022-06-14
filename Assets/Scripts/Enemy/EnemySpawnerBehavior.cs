@@ -13,13 +13,13 @@ public class EnemySpawnerBehavior : MonoBehaviour
     /// <summary>
     /// amount of time till the enemy spawn for each wave
     /// </summary>
-    public int TimeToSpawnWaves { get { return _TimeToSpawnWaves; } set{ _TimeToSpawnWaves = value; } }
+    public int TimeToSpawnWaves { get { return _TimeToSpawnWaves; } set { _TimeToSpawnWaves = value; } }
     public bool IsActive { get { return _isActive; } set { _isActive = value; } }
     /// <summary>
     /// amount of enemyies that were spawned
     /// </summary>
-    public int EnemyCount {get { return _enemyCount; }}
-    private void Awake() 
+    public int EnemyCount { get { return _enemyCount; } }
+    private void Awake()
     {
         EnemySpawnerInstance = this;
     }

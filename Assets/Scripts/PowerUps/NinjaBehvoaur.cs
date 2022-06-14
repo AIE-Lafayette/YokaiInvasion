@@ -37,10 +37,10 @@ public class NinjaBehvoaur : PowerUpBehavior
     /// <summary>
     /// Resets the posistion of the ninjas
     /// </summary>
-    private void ResetGameObject() 
+    private void ResetGameObject()
     {
         if (gameObject.tag == "NinjaL")
-           transform.position = _leftSpawnPoint.transform.position;
+            transform.position = _leftSpawnPoint.transform.position;
         if (gameObject.tag == "NinjaR")
             transform.position = _rightSpawnPoint.transform.position;
         gameObject.SetActive(false);

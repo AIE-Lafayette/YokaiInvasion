@@ -8,7 +8,7 @@ public class PowerUpSpawnerBehvour : MonoBehaviour
     [SerializeField]
     private GameObject _powerUps;
 
-    private void Awake() { Instance = this;}
+    private void Awake() { Instance = this; }
     /// <summary>
     /// spawns a single enemy
     /// </summary>

@@ -4,13 +4,33 @@ using UnityEngine;
 
 public class EnviromentBehavior : MonoBehaviour
 {
-    private int _hitCount;
-    private void Update()
+    public static EnviromentBehavior Instance;
+    [SerializeField]
+    private GameObject _enviromentRef;
+    private Rigidbody _rigidbody;
+    private void Awake()
+    {
+        Instance = this;
+    }
+    private void Start()
     {
         if (GameManager.Instace.State != GameState.AdvanceForward)
             GetComponent<MovementBehavior>().Speed = 0;
         if (GameManager.Instace.State == GameState.AdvanceForward)
             GetComponent<MovementBehavior>().Speed = 20;
+    }
+    // Update is called once per frame
+    void Update()
+    {
+       
+        if (GameManager.Instace._advaceForwardTrue == true)
+        {
+            Instance.GetComponent<MovementBehavior>().Speed = 40;
+            GameManager.Instace._advaceForwardTrue = false;
+        }
+           
+        //RoutineBehaviour.Instance.StartNewTimedAction(args => , TimedActionCountType.UNSCALEDTIME, 4);
+        
     }
     private void OnTriggerEnter(Collider other)
     {

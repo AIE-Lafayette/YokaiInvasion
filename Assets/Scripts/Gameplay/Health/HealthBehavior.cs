@@ -12,12 +12,12 @@ public class HealthBehavior : MonoBehaviour
     [SerializeField]
     private PowerUpSpawnerBehvour _powerUpSpawnerBehvour;
 
-    public float Health { get { return _health; } set { _health = value; }}
-    public float MaxHealth {get { return _maxHealth; } set { _maxHealth = value; }}
+    public float Health { get { return _health; } set { _health = value; } }
+    public float MaxHealth { get { return _maxHealth; } set { _maxHealth = value; } }
 
-    public bool IsAlive {get { return _isAlive; }}
-    private void Awake() 
-    { 
+    public bool IsAlive { get { return _isAlive; } }
+    private void Awake()
+    {
         _health = _maxHealth;
     }
     //deals the damage amount and sends back the result
@@ -29,8 +29,8 @@ public class HealthBehavior : MonoBehaviour
     public virtual void OnDeath()
     {
         if (tag == "Enemy")
-        { 
-             GameManager.Instace.AddPoint();
+        {
+            GameManager.Instace.AddPoint();
             if (_powerUpSpawnerBehvour)
                 _powerUpSpawnerBehvour.SpawnPower();
         }
@@ -46,6 +46,6 @@ public class HealthBehavior : MonoBehaviour
 
         //checks if it is dead and deletes on death
         if (!IsAlive && _destroyOnDeath)
-         Destroy(gameObject);
+            Destroy(gameObject);
     }
 }

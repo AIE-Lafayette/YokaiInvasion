@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 
     // public InputDelegateBehavior _inputDelegateBehavior;
     public Text _enemycount, _waveCounter;
-    private void Awake()  { Instace = this; }
+    private void Awake() { Instace = this; }
     private void Start()
     {
         _enemycount.text = "Score: " + _playerScore.ToString();
@@ -27,8 +27,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //caculatePoint();
-       
         if (_enemyCount == 0)
             UpdateGamestate(GameState.AdvanceForward);
     }
@@ -55,7 +53,7 @@ public class GameManager : MonoBehaviour
                 EnvironmentSpawnerHolder.Instace.setActiveSpawners();
                 break;
             case GameState.EndScreen:
-                SceneManager.LoadScene("DeathScene",LoadSceneMode.Single );
+                SceneManager.LoadScene("DeathScene", LoadSceneMode.Single);
                 break;
             default:
                 break;
@@ -89,6 +87,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void increaseWaveCount()
     {
+        _advaceForwardTrue = true;
         _waveCount += 1;
         _waveCounter.text = "WaveCount: " + _waveCount.ToString();
     }
