@@ -54,7 +54,7 @@ MonoBehaviour:
   - {fileID: 2311205330787870843}
   - {fileID: 2311205329620154946}
   - {fileID: 2311205329801107960}
-  _timeToSpawnWaves: 3
+  _timeToSpawnWaves: 4.5
 --- !u!1001 &198257602000686203
 PrefabInstance:
   m_ObjectHideFlags: 0
