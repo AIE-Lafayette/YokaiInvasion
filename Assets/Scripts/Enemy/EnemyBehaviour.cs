@@ -13,13 +13,13 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField]
     private int _speed;
 
-    public float Damage {get { return _damage; } set { _damage = value; } }
-    public float MaxHealth {get { return _healthBehavior.MaxHealth;} set { _healthBehavior.MaxHealth = value; } }
+    public float Damage { get { return _damage; } set { _damage = value; } }
+    public float MaxHealth { get { return _healthBehavior.MaxHealth; } set { _healthBehavior.MaxHealth = value; } }
     public float Health { get { return _healthBehavior.Health; } set { _healthBehavior.Health = value; } }
     /// <summary>
     /// The speed and direction of the game object.
     /// </summary>
-    public Vector3 MoveDirection {get { return _moveDirection; } set { _moveDirection = value; } }
+    public Vector3 MoveDirection { get { return _moveDirection; } set { _moveDirection = value; } }
     private void Awake()
     {
         _healthBehavior = GetComponent<HealthBehavior>();

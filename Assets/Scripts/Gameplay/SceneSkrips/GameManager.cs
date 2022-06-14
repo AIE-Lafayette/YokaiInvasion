@@ -9,26 +9,28 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instace;
     public GameState State;
-    public static event System.Action<GameState> OnGmaeStateChange;
+    public static event System.Action<GameState> OnGmaeStateChange;//a varable to call when needeing the game states
+    [SerializeField]
     private EnemySpawnerBehavior enemySpawnerBehavior;
     private int _playerScore, _enemyCount, _waveCount;
     public bool _advaceForwardTrue;
     public Text _enemycount, _waveCounter;
-    private void Awake()  { Instace = this; }
+    private void Awake() { Instace = this; }
     private void Start()
     {
         _enemycount.text = "Score: " + _playerScore.ToString();
         _waveCounter.text = "WaveAmount: " + _waveCount.ToString();
-        caculatePoint();
     }
     // Update is called once per frame
     void Update()
     {
-
         if (_enemyCount == 0)
             UpdateGamestate(GameState.AdvanceForward);
     }
-
+    /// <summary>
+    /// updateds the game state by taking in a game state
+    /// </summary>
+    /// <param name="newState">Uses the enum GameState to change the states for the switch</param>
     public void UpdateGamestate(GameState newState)
     {
         State = newState;
@@ -38,39 +40,53 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene("StartScreen", LoadSceneMode.Single);
                 break;
             case GameState.MainGameScene:
-                SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
+                SceneManager.LoadScene("BackUpScene", LoadSceneMode.Single);
                 break;
             case GameState.SpawnWave:
-                 EnemyHolderManager.Instace.setActiveSpawners();
+                EnemyHolderManager.Instace.setActiveSpawners();
                 break;
             case GameState.AdvanceForward:
-                _advaceForwardTrue = true;
-                _waveCount++;
-                _waveCounter.text = "WaveCount: " + _waveCount.ToString();
+                increaseWaveCount();
                 EnvironmentSpawnerHolder.Instace.setActiveSpawners();
                 break;
             case GameState.EndScreen:
-                SceneManager.LoadScene("DeathScene",LoadSceneMode.Single );
+                SceneManager.LoadScene("DeathScene", LoadSceneMode.Single);
                 break;
             default:
                 break;
         }
         OnGmaeStateChange?.Invoke(newState);
     }
+    //gets the amount of points the player has
     public void caculatePoint()
     {
         _enemyCount = enemySpawnerBehavior.EnemyCount;
     }
+    /// <summary>
+    /// incease the enemy count by 1 when called
+    /// </summary>
     public void AddEnemyCount()
     {
         _enemyCount += 1;
         _enemycount.text = "Score: " + _playerScore.ToString();
     }
+    /// <summary>
+    /// adds 50 points to the score and descrease the enemy count by 1
+    /// </summary>
     public void AddPoint()
     {
         _playerScore += 50;
         _enemyCount -= 1;
         _enemycount.text = "Score: " + _playerScore.ToString();
+    }
+    /// <summary>
+    /// incease the wave count my 1 each time its called
+    /// </summary>
+    private void increaseWaveCount()
+    {
+        _advaceForwardTrue = true;
+        _waveCount += 1;
+        _waveCounter.text = "WaveCount: " + _waveCount.ToString();
     }
 }
 

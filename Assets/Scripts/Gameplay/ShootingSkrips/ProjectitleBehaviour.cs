@@ -18,9 +18,9 @@ public class ProjectitleBehaviour : MonoBehaviour
         get { return _damage; }
     }
 
-    public string OwnerTag {get { return _ownerTag; } set { _ownerTag = value; }}
+    public string OwnerTag { get { return _ownerTag; } set { _ownerTag = value; } }
 
-    public Rigidbody RigidBody {get { return _rigidbody; } }
+    public Rigidbody RigidBody { get { return _rigidbody; } }
 
     public virtual float IncreaseDamage(float DamageIncrease)
     {

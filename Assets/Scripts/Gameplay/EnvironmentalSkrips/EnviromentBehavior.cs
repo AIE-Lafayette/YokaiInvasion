@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class EnviromentBehavior : MonoBehaviour
 {
-    public static EnviromentBehavior ToryGateInstace;
+    public static EnviromentBehavior Instance;
     [SerializeField]
     private GameObject _enviromentRef;
-    [SerializeField]
-    private float _lifeTime;
-    private float _timer;
-    private int _justAInt;
     private Rigidbody _rigidbody;
+    private void Awake()
+    {
+        Instance = this;
+    }
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -19,10 +19,10 @@ public class EnviromentBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RoutineBehaviour.Instance.StartNewTimedAction(args => Destroy(this), TimedActionCountType.UNSCALEDTIME, _lifeTime );
+       
         if (GameManager.Instace._advaceForwardTrue == true)
         {
-            GetComponent<MovementBehavior>().Speed = 40;
+            Instance.GetComponent<MovementBehavior>().Speed = 40;
             GameManager.Instace._advaceForwardTrue = false;
         }
            

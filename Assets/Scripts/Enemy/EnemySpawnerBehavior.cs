@@ -13,13 +13,13 @@ public class EnemySpawnerBehavior : MonoBehaviour
     /// <summary>
     /// amount of time till the enemy spawn for each wave
     /// </summary>
-    public int TimeToSpawnWaves { get { return _TimeToSpawnWaves; } set{ _TimeToSpawnWaves = value; } }
+    public int TimeToSpawnWaves { get { return _TimeToSpawnWaves; } set { _TimeToSpawnWaves = value; } }
     public bool IsActive { get { return _isActive; } set { _isActive = value; } }
     /// <summary>
     /// amount of enemyies that were spawned
     /// </summary>
-    public int EnemyCount {get { return _enemyCount; }}
-    private void Awake() 
+    public int EnemyCount { get { return _enemyCount; } }
+    private void Awake()
     {
         EnemySpawnerInstance = this;
     }
@@ -31,9 +31,9 @@ public class EnemySpawnerBehavior : MonoBehaviour
     {
         if (IsActive)
         {
+            GameManager.Instace.AddEnemyCount();
             RoutineBehaviour.Instance.StartNewTimedAction(args => SpawnEnemy(), TimedActionCountType.UNSCALEDTIME, _TimeToSpawnWaves);
             //incresse amount
-            GameManager.Instace.AddEnemyCount();
             IsActive = false;
         }
     }
@@ -44,6 +44,5 @@ public class EnemySpawnerBehavior : MonoBehaviour
     {
         //keeps adding in enemyes based on the waves
         EnemyBehaviour spawnedEnemy = Instantiate(_enemy[Random.Range(0, _enemy.Length)], transform.position, transform.rotation);
-        
     }
 }

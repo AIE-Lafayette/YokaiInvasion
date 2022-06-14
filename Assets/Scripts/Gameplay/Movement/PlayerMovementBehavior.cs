@@ -6,32 +6,18 @@ public class PlayerMovementBehavior : MonoBehaviour
 {
 
     public static PlayerMovementBehavior Instace;
-    [SerializeField]
-    private float _speed;
+
     private Rigidbody _rigidbody;
     private Vector3 _velocity;
-    private int _lane,_lanes;
+    private int _lane, _lanes;
 
-    public float Speed
-    {
-        get { return _speed; }
-        set { Speed = value; }
-    }
+
     private void Awake()
     {
         Instace = this;
         _lanes = 2;
     }
-    public Vector3 Velocity 
-    {
-        get { return _velocity; }
-    }
-    public virtual float IncreaseSpeed(float SpeedIncrease)
-    {
-        _speed += SpeedIncrease;
 
-        return SpeedIncrease;
-    }
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +25,7 @@ public class PlayerMovementBehavior : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    public void Move(int _lane) 
+    public void Move(int _lane)
     {
         _lanes += _lane;
         if (_lanes > 4)
@@ -74,12 +60,12 @@ public class PlayerMovementBehavior : MonoBehaviour
                     30 * Time.deltaTime);
                 break;
         }
-      
-       // _velocity = direction * _speed * Time.deltaTime;    
+
+        // _velocity = direction * _speed * Time.deltaTime;    
     }
 
     // Update is called once per frame
-    void FixedUpdate() 
+    void FixedUpdate()
     {
         //_rigidbody.MovePosition(transform.position + _velocity);
     }

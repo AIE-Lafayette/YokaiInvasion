@@ -4,7 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public class UsePowerUpBehavior : PowerUpBehavior
 {
-    
+
     /// <summary>
     /// Checks if there is a powerup in use and activates it
     /// </summary>
@@ -20,22 +20,10 @@ public class UsePowerUpBehavior : PowerUpBehavior
     //On collision with a powerUp it checks their tag and sets the currentPowerup
     private void OnTriggerEnter(Collider other)
     {
-          if (other.tag == "Rage")
+        if (other.tag == "Rage")
         {
             PowerUpBehavior powerUp = other.GetComponent<PowerUpBehavior>();
 
-            if (powerUp)
-            {
-                GetComponent<PowerUpBehavior>().CurrentPowerUp = powerUp.CurrentPowerUp;
-                Activate();
-                
-            }
-            Destroy(other.gameObject);
-        }
-
-        if (other.tag == "SpeedUp")
-        {
-            PowerUpBehavior powerUp = other.GetComponent<PowerUpBehavior>();
             if (powerUp)
             {
                 GetComponent<PowerUpBehavior>().CurrentPowerUp = powerUp.CurrentPowerUp;
@@ -44,6 +32,7 @@ public class UsePowerUpBehavior : PowerUpBehavior
             }
             Destroy(other.gameObject);
         }
+
         //I am setting a tag for this so nothing can mess up Ravis's tests, However I do think we should use this tag instead
         //Of a ninja tag. The power ups should all activate the same afterall.
         else if (other.tag == "PowerUp")

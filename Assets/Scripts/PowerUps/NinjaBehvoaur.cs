@@ -5,26 +5,10 @@ using UnityEngine;
 public class NinjaBehvoaur : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _enemyBehaviour;
-    [SerializeField]
     private float _damage;
     [SerializeField]
-    private GameObject _player;
-    private PlayerMovementBehavior _PlayerMovementBehavior;
-    [SerializeField]
-    private GameObject _leftSpawnPoint, _rightSpawnPoint;
-    private Rigidbody _rigidbody;
-    
+    private GameObject _leftSpawnPoint, _rightSpawnPoint, _player;
     public float Damage { get { return _damage; } set { _damage = value; } }
-    /// <summary>
-    /// The speed and direction of the game object.
-    /// </summary>
-    // public Vector3 MoveDirection { get { return _moveDirection; } set { _moveDirection = value; } }
-    private void Start()
-    {
-        _rigidbody = GetComponent<Rigidbody>();
-        _PlayerMovementBehavior = GetComponent<PlayerMovementBehavior>();
-    }
     // Update is called once per frame
     void Update()
     {
@@ -35,15 +19,28 @@ public class NinjaBehvoaur : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "WallL")
-            _PlayerMovementBehavior.Move(3);
+        {
+            if (tag == "NinjaL")
+                transform.position = new Vector3(1, transform.position.y, transform.position.z);
+            if (tag == "NinjaR")
+                transform.position = new Vector3(1, transform.position.y, transform.position.z);
+        }
 
         if (other.tag == "WallR")
-            _PlayerMovementBehavior.Move(-3);
+        {
+            if (tag == "NinjaL")
+                transform.position = new Vector3(1, transform.position.y, transform.position.z);
+            if (tag == "NinjaR")
+                transform.position = new Vector3(1, transform.position.y, transform.position.z);
+        }
     }
-    private void ResetGameObject() 
+    /// <summary>
+    /// Resets the posistion of the ninjas
+    /// </summary>
+    private void ResetGameObject()
     {
         if (gameObject.tag == "NinjaL")
-           transform.position = _leftSpawnPoint.transform.position;
+            transform.position = _leftSpawnPoint.transform.position;
         if (gameObject.tag == "NinjaR")
             transform.position = _rightSpawnPoint.transform.position;
         gameObject.SetActive(false);
