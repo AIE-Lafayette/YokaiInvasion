@@ -24,7 +24,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         _healthBehavior = GetComponent<HealthBehavior>();
     }
-
+   
     // Update is called once per frame
     void Update()
     {

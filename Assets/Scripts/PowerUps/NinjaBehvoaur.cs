@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NinjaBehvoaur : MonoBehaviour
+public class NinjaBehvoaur : PowerUpBehavior
 {
     [SerializeField]
     private float _damage;

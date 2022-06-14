@@ -38,7 +38,7 @@ public class InputDelegateBehavior : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    { 
         _playerControls.Player.Shoot.performed += context => _gun.Fire();
     }
 
