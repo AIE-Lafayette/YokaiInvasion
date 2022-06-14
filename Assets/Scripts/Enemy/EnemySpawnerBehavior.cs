@@ -20,19 +20,15 @@ public class EnemySpawnerBehavior : MonoBehaviour
     /// amount of enemyies that were spawned
     /// </summary>
     public int EnemyCount { get { return _enemyCount; } }
-    private void Awake()
-    {
-        EnemySpawnerInstance = this;
-    }
-    private void Start()
-    {
-        IsActive = true;
-    }
+    private void Awake() { EnemySpawnerInstance = this;}
+    private void Start() {IsActive = true;}
     void Update()
     {
         if (IsActive)
         {
+            //increase the enemy count
             GameManager.Instace.AddEnemyCount();
+            //spawn the enemy
             RoutineBehaviour.Instance.StartNewTimedAction(args => SpawnEnemy(), TimedActionCountType.UNSCALEDTIME, _TimeToSpawnWaves);
             //incresse amount
             IsActive = false;

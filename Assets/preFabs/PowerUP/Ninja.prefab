@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7646001092358185440}
   - component: {fileID: 3469858923830998780}
   - component: {fileID: 179042125868074917}
-  - component: {fileID: 7671766992177575766}
+  - component: {fileID: 5160116331308522724}
   m_Layer: 0
   m_Name: Ninja
   m_TagString: Ninja
@@ -137,7 +137,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 124
   m_CollisionDetection: 0
---- !u!114 &7671766992177575766
+--- !u!114 &5160116331308522724
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,9 +146,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4349741689220008346}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0525993bb04f57a4bb69354e862500bf, type: 3}
+  m_Script: {fileID: 11500000, guid: f9e43926789d5af44b26c6d11bf22702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gun: {fileID: 1662813917354653713}
 --- !u!1001 &3681301744502255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -337,3 +338,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1660728843226434887, guid: 42b7769e5dfc84c42a3035bf7aaee423, type: 3}
   m_PrefabInstance: {fileID: 4822691361927367425}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1662813917354653713 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6196430060480197392, guid: 42b7769e5dfc84c42a3035bf7aaee423, type: 3}
+  m_PrefabInstance: {fileID: 4822691361927367425}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2201e6f04ad38e4a96ca8947307c863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

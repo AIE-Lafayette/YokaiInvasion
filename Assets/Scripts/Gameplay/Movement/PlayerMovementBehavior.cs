@@ -60,10 +60,12 @@ public class PlayerMovementBehavior : MonoBehaviour
                     30 * Time.deltaTime);
                 break;
         }
-
+        //makes the palyer move in constent motion
         // _velocity = direction * _speed * Time.deltaTime;    
     }
-
+    /// <summary>
+    /// Needed for the constent motion
+    /// </summary>
     // Update is called once per frame
     void FixedUpdate()
     {

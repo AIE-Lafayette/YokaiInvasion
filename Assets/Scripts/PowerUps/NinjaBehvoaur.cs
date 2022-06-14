@@ -16,22 +16,27 @@ public class NinjaBehvoaur : PowerUpBehavior
             return;
         RoutineBehaviour.Instance.StartNewTimedAction(args => ResetGameObject(), TimedActionCountType.UNSCALEDTIME, 10);
     }
+    /// <summary>
+    /// made boxes that the ninjas will go to when the collided with a wall.
+    /// </summary>
+    /// <param name="other">other is a wallLeft or Wall Right</param>
     private void OnTriggerEnter(Collider other)
     {
+        
         if (other.tag == "WallL")
         {
             if (tag == "NinjaL")
-                transform.position = _rightSpawnPoint2.transform.position; //new Vector3(_rightSpawnPoint.transform.position, transform.position.y, transform.position.z);
+                transform.position = _rightSpawnPoint2.transform.position;
             if (tag == "NinjaR")
-                transform.position = _rightSpawnPoint.transform.position; //new Vector3(1, transform.position.y, transform.position.z);
+                transform.position = _rightSpawnPoint.transform.position; 
         }
 
         if (other.tag == "WallR")
         {
             if (tag == "NinjaL")
-                transform.position = _leftSpawnPoint.transform.position;//new Vector3(1, transform.position.y, transform.position.z);
+                transform.position = _leftSpawnPoint.transform.position;
             if (tag == "NinjaR")
-                transform.position = _leftSpawnPoint2.transform.position; //new Vector3(1, transform.position.y, transform.position.z);
+                transform.position = _leftSpawnPoint2.transform.position; 
         }
     }
     /// <summary>

@@ -237,7 +237,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8723018392214279883}
   m_LocalRotation: {x: 0, y: 0, z: -0, w: -1}
-  m_LocalPosition: {x: 0.029998865, y: 0.963, z: 0.70999944}
+  m_LocalPosition: {x: 0.029998865, y: -0.54, z: 0.70999944}
   m_LocalScale: {x: 1.4530342, y: 0.8109477, z: 1.4530342}
   m_Children: []
   m_Father: {fileID: 8244752519663270666}
@@ -255,8 +255,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2201e6f04ad38e4a96ca8947307c863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bulletRef: {fileID: -6966932180625127310, guid: 08d24ecb6ebcef54f995ccfa87935014, type: 3}
   _bulletForce: 10
+  _bulletRef: {fileID: -6966932180625127310, guid: 08d24ecb6ebcef54f995ccfa87935014, type: 3}
   _playerInput: {fileID: 0}
   _owner: {fileID: 3306752816002615309}
 --- !u!1001 &3119447139709554828
