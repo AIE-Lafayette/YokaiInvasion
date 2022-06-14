@@ -8,6 +8,7 @@ public class EnviromentBehavior : MonoBehaviour
     [SerializeField]
     private GameObject _enviromentRef;
     private Rigidbody _rigidbody;
+    private int _hitCount;
     private void Awake()
     {
         Instance = this;
@@ -33,7 +34,11 @@ public class EnviromentBehavior : MonoBehaviour
     {
         if (other.tag == "Wall")
         {
-            GetComponent<MovementBehavior>().Speed = 0;
+            _hitCount++;
+            if (_hitCount <= 1)
+            {
+                GetComponent<MovementBehavior>().Speed = 0;
+            }
         }
     }
 }
