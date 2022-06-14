@@ -7,7 +7,7 @@ public class NinjaBehvoaur : PowerUpBehavior
     [SerializeField]
     private float _damage;
     [SerializeField]
-    private GameObject _leftSpawnPoint, _rightSpawnPoint, _player;
+    private GameObject _leftSpawnPoint,_leftSpawnPoint2, _rightSpawnPoint,_rightSpawnPoint2, _player;
     public float Damage { get { return _damage; } set { _damage = value; } }
     // Update is called once per frame
     void Update()
@@ -21,17 +21,17 @@ public class NinjaBehvoaur : PowerUpBehavior
         if (other.tag == "WallL")
         {
             if (tag == "NinjaL")
-                transform.position = new Vector3(1, transform.position.y, transform.position.z);
+                transform.position = _rightSpawnPoint2.transform.position; //new Vector3(_rightSpawnPoint.transform.position, transform.position.y, transform.position.z);
             if (tag == "NinjaR")
-                transform.position = new Vector3(1, transform.position.y, transform.position.z);
+                transform.position = _rightSpawnPoint.transform.position; //new Vector3(1, transform.position.y, transform.position.z);
         }
 
         if (other.tag == "WallR")
         {
             if (tag == "NinjaL")
-                transform.position = new Vector3(1, transform.position.y, transform.position.z);
+                transform.position = _leftSpawnPoint.transform.position;//new Vector3(1, transform.position.y, transform.position.z);
             if (tag == "NinjaR")
-                transform.position = new Vector3(1, transform.position.y, transform.position.z);
+                transform.position = _leftSpawnPoint2.transform.position; //new Vector3(1, transform.position.y, transform.position.z);
         }
     }
     /// <summary>

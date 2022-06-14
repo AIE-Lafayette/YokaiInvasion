@@ -27,7 +27,7 @@ public class EnviromentBehavior : MonoBehaviour
             GameManager.Instace._advaceForwardTrue = false;
         }
            
-        //RoutineBehaviour.Instance.StartNewTimedAction(args => , TimedActionCountType.UNSCALEDTIME, 4);
+        RoutineBehaviour.Instance.StartNewTimedAction(args => Destroy(this._enviromentRef), TimedActionCountType.UNSCALEDTIME, 15);
         
     }
     private void OnTriggerEnter(Collider other)

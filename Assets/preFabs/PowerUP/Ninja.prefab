@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3248642175036442766}
   - component: {fileID: 7646001092358185440}
   - component: {fileID: 3469858923830998780}
-  - component: {fileID: 6596785340115341965}
   - component: {fileID: 3374197442224722891}
   m_Layer: 0
   m_Name: Ninja
@@ -118,22 +117,6 @@ MonoBehaviour:
   _leftSpawnPoint: {fileID: 0}
   _rightSpawnPoint: {fileID: 0}
   _player: {fileID: 0}
---- !u!114 &6596785340115341965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4349741689220008346}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8c0a4cee058a2b4da96d739b3518284, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _damage: 2
-  _gun: {fileID: 1662813917354653713}
-  _bulletCooldown: 1.5
-  _destroyOnHit: 1
 --- !u!114 &3374197442224722891
 MonoBehaviour:
   m_ObjectHideFlags: 0
