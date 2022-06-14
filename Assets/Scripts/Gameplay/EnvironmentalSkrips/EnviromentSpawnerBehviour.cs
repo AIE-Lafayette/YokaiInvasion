@@ -7,6 +7,7 @@ public class EnviromentSpawnerBehviour : MonoBehaviour
     public static EnviromentSpawnerBehviour Instace;
     [SerializeField]
     private EnviromentBehavior _enviromentRef;
+    [SerializeField]
     private float _timer;
     private bool timerIsReached, _isActive;
     //how meny enemies 
@@ -20,7 +21,7 @@ public class EnviromentSpawnerBehviour : MonoBehaviour
         if (IsActive)
         {
             _isActive = false;
-            RoutineBehaviour.Instance.StartNewTimedAction(args => Spawn(), TimedActionCountType.UNSCALEDTIME, 1);
+            RoutineBehaviour.Instance.StartNewTimedAction(args => Spawn(), TimedActionCountType.UNSCALEDTIME, _timer);
             if (!IsActive)
             {
                 GameManager.Instace.UpdateGamestate(GameState.SpawnWave);

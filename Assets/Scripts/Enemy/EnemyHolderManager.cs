@@ -9,7 +9,7 @@ public class EnemyHolderManager : MonoBehaviour
     private EnemySpawnerBehavior[] enemySpawnerBehavior;
 
     [SerializeField]
-    private int _timeToSpawnWaves;
+    private float _timeToSpawnWaves;
     private void Awake() { Instace = this; }
     private void Start()
     {

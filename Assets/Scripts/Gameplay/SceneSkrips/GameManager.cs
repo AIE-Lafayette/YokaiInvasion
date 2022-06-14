@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public static event System.Action<GameState> OnGmaeStateChange;//a varable to call when needeing the game states
     [SerializeField]
     private EnemySpawnerBehavior enemySpawnerBehavior;
-    private int _playerScore, _enemyCount, _waveCount;
+    private int _playerScore, _enemyCount, _waveCount, _hit;
     public bool _advaceForwardTrue;
     public Text _enemycount, _waveCounter;
     private void Awake() { Instace = this; }
@@ -46,8 +46,13 @@ public class GameManager : MonoBehaviour
                 EnemyHolderManager.Instace.setActiveSpawners();
                 break;
             case GameState.AdvanceForward:
-                increaseWaveCount();
-                EnvironmentSpawnerHolder.Instace.setActiveSpawners();
+                _hit++;
+                if (_hit <= 1)
+                {
+                    increaseWaveCount();
+                    EnvironmentSpawnerHolder.Instace.setActiveSpawners();
+                }
+                
                 break;
             case GameState.EndScreen:
                 SceneManager.LoadScene("DeathScene", LoadSceneMode.Single);
@@ -84,6 +89,8 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void increaseWaveCount()
     {
+        RoutineBehaviour.Instance.StartNewTimedAction(args => _hit = 0, TimedActionCountType.UNSCALEDTIME, 3);
+       
         _advaceForwardTrue = true;
         _waveCount += 1;
         _waveCounter.text = "WaveCount: " + _waveCount.ToString();

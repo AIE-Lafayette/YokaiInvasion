@@ -27,7 +27,7 @@ public class EnviromentBehavior : MonoBehaviour
             GameManager.Instace._advaceForwardTrue = false;
         }
            
-        RoutineBehaviour.Instance.StartNewTimedAction(args => Destroy(this._enviromentRef), TimedActionCountType.UNSCALEDTIME, 15);
+        RoutineBehaviour.Instance.StartNewTimedAction(args => Destroy(this._enviromentRef), TimedActionCountType.UNSCALEDTIME, 20);
         
     }
     private void OnTriggerEnter(Collider other)
@@ -40,5 +40,9 @@ public class EnviromentBehavior : MonoBehaviour
                 GetComponent<MovementBehavior>().Speed = 0;
             }
         }
+        //if (other.tag == "DeathWall")
+        //{
+        //    Destroy(this._enviromentRef);
+        //}
     }
 }

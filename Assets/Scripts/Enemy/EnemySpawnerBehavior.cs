@@ -8,12 +8,13 @@ public class EnemySpawnerBehavior : MonoBehaviour
     [SerializeField]
     private EnemyBehaviour[] _enemy;
     private bool _isActive;
-    private int _TimeToSpawnWaves, _enemyCount;
+    private float _TimeToSpawnWaves;
+    private int _enemyCount;
 
     /// <summary>
     /// amount of time till the enemy spawn for each wave
     /// </summary>
-    public int TimeToSpawnWaves { get { return _TimeToSpawnWaves; } set { _TimeToSpawnWaves = value; } }
+    public float TimeToSpawnWaves { get { return _TimeToSpawnWaves; } set { _TimeToSpawnWaves = value; } }
     public bool IsActive { get { return _isActive; } set { _isActive = value; } }
     /// <summary>
     /// amount of enemyies that were spawned
