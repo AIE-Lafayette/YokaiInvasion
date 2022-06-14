@@ -5,9 +5,10 @@ using UnityEngine;
 public class EnviromentSpawnerBehviour : MonoBehaviour
 {
     public static EnviromentSpawnerBehviour Instace;
+    [SerializeField]
+    private EnviromentBehavior _enviromentRef;
     private float _timer;
     private bool timerIsReached, _isActive;
-    public GameObject[] _arrayEnviromentRef;
     //how meny enemies 
     public bool IsActive { get { return _isActive; } set { _isActive = value; } }
     private void Awake() { Instace = this; }
@@ -19,27 +20,18 @@ public class EnviromentSpawnerBehviour : MonoBehaviour
         if (IsActive)
         {
             _isActive = false;
-            RoutineBehaviour.Instance.StartNewTimedAction(args => MoveEnviroment(), TimedActionCountType.UNSCALEDTIME, 1);
-            
+            RoutineBehaviour.Instance.StartNewTimedAction(args => Spawn(), TimedActionCountType.UNSCALEDTIME, 1);
             if (!IsActive)
             {
-                for (int i = 0; i < _arrayEnviromentRef.Length; i++)
-                {
-                    //_arrayEnviromentRef[i].GetComponent<MovementBehavior>().enabled = false;
-                }
-                RoutineBehaviour.Instance.StartNewTimedAction(args => GameManager.Instace.UpdateGamestate(GameState.SpawnWave), TimedActionCountType.UNSCALEDTIME, 10);
+                GameManager.Instace.UpdateGamestate(GameState.SpawnWave);
             }
         }
     }
-    /// <summary>
-    /// spawns a instance of a enviroment reference
-    /// </summary>
-    void MoveEnviroment()
+
+    void Spawn()
     {
-        for (int i = 0; i < _arrayEnviromentRef.Length; i++)
-        {
-            _arrayEnviromentRef[i].GetComponent<MovementBehavior>().enabled = true;
-        }
+        //EnviromentBehavior.ToryGateInstace.enabled = true;
+        //make the refereces speed
+        GameObject enviroment = Instantiate(_enviromentRef.gameObject, transform.position, transform.rotation);
     }
-    
 }

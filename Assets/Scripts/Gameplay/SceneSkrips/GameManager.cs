@@ -13,10 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private EnemySpawnerBehavior enemySpawnerBehavior;
     private int _playerScore, _enemyCount, _waveCount;
-    //[SerializeField]
-    //private GameObject _player;
-
-    // public InputDelegateBehavior _inputDelegateBehavior;
+    public bool _advaceForwardTrue;
     public Text _enemycount, _waveCounter;
     private void Awake() { Instace = this; }
     private void Start()
