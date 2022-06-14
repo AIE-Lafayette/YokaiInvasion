@@ -89,9 +89,7 @@ public class GameManager : MonoBehaviour
         _waveCounter.text = "WaveCount: " + _waveCount.ToString();
     }
 }
-/// <summary>
-/// holds the values for the states of the game
-/// </summary>
+
 public enum GameState { 
     Startmenu,
     MainGameScene,

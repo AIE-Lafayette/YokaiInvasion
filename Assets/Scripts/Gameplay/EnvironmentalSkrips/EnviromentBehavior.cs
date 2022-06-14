@@ -20,15 +20,15 @@ public class EnviromentBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+       
         if (GameManager.Instace._advaceForwardTrue == true)
         {
             Instance.GetComponent<MovementBehavior>().Speed = 40;
             GameManager.Instace._advaceForwardTrue = false;
         }
-
+           
         //RoutineBehaviour.Instance.StartNewTimedAction(args => , TimedActionCountType.UNSCALEDTIME, 4);
-
+        
     }
     private void OnTriggerEnter(Collider other)
     {
