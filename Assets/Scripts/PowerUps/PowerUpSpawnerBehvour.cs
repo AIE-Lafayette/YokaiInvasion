@@ -12,9 +12,5 @@ public class PowerUpSpawnerBehvour : MonoBehaviour
     /// <summary>
     /// spawns a single enemy
     /// </summary>
-    public void SpawnPower()
-    {
-        //keeps adding in enemyes based on the waves
-        GameObject spawnedEnemy = Instantiate(_powerUps, transform.position, transform.rotation);
-    }
+    public void SpawnPower() {/*keeps adding in enemyes based on the waves*/GameObject spawnedEnemy = Instantiate(_powerUps, transform.position, transform.rotation);}
 }

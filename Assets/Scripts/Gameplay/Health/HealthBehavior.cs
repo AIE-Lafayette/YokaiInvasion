@@ -16,10 +16,7 @@ public class HealthBehavior : MonoBehaviour
     public float MaxHealth { get { return _maxHealth; } set { _maxHealth = value; } }
 
     public bool IsAlive { get { return _isAlive; } }
-    private void Awake()
-    {
-        _health = _maxHealth;
-    }
+    private void Awake() { _health = _maxHealth;}
     //deals the damage amount and sends back the result
     public virtual float TakeDamage(float damgeAmount)
     {

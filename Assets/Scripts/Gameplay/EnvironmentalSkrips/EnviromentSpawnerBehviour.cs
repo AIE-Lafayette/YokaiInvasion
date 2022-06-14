@@ -24,7 +24,7 @@ public class EnviromentSpawnerBehviour : MonoBehaviour
                 RoutineBehaviour.Instance.StartNewTimedAction(args => Spawn(), TimedActionCountType.UNSCALEDTIME, _timer);
             
             if (!IsActive)
-            {
+            {//set the game state to spwn wave
                  GameManager.Instace.UpdateGamestate(GameState.SpawnWave);
             }
         }
@@ -32,8 +32,10 @@ public class EnviromentSpawnerBehviour : MonoBehaviour
 
     void Spawn()
     {
-        //EnviromentBehavior.ToryGateInstace.enabled = true;
         //make the refereces speed
         GameObject enviroment = Instantiate(_enviromentRef.gameObject, transform.position, transform.rotation);
+
+        //if(_enviromentRef[1].enabled == false)
+           // Instantiate(_enviromentRef[1].gameObject, transform.position, transform.rotation);
     }
 }

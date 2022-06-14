@@ -10,15 +10,10 @@ public class InputDelegateBehavior : MonoBehaviour
     private PlayerMovementBehavior _playerMovement;
     [SerializeField]
     private FireBehaviour _gun;
-    private float _laneChange;
-    private float _numberOfHits;
-
-    private bool _isMoving;
-    private bool _isShooting;
+    private float _laneChange, _numberOfHits;
+    private bool _isMoving, _isShooting;
     public bool IsShooting { get => _isShooting; set => _isShooting = value; }
-
     public bool IsMoving { get => _isMoving; }
-
     private void Awake()
     {
         Instance = this;
@@ -26,22 +21,17 @@ public class InputDelegateBehavior : MonoBehaviour
         _playerMovement = GetComponent<PlayerMovementBehavior>();
 
     }
-    private void OnEnable()
-    {
-        _playerControls.Enable();
-    }
+    private void OnEnable() { _playerControls.Enable();}
 
-    private void OnDisable()
-    {
-        _playerControls.Disable();
-    }
+    private void OnDisable() { _playerControls.Disable();}
 
     // Start is called before the first frame update
-    void Start()
-    { 
-        _playerControls.Player.Shoot.performed += context => _gun.Fire();
+    void Start() {  _playerControls.Player.Shoot.performed += context => _gun.Fire();}
+    private void FixedUpdate()
+    {
+        if (_playerControls.Player.Exit.activeControl.IsPressed())
+            Application.Quit();
     }
-
     /// <summary>
     /// Checks to see if th eplayer is moving or shooting
     /// </summary>
@@ -56,12 +46,10 @@ public class InputDelegateBehavior : MonoBehaviour
 
             _numberOfHits = 0;
         }
-
         //After the player moves sets the animation to false
         if (IsMoving)
             _isMoving = false;
 
         _isShooting = _playerControls.Player.Shoot.activeControl.IsPressed();
     }
-
 }
