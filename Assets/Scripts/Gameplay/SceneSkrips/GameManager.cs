@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene("StartScreen", LoadSceneMode.Single);
                 break;
             case GameState.MainGameScene:
-                SceneManager.LoadScene("BackUpScene", LoadSceneMode.Single);
+                SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
                 break;
             case GameState.SpawnWave:
                 EnemyHolderManager.Instace.setActiveSpawners();
@@ -52,7 +52,6 @@ public class GameManager : MonoBehaviour
                     increaseWaveCount();
                     EnvironmentSpawnerHolder.Instace.setActiveSpawners();
                 }
-                
                 break;
             case GameState.EndScreen:
                 SceneManager.LoadScene("DeathScene", LoadSceneMode.Single);
@@ -90,7 +89,6 @@ public class GameManager : MonoBehaviour
     private void increaseWaveCount()
     {
         RoutineBehaviour.Instance.StartNewTimedAction(args => _hit = 0, TimedActionCountType.UNSCALEDTIME, 3);
-       
         _advaceForwardTrue = true;
         _waveCount += 1;
         _waveCounter.text = "WaveCount: " + _waveCount.ToString();

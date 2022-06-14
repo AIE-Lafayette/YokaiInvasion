@@ -21,10 +21,11 @@ public class EnviromentSpawnerBehviour : MonoBehaviour
         if (IsActive)
         {
             _isActive = false;
-            RoutineBehaviour.Instance.StartNewTimedAction(args => Spawn(), TimedActionCountType.UNSCALEDTIME, _timer);
+                RoutineBehaviour.Instance.StartNewTimedAction(args => Spawn(), TimedActionCountType.UNSCALEDTIME, _timer);
+            
             if (!IsActive)
             {
-                GameManager.Instace.UpdateGamestate(GameState.SpawnWave);
+                 GameManager.Instace.UpdateGamestate(GameState.SpawnWave);
             }
         }
     }
