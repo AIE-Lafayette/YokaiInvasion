@@ -23,7 +23,7 @@ public class EnviromentBehavior : MonoBehaviour
             GameManager.Instace._advaceForwardTrue = false;
         }
         /*destroy the game object*/
-        RoutineBehaviour.Instance.StartNewTimedAction(args => Destroy(this._enviromentRef), TimedActionCountType.UNSCALEDTIME, 20);
+        RoutineBehaviour.Instance.StartNewTimedAction(args => this.enabled = false, TimedActionCountType.UNSCALEDTIME, 20);
         
     }
     private void OnTriggerEnter(Collider other)
@@ -31,11 +31,11 @@ public class EnviromentBehavior : MonoBehaviour
         if (other.tag == "Wall")
         {
             //when the hit count go to 1 then stop
-            _hitCount++;
-            if (_hitCount <= 1)
-            {
+            //_hitCount++;
+            //if (_hitCount <= 1)
+           // {
                 GetComponent<MovementBehavior>().Speed = 0;
-            }
+           // }
         }
     }
 }
