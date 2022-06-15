@@ -154,7 +154,7 @@ PrefabInstance:
     - target: {fileID: -8847120826387727493, guid: fc9a60e21336e704286c2578dc2fcf2a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c46b9eb2491ff8f4ea37323031165461, type: 2}
+      objectReference: {fileID: 2100000, guid: 7ddef56b80effe14aa8e3e61b265e571, type: 2}
     - target: {fileID: -8679921383154817045, guid: fc9a60e21336e704286c2578dc2fcf2a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -202,7 +202,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: fc9a60e21336e704286c2578dc2fcf2a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c46b9eb2491ff8f4ea37323031165461, type: 2}
+      objectReference: {fileID: 2100000, guid: 7ddef56b80effe14aa8e3e61b265e571, type: 2}
     - target: {fileID: 919132149155446097, guid: fc9a60e21336e704286c2578dc2fcf2a, type: 3}
       propertyPath: m_Name
       value: Scroll
