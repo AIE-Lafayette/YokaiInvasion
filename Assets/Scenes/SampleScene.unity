@@ -722,6 +722,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawners
       objectReference: {fileID: 0}
+    - target: {fileID: 2311205329801107960, guid: 551d9657728533e47bfd81647192ee68, type: 3}
+      propertyPath: _enemy.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2311205329801107960, guid: 551d9657728533e47bfd81647192ee68, type: 3}
+      propertyPath: _enemy.Array.data[0]
+      value: 
+      objectReference: {fileID: 7749460261752766541, guid: 0115588eb856ee34a856ed23a844f1c1, type: 3}
+    - target: {fileID: 2311205329801107960, guid: 551d9657728533e47bfd81647192ee68, type: 3}
+      propertyPath: _enemy.Array.data[1]
+      value: 
+      objectReference: {fileID: 5147401004812216343, guid: a8f30f9c159fb1a47a108a691d94dcb1, type: 3}
+    - target: {fileID: 2311205331168144700, guid: 551d9657728533e47bfd81647192ee68, type: 3}
+      propertyPath: _enemy.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2311205331168144700, guid: 551d9657728533e47bfd81647192ee68, type: 3}
+      propertyPath: _enemy.Array.data[0]
+      value: 
+      objectReference: {fileID: 7749460261752766541, guid: 0115588eb856ee34a856ed23a844f1c1, type: 3}
+    - target: {fileID: 2311205331168144700, guid: 551d9657728533e47bfd81647192ee68, type: 3}
+      propertyPath: _enemy.Array.data[1]
+      value: 
+      objectReference: {fileID: 5147401004812216343, guid: a8f30f9c159fb1a47a108a691d94dcb1, type: 3}
     - target: {fileID: 2504205427415721544, guid: 551d9657728533e47bfd81647192ee68, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.95
