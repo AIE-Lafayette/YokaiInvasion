@@ -11,8 +11,9 @@ public class InputDelegateBehavior : MonoBehaviour
     [SerializeField]
     private FireBehaviour _gun;
     private float _laneChange, _numberOfHits;
-    private bool _isMoving, _isShooting;
+    private bool _isMoving, _isShooting, _shoot;
     public bool IsShooting { get => _isShooting; set => _isShooting = value; }
+    public bool Shoot { get => _shoot; set => _shoot = value; }
     public bool IsMoving { get => _isMoving; }
     private void Awake()
     {
@@ -48,6 +49,9 @@ public class InputDelegateBehavior : MonoBehaviour
             _isMoving = false;
 
         _isShooting = _playerControls.Player.Shoot.activeControl.IsPressed();
+
+        //if (_playerControls.Ninja.Shoot.activeControl.IsPressed())
+        //    _shoot = true;
     }
     /// <summary>
     /// Checks to see if th eplayer is moving or shooting

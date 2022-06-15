@@ -16,6 +16,7 @@ public class NinjaHolderBehaviour : MonoBehaviour
     /// </summary>
     public void setActiveSpawners()
     {
+
         //loops through the array...
         for (int i = 0; i < _ninjas.Length; i++)
         {
