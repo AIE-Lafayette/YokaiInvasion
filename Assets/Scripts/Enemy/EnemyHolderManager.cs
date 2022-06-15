@@ -9,8 +9,8 @@ public class EnemyHolderManager : MonoBehaviour
     private EnemySpawnerBehavior[] enemySpawnerBehavior;
 
     [SerializeField]
-    private int _timeToSpawnWaves;
-    private void Awake() {Instace = this;}
+    private float _timeToSpawnWaves;
+    private void Awake() { Instace = this; }
     private void Start()
     {
         //loops through the array...

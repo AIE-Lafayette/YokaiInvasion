@@ -8,8 +8,5 @@ public class SetTagSkripBehaviour : MonoBehaviour
     private GameObject _PowerUps;
     public string[] PowerUpNumbers;
     // Start is called before the first frame update
-    void Start()
-    {
-        _PowerUps.tag = PowerUpNumbers[Random.Range(0,2)];
-    }
+    void Start()  { _PowerUps.tag = PowerUpNumbers[Random.Range(0,2)];}
 }

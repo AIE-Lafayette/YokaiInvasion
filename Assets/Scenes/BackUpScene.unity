@@ -195,6 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enviromentRef: {fileID: 7014470039886507317, guid: ee252ba0a6d74d34da88d04bc156ba41, type: 3}
+  _timer: 0
 --- !u!4 &106160335
 Transform:
   m_ObjectHideFlags: 0
@@ -2150,6 +2151,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   State: 1
+  enemySpawnerBehavior: {fileID: 0}
+  _advaceForwardTrue: 0
   _enemycount: {fileID: 475563128}
   _waveCounter: {fileID: 266769681}
 --- !u!4 &1273276692
@@ -2697,6 +2700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enviromentRef: {fileID: 3826363247013159294, guid: d00b40fae32f8734ba3ee2c82a216bff, type: 3}
+  _timer: 0
 --- !u!4 &1529534100
 Transform:
   m_ObjectHideFlags: 0
@@ -3722,6 +3726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enviromentRef: {fileID: 7014470039886507317, guid: ee252ba0a6d74d34da88d04bc156ba41, type: 3}
+  _timer: 0
 --- !u!4 &1977571934
 Transform:
   m_ObjectHideFlags: 0

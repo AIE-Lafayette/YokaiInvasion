@@ -10,14 +10,12 @@ public class GameManager : MonoBehaviour
     public static GameManager Instace;
     public GameState State;
     public static event System.Action<GameState> OnGmaeStateChange;//a varable to call when needeing the game states
+    [SerializeField]
     private EnemySpawnerBehavior enemySpawnerBehavior;
-    private int _playerScore, _enemyCount, _waveCount;
-    //[SerializeField]
-    //private GameObject _player;
-
-    // public InputDelegateBehavior _inputDelegateBehavior;
+    private int _playerScore, _enemyCount, _waveCount, _hit;
+    public bool _advaceForwardTrue;
     public Text _enemycount, _waveCounter;
-    private void Awake()  { Instace = this; }
+    private void Awake() { Instace = this; }
     private void Start()
     {
         _enemycount.text = "Score: " + _playerScore.ToString();
@@ -42,17 +40,21 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene("StartScreen", LoadSceneMode.Single);
                 break;
             case GameState.MainGameScene:
-                SceneManager.LoadScene("BackUpScene", LoadSceneMode.Single);
+                SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
                 break;
             case GameState.SpawnWave:
                 EnemyHolderManager.Instace.setActiveSpawners();
                 break;
             case GameState.AdvanceForward:
-                increaseWaveCount();
-                EnvironmentSpawnerHolder.Instace.setActiveSpawners();
+                _hit++;
+                if (_hit <= 1)
+                {
+                    increaseWaveCount();
+                    EnvironmentSpawnerHolder.Instace.setActiveSpawners();
+                }
                 break;
             case GameState.EndScreen:
-                SceneManager.LoadScene("DeathScene",LoadSceneMode.Single );
+                SceneManager.LoadScene("DeathScene", LoadSceneMode.Single);
                 break;
             default:
                 break;
@@ -86,13 +88,13 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void increaseWaveCount()
     {
+        RoutineBehaviour.Instance.StartNewTimedAction(args => _hit = 0, TimedActionCountType.UNSCALEDTIME, 3);
+        _advaceForwardTrue = true;
         _waveCount += 1;
         _waveCounter.text = "WaveCount: " + _waveCount.ToString();
     }
 }
-/// <summary>
-/// holds the values for the states of the game
-/// </summary>
+
 public enum GameState { 
     Startmenu,
     MainGameScene,

@@ -8,32 +8,29 @@ public class EnemySpawnerBehavior : MonoBehaviour
     [SerializeField]
     private EnemyBehaviour[] _enemy;
     private bool _isActive;
-    private int _TimeToSpawnWaves, _enemyCount;
+    private float _TimeToSpawnWaves;
+    private int _enemyCount;
 
     /// <summary>
     /// amount of time till the enemy spawn for each wave
     /// </summary>
-    public int TimeToSpawnWaves { get { return _TimeToSpawnWaves; } set{ _TimeToSpawnWaves = value; } }
+    public float TimeToSpawnWaves { get { return _TimeToSpawnWaves; } set { _TimeToSpawnWaves = value; } }
     public bool IsActive { get { return _isActive; } set { _isActive = value; } }
     /// <summary>
     /// amount of enemyies that were spawned
     /// </summary>
-    public int EnemyCount {get { return _enemyCount; }}
-    private void Awake() 
-    {
-        EnemySpawnerInstance = this;
-    }
-    private void Start()
-    {
-        IsActive = true;
-    }
+    public int EnemyCount { get { return _enemyCount; } }
+    private void Awake() { EnemySpawnerInstance = this;}
+    private void Start() {IsActive = true;}
     void Update()
     {
         if (IsActive)
         {
+            //increase the enemy count
+            GameManager.Instace.AddEnemyCount();
+            //spawn the enemy
             RoutineBehaviour.Instance.StartNewTimedAction(args => SpawnEnemy(), TimedActionCountType.UNSCALEDTIME, _TimeToSpawnWaves);
             //incresse amount
-            GameManager.Instace.AddEnemyCount();
             IsActive = false;
         }
     }
