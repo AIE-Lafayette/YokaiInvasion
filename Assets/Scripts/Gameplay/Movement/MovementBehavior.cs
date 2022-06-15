@@ -15,8 +15,7 @@ public class MovementBehavior : MonoBehaviour
 
     public void Start()
     {
-        //makes the rigidbodys velocity equal to the forward
-        GetComponent<Rigidbody>().velocity = transform.forward;
+
     }
 
     // Update is called once per frame
@@ -26,6 +25,8 @@ public class MovementBehavior : MonoBehaviour
         MoveDirection = Vector3.back;
         //addes the move direction scaled up by  the speed to position
         transform.position += MoveDirection * Time.deltaTime;
+        //makes the rigidbodys velocity equal to the forward
+        GetComponent<Rigidbody>().velocity = transform.forward;
 
     }
 }

@@ -35,7 +35,7 @@ public class InputDelegateBehavior : MonoBehaviour
 
         Vector3 moveDirection = _playerControls.Player.Movement.ReadValue<Vector2>();
         _laneChange = moveDirection.x;
-        
+        _playerMovement.Move(new Vector3 (_laneChange,transform.position.y, transform.position.z));
 
         //After the player moves sets the animation to false
         if (IsMoving)
