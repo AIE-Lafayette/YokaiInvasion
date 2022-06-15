@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class FireBehaviour : MonoBehaviour
 {
-    [SerializeField]
-    private ProjectitleBehaviour _bulletRef;
     public static FireBehaviour instance;
     [SerializeField]
     private float _bulletForce;
     private ProjectitleBehaviour bulletBehaviour;
+    [SerializeField]
+    private ProjectitleBehaviour _bulletRef;
 
     [SerializeField]
     private InputDelegateBehavior _playerInput;
@@ -22,10 +22,7 @@ public class FireBehaviour : MonoBehaviour
     /// <summary>
     /// it the total force that the bullet gives off
     /// </summary>
-    public float BulletForce
-    {
-        get { return _bulletForce; }
-    }
+    public float BulletForce {get { return _bulletForce; }}
     /// <summary>
     /// decreases the damage of the bullet
     /// </summary>

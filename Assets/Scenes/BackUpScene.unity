@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 81ff18106161e584183c9c368b5b8922, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -195,6 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enviromentRef: {fileID: 7014470039886507317, guid: ee252ba0a6d74d34da88d04bc156ba41, type: 3}
+  _timer: 0
 --- !u!4 &106160335
 Transform:
   m_ObjectHideFlags: 0
@@ -534,6 +535,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 413135801}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &459149783 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 675629193992820222, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
+  m_PrefabInstance: {fileID: 758621239}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &475563125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1371,6 +1377,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 124
       objectReference: {fileID: 0}
+    - target: {fileID: 1960728388, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 272079041844877544, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1435,6 +1445,14 @@ PrefabInstance:
       propertyPath: _ninjas.Array.data[1]
       value: 
       objectReference: {fileID: 1745039646}
+    - target: {fileID: 3469858923985202347, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
+      propertyPath: _owner
+      value: 
+      objectReference: {fileID: 459149783}
+    - target: {fileID: 3469858924967651666, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
+      propertyPath: _owner
+      value: 
+      objectReference: {fileID: 459149783}
     - target: {fileID: 3923458405677812800, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
       propertyPath: Instace
       value: 
@@ -2133,7 +2151,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   State: 1
-  _inputDelegateBehavior: {fileID: 1946054323}
+  enemySpawnerBehavior: {fileID: 0}
+  _advaceForwardTrue: 0
   _enemycount: {fileID: 475563128}
   _waveCounter: {fileID: 266769681}
 --- !u!4 &1273276692
@@ -2681,6 +2700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enviromentRef: {fileID: 3826363247013159294, guid: d00b40fae32f8734ba3ee2c82a216bff, type: 3}
+  _timer: 0
 --- !u!4 &1529534100
 Transform:
   m_ObjectHideFlags: 0
@@ -3676,17 +3696,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.81, z: 1.69}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1946054323 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -9053783190085303994, guid: ef30adfa87f6fe94abb8d0a8fce58ec5, type: 3}
-  m_PrefabInstance: {fileID: 758621239}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e43926789d5af44b26c6d11bf22702, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1977571932
 GameObject:
   m_ObjectHideFlags: 0
@@ -3717,6 +3726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enviromentRef: {fileID: 7014470039886507317, guid: ee252ba0a6d74d34da88d04bc156ba41, type: 3}
+  _timer: 0
 --- !u!4 &1977571934
 Transform:
   m_ObjectHideFlags: 0

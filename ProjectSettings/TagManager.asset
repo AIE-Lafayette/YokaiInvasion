@@ -18,7 +18,9 @@ TagManager:
   - NinjaSpawnPointR
   - NinjaSpawnPointL
   - Gamemanager
+  - Ground
   - JumpFix
+  - DeathWall
   layers:
   - Default
   - TransparentFX

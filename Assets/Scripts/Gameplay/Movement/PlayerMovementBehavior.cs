@@ -9,7 +9,7 @@ public class PlayerMovementBehavior : MonoBehaviour
 
     private Rigidbody _rigidbody;
     private Vector3 _velocity;
-    private int _lane,_lanes;
+    private int _lane, _lanes;
 
 
     private void Awake()
@@ -25,7 +25,7 @@ public class PlayerMovementBehavior : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    public void Move(int _lane) 
+    public void Move(int _lane)
     {
         _lanes += _lane;
         if (_lanes > 4)
@@ -40,32 +40,34 @@ public class PlayerMovementBehavior : MonoBehaviour
         switch (_lanes)
         {
             case 0:
-                transform.position = Vector3.Lerp(transform.position, new Vector3(-5, transform.position.y, transform.position.z),
+                transform.position = Vector3.Lerp(transform.position, new Vector3(-4.140f, transform.position.y, transform.position.z),
                     30 * Time.deltaTime);
                 break;
             case 1:
-                transform.position = Vector3.Lerp(transform.position, new Vector3(-2, transform.position.y, transform.position.z),
+                transform.position = Vector3.Lerp(transform.position, new Vector3(-1.450f, transform.position.y, transform.position.z),
                     30 * Time.deltaTime);
                 break;
             case 2:
-                transform.position = Vector3.Lerp(transform.position, new Vector3(1, transform.position.y, transform.position.z),
+                transform.position = Vector3.Lerp(transform.position, new Vector3(1.70f, transform.position.y, transform.position.z),
                     30 * Time.deltaTime);
                 break;
             case 3:
-                transform.position = Vector3.Lerp(transform.position, new Vector3(4, transform.position.y, transform.position.z),
+                transform.position = Vector3.Lerp(transform.position, new Vector3(4.70f, transform.position.y, transform.position.z),
                     30 * Time.deltaTime);
                 break;
             case 4:
-                transform.position = Vector3.Lerp(transform.position, new Vector3(7, transform.position.y, transform.position.z),
+                transform.position = Vector3.Lerp(transform.position, new Vector3(7.060f, transform.position.y, transform.position.z),
                     30 * Time.deltaTime);
                 break;
         }
-      
-       // _velocity = direction * _speed * Time.deltaTime;    
+        //makes the palyer move in constent motion
+        // _velocity = direction * _speed * Time.deltaTime;    
     }
-
+    /// <summary>
+    /// Needed for the constent motion
+    /// </summary>
     // Update is called once per frame
-    void FixedUpdate() 
+    void FixedUpdate()
     {
         //_rigidbody.MovePosition(transform.position + _velocity);
     }

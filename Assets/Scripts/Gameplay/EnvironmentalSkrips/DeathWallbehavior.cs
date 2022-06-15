@@ -16,8 +16,6 @@ public class DeathWallbehavior : MonoBehaviour
             Destroy(other);
         if (other.tag == "Rage")
             Destroy(other);
-        if (other.tag == "ToriGate")
-            EnvironmentSpawnerHolder.Instace.DestroyTheEnviroment();
         if (other.tag == "Lanter")
             Destroy(other);
         if (other.tag == "Untagged")
