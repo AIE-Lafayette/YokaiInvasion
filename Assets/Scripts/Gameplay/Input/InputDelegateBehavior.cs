@@ -29,14 +29,10 @@ public class InputDelegateBehavior : MonoBehaviour
     void Start() {  _playerControls.Player.Shoot.performed += context => _gun.Fire();}
     private void FixedUpdate()
     {
-        if (_playerControls.Player.Exit.activeControl.IsPressed())
-            Application.Quit();
-    }
-    /// <summary>
-    /// Checks to see if th eplayer is moving or shooting
-    /// </summary>
-    public void Update()
-    {
+        //press esc key on key board and b on controller to exit game
+        //if (_playerControls.Player.Exit.activeControl.IsPressed())
+        //    Application.Quit();
+
         Vector2 moveDirection = _playerControls.Player.Movement.ReadValue<Vector2>();
         _laneChange = moveDirection.x;
         _numberOfHits++;
@@ -46,10 +42,18 @@ public class InputDelegateBehavior : MonoBehaviour
 
             _numberOfHits = 0;
         }
+
         //After the player moves sets the animation to false
         if (IsMoving)
             _isMoving = false;
 
         _isShooting = _playerControls.Player.Shoot.activeControl.IsPressed();
+    }
+    /// <summary>
+    /// Checks to see if th eplayer is moving or shooting
+    /// </summary>
+    public void Update()
+    {
+        _isMoving = _playerControls.Player.Movement.activeControl.IsPressed();
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
-
+using UnityEngine.InputSystem;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instace;
@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     }
     // Update is called once per frame
     void Update()
-    {
+    { 
         if (_enemyCount == 0)
             UpdateGamestate(GameState.AdvanceForward);
     }
