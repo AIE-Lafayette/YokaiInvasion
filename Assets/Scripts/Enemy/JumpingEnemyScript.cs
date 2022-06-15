@@ -61,7 +61,7 @@ public class JumpingEnemyScript : EnemyBehaviour
         if (_isGrounded)
         {
             //if the timer is above 0
-            if(_timer > 0f)
+            if (_timer > 0f)
             {
                 //count down
                 _timer -= Time.deltaTime;
@@ -75,7 +75,7 @@ public class JumpingEnemyScript : EnemyBehaviour
                 //restart the timer
                 _timer = 2.5f;
             }
-            
+
         }
     }
 }
