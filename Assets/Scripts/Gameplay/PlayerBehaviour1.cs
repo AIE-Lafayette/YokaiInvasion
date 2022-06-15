@@ -20,6 +20,6 @@ public class PlayerBehaviour1 : HealthBehavior
             NinjaHolderBehaviour.Instace.setActiveSpawners();
             Destroy(other);
         }
-            
+
     }
 }

@@ -13,14 +13,11 @@ public class ProjectitleBehaviour : MonoBehaviour
     private Rigidbody _rigidbody;
     public static ProjectitleBehaviour Instance;
 
-    public float Damage
-    {
-        get { return _damage; }
-    }
+    public float Damage {get { return _damage; }}
 
-    public string OwnerTag {get { return _ownerTag; } set { _ownerTag = value; }}
+    public string OwnerTag { get { return _ownerTag; } set { _ownerTag = value; } }
 
-    public Rigidbody RigidBody {get { return _rigidbody; } }
+    public Rigidbody RigidBody { get { return _rigidbody; } }
 
     public virtual float IncreaseDamage(float DamageIncrease)
     {
@@ -29,10 +26,7 @@ public class ProjectitleBehaviour : MonoBehaviour
         return DamageIncrease;
     }
 
-    private void Awake()
-    {
-        _rigidbody = GetComponent<Rigidbody>();
-    }
+    private void Awake() {_rigidbody = GetComponent<Rigidbody>();}
 
     private void OnTriggerEnter(Collider other)
     {

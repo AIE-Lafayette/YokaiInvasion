@@ -7,17 +7,11 @@ public class MovementBehavior : MonoBehaviour
     private Vector3 _moveDirection;
     [SerializeField]
     private int _speed;
-
-
-    public int Speed 
-    {
-        get { return _speed; }
-        set { _speed = value; }
-    }
+    public int Speed {get { return _speed; }set { _speed = value; }}
     /// <summary>
     /// The speed and direction of the game object.
     /// </summary>
-    public Vector3 MoveDirection {get { return _moveDirection; } set { _moveDirection = value; } }
+    public Vector3 MoveDirection { get { return _moveDirection; } set { _moveDirection = value; } }
 
     // Update is called once per frame
     public void Update()

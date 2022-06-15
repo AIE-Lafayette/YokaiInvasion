@@ -5,69 +5,55 @@ using UnityEngine.InputSystem;
 
 public class InputDelegateBehavior : MonoBehaviour
 {
-    public static InputDelegateBehavior Instatce;
+    public static InputDelegateBehavior Instance;
     private PlayerControls _playerControls;
     private PlayerMovementBehavior _playerMovement;
     [SerializeField]
     private FireBehaviour _gun;
-    private bool _ableToGetInput = true;
-    private float _laneChange;
-    private float _numberOfHits;
-
+    private float _laneChange, _numberOfHits;
+    private bool _isMoving, _isShooting;
+    public bool IsShooting { get => _isShooting; set => _isShooting = value; }
+    public bool IsMoving { get => _isMoving; }
     private void Awake()
     {
+        Instance = this;
         _playerControls = new PlayerControls();
         _playerMovement = GetComponent<PlayerMovementBehavior>();
-        
-    }
 
-    private void OnEnable()
-    {
-       
-        _playerControls.Enable();
     }
+    private void OnEnable() { _playerControls.Enable();}
 
-    private void OnDisable()
-    {
-        
-        _playerControls.Disable();
-    }
+    private void OnDisable() { _playerControls.Disable();}
 
     // Start is called before the first frame update
-    void Start()
+    void Start() {  _playerControls.Player.Shoot.performed += context => _gun.Fire();}
+    private void FixedUpdate()
     {
-        if (_ableToGetInput)
-        {
-            _playerControls.Player.Shoot.performed += context => _gun.Fire();
-        }
-    }
+        //press esc key on key board and b on controller to exit game
+        //if (_playerControls.Player.Exit.activeControl.IsPressed())
+        //    Application.Quit();
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-            Vector2 moveDirection = _playerControls.Player.Movement.ReadValue<Vector2>();
-
-            _laneChange = moveDirection.x;
-            _numberOfHits++;
-
-        if (_numberOfHits == 5)
+        Vector2 moveDirection = _playerControls.Player.Movement.ReadValue<Vector2>();
+        _laneChange = moveDirection.x;
+        _numberOfHits++;
+        if (_numberOfHits == 4)
         {
             _playerMovement.Move((int)(_laneChange));
-            _numberOfHits = 0;
 
+            _numberOfHits = 0;
         }
-        //_playerControls.Player.Movement.activeControl.
+
+        //After the player moves sets the animation to false
+        if (IsMoving)
+            _isMoving = false;
+
+        _isShooting = _playerControls.Player.Shoot.activeControl.IsPressed();
     }
-    public void Disable() 
+    /// <summary>
+    /// Checks to see if th eplayer is moving or shooting
+    /// </summary>
+    public void Update()
     {
-        _ableToGetInput = false;
-        //Instatce.enabled = false;
-       // this.enabled = false;
-    }
-    public void Enable()
-    {
-        _ableToGetInput = true;
-       // Instatce.enabled = true;
-       // this.enabled = true;
+        _isMoving = _playerControls.Player.Movement.activeControl.IsPressed();
     }
 }

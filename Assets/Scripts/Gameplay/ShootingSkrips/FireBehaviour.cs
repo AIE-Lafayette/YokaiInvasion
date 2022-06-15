@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class FireBehaviour : MonoBehaviour
 {
-    [SerializeField]
-    private ProjectitleBehaviour _bulletRef;
     public static FireBehaviour instance;
     [SerializeField]
     private float _bulletForce;
     private ProjectitleBehaviour bulletBehaviour;
+    [SerializeField]
+    private ProjectitleBehaviour _bulletRef;
+
+    [SerializeField]
+    private InputDelegateBehavior _playerInput;
+
     /// <summary>
     /// makes the bullet not hit the owner to kill its self
     /// </summary>
@@ -18,10 +22,7 @@ public class FireBehaviour : MonoBehaviour
     /// <summary>
     /// it the total force that the bullet gives off
     /// </summary>
-    public float BulletForce
-    {
-        get { return _bulletForce; }
-    }
+    public float BulletForce {get { return _bulletForce; }}
     /// <summary>
     /// decreases the damage of the bullet
     /// </summary>
@@ -39,6 +40,7 @@ public class FireBehaviour : MonoBehaviour
         instance = this;
         bulletBehaviour = GetComponent<ProjectitleBehaviour>();
     }
+
     //Spawns a bullet and gives it a force 
     public void Fire()
     {
@@ -49,5 +51,11 @@ public class FireBehaviour : MonoBehaviour
         bulletBehaviour.OwnerTag = _owner.tag;
         //adds force to the rigidbody
         bulletBehaviour.RigidBody.AddForce(transform.forward * _bulletForce, ForceMode.Impulse);
+    }
+    private void Update()
+    {
+        //After you fire it sets the animation to false
+        if (_playerInput.IsShooting)
+            _playerInput.IsShooting = false;
     }
 }

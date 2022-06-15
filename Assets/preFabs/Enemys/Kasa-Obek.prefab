@@ -57,7 +57,6 @@ GameObject:
   - component: {fileID: 6105612333882906065}
   - component: {fileID: 5340021941055115671}
   - component: {fileID: 2748736586105195348}
-  - component: {fileID: 390641471010718218}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -129,19 +128,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &390641471010718218
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3265050736963659837}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4300369910222140372
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,7 +224,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4300369910222140372}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -304,10 +290,10 @@ GameObject:
   - component: {fileID: 4332545303043465729}
   - component: {fileID: 8418939620007178102}
   - component: {fileID: 2717000180134045337}
-  - component: {fileID: 8879484751670153880}
+  - component: {fileID: 8231305156755515729}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: JumpFix
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -320,8 +306,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6410802307697052071}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.492, z: 0}
-  m_LocalScale: {x: 2.1665764, y: 0.0094298, z: 2.2192}
+  m_LocalPosition: {x: -0.04, y: 0.74, z: 0}
+  m_LocalScale: {x: 1.2006747, y: 1.837475, z: 2.0616038}
   m_Children: []
   m_Father: {fileID: 6105612333882906065}
   m_RootOrder: 0
@@ -375,7 +361,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8879484751670153880
+--- !u!65 &8231305156755515729
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -386,7 +372,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1738065336231827755
 PrefabInstance:
@@ -405,7 +391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2306093339945106610, guid: 57b84069a6269164082a8aabccad447d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.153
+      value: 0.74
       objectReference: {fileID: 0}
     - target: {fileID: 2306093339945106610, guid: 57b84069a6269164082a8aabccad447d, type: 3}
       propertyPath: m_LocalPosition.z
