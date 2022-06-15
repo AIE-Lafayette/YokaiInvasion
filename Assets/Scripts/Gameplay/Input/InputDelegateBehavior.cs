@@ -10,7 +10,7 @@ public class InputDelegateBehavior : MonoBehaviour
     private PlayerMovementBehavior _playerMovement;
     [SerializeField]
     private FireBehaviour _gun;
-    private float _laneChange, _numberOfHits;
+    private float _laneChange;
     private bool _isMoving, _isShooting;
     public bool IsShooting { get => _isShooting; set => _isShooting = value; }
     public bool IsMoving { get => _isMoving; }
@@ -33,15 +33,9 @@ public class InputDelegateBehavior : MonoBehaviour
         //if (_playerControls.Player.Exit.activeControl.IsPressed())
         //    Application.Quit();
 
-        Vector2 moveDirection = _playerControls.Player.Movement.ReadValue<Vector2>();
+        Vector3 moveDirection = _playerControls.Player.Movement.ReadValue<Vector2>();
         _laneChange = moveDirection.x;
-        _numberOfHits++;
-        if (_numberOfHits == 4)
-        {
-            _playerMovement.Move((int)(_laneChange));
-
-            _numberOfHits = 0;
-        }
+        
 
         //After the player moves sets the animation to false
         if (IsMoving)

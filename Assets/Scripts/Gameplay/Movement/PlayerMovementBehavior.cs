@@ -9,13 +9,17 @@ public class PlayerMovementBehavior : MonoBehaviour
 
     private Rigidbody _rigidbody;
     private Vector3 _velocity;
-    private int _lane, _lanes;
+    private int _lane = 2;
+    public GameObject[] _lanes;
+    private Vector3[] _lanePos;
+    float _time = 1;
+    [SerializeField]
+    float _speed;
 
 
     private void Awake()
     {
         Instace = this;
-        _lanes = 2;
     }
 
 
@@ -25,43 +29,12 @@ public class PlayerMovementBehavior : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    public void Move(int _lane)
+    public void Move(Vector3 position)
     {
-        _lanes += _lane;
-        if (_lanes > 4)
-        {
-            _lanes = 4;
-        }
-        else if (_lanes < 0)
-        {
-            _lanes = 0;
-        }
-        //using lerp, the player should switch between the lanes, lane 0 is all the way to the left, lane 4 is all the way to the right.
-        switch (_lanes)
-        {
-            case 0:
-                transform.position = Vector3.Lerp(transform.position, new Vector3(-4.140f, transform.position.y, transform.position.z),
-                    30 * Time.deltaTime);
-                break;
-            case 1:
-                transform.position = Vector3.Lerp(transform.position, new Vector3(-1.450f, transform.position.y, transform.position.z),
-                    30 * Time.deltaTime);
-                break;
-            case 2:
-                transform.position = Vector3.Lerp(transform.position, new Vector3(1.70f, transform.position.y, transform.position.z),
-                    30 * Time.deltaTime);
-                break;
-            case 3:
-                transform.position = Vector3.Lerp(transform.position, new Vector3(4.70f, transform.position.y, transform.position.z),
-                    30 * Time.deltaTime);
-                break;
-            case 4:
-                transform.position = Vector3.Lerp(transform.position, new Vector3(7.060f, transform.position.y, transform.position.z),
-                    30 * Time.deltaTime);
-                break;
-        }
-        //makes the palyer move in constent motion
-        // _velocity = direction * _speed * Time.deltaTime;    
+
+       transform.position = Vector3.Lerp(position, _lanes[_lane].transform.position, _time += Time.deltaTime * _speed);
+        
+         
     }
     /// <summary>
     /// Needed for the constent motion

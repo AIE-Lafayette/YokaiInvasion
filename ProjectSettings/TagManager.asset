@@ -21,6 +21,7 @@ TagManager:
   - Ground
   - JumpFix
   - DeathWall
+  - Lane
   layers:
   - Default
   - TransparentFX

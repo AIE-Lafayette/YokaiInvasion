@@ -13,14 +13,19 @@ public class MovementBehavior : MonoBehaviour
     /// </summary>
     public Vector3 MoveDirection { get { return _moveDirection; } set { _moveDirection = value; } }
 
+    public void Start()
+    {
+        //makes the rigidbodys velocity equal to the forward
+        GetComponent<Rigidbody>().velocity = transform.forward;
+    }
+
     // Update is called once per frame
     public void Update()
     {
         //makes movedirection into a new vecotor3 that uses speed to move
-        MoveDirection = new Vector3(0, 0, -_speed);
+        MoveDirection = Vector3.back;
         //addes the move direction scaled up by  the speed to position
         transform.position += MoveDirection * Time.deltaTime;
-        //makes the rigidbodys velocity equal to the forward
-        GetComponent<Rigidbody>().velocity = transform.forward;
+
     }
 }

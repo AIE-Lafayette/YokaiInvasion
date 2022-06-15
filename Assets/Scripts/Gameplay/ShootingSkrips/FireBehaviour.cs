@@ -54,8 +54,8 @@ public class FireBehaviour : MonoBehaviour
     }
     private void Update()
     {
-        //After you fire it sets the animation to false
-        if (_playerInput.IsShooting)
-            _playerInput.IsShooting = false;
+        ////After you fire it sets the animation to false
+        //if (_playerInput.IsShooting)
+        //    _playerInput.IsShooting = false;
     }
 }
