@@ -9,11 +9,6 @@ public class PlayerAnimationBehavior : MonoBehaviour
     [SerializeField]
     private Animator _animator;
 
-    private void Awake()
-    {
-        //PlayerBehaviour1.OnDeath = () => _animator.SetTrigger("Death");
-    }
-
     //Goes through the animations of the player
     void Update()
     {

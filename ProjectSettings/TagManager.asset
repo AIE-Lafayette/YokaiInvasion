@@ -21,6 +21,7 @@ TagManager:
   - Ground
   - JumpFix
   - DeathWall
+  - Bullet
   layers:
   - Default
   - TransparentFX

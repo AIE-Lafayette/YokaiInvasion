@@ -64,3 +64,5 @@ crashlytics-build.properties
 
 UserSettings/
 UserSettings/EditorUserSettings.asset
+
+Assets/Scenes/SampleScene.unity

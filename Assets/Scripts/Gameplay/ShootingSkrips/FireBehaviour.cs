@@ -52,10 +52,17 @@ public class FireBehaviour : MonoBehaviour
         //adds force to the rigidbody
         bulletBehaviour.RigidBody.AddForce(transform.forward * _bulletForce, ForceMode.Impulse);
     }
+
+
     private void Update()
     {
+        //if (_playerInput.Shoot)
+        //    _playerInput.Shoot = false;
+
         //After you fire it sets the animation to false
         if (_playerInput.IsShooting)
             _playerInput.IsShooting = false;
+
+        
     }
 }
