@@ -1,6 +1,6 @@
 YokaiInvasion
 
-This game is a collaboration effort between 3 programmers and 3 artists. The game is to kill the enemy in fornt of you and dont die. 
+This game is a collaboration between 3 programmers and 3 artists. The game is to kill the enemy in fornt of you and dont die. 
 
 [Controls]
 
