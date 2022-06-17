@@ -16,6 +16,8 @@ public class DeathWallbehavior : MonoBehaviour
             Destroy(other);
         if (other.tag == "Rage")
             Destroy(other);
+        if (other.tag == "ToriGate")
+            Destroy(other.gameObject);
         if (other.tag == "Lanter")
             Destroy(other);
         if (other.tag == "Untagged")

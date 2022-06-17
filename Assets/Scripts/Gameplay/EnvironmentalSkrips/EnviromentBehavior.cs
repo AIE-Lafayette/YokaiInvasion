@@ -22,9 +22,6 @@ public class EnviromentBehavior : MonoBehaviour
             Instance.GetComponent<MovementBehavior>().Speed = 40;
             GameManager.Instace._advaceForwardTrue = false;
         }
-        /*destroy the game object*/
-        RoutineBehaviour.Instance.StartNewTimedAction(args => Destroy(this._enviromentRef), TimedActionCountType.UNSCALEDTIME, 20);
-        
     }
     private void OnTriggerEnter(Collider other)
     {
